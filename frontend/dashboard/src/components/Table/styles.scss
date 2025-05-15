@@ -1,0 +1,78 @@
+// Estilos para o componente Table
+table {
+    width: 100%;
+    border-collapse: separate; // Usar para permitir bordas arredondadas
+    border-spacing: 0; // Remover espaços entre as células
+    margin: 20px 0;
+    background-color: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; // Bordas arredondadas
+    overflow: hidden;
+  
+    thead {
+        background-color: var(--purple-02);
+        color: var(--white);
+    
+        th {
+            padding: 12px;
+            font-weight: bold;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            border: 1px solid var(--purple-03);
+        }
+    }
+  
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: var(--background);
+            }
+    
+            &:nth-child(even) {
+                background-color: #fdf6ff; // Tons claros para alternar
+            }
+    
+            &:hover {
+                background-color: #e6d2f2; // Cor suave para o hover
+                color: var(--text);
+                cursor: pointer;
+            }
+    
+            td {
+                font-size: 0.825rem;
+                padding: 12px;
+                border: 1px solid #e0c6ef; // Bordas claras
+                
+                .td-actions {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: 8px;
+
+                    a {
+                        color: var(--purple-02);
+                    }
+    
+                    button {
+                        background-color: var(--purple-02);
+                        color: var(--white);
+                        padding: 8px 12px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        transition: background-color 0.2s;
+        
+                        &:hover {
+                            background-color: var(--purple-03);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+  

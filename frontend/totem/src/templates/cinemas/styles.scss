@@ -1,0 +1,74 @@
+.cinemas-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(var(--purple-01), var(--purple-03));
+
+  .c-content {
+    width: 100%;
+    min-height: 55vh;
+    max-width: 1200px;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .c-header {
+      width: 100%;
+      color: var(--white);
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    h2 {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 30px;
+    }
+
+    .c-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+
+      button {
+        background: #822daf;
+        border: none;
+        border-radius: 8px;
+        padding: 2.5rem 7rem;
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        h3 {
+          font-size: 1.6rem;
+          margin: 0;
+        }
+
+        p {
+          font-size: 1.1rem;
+          margin: 0;
+          opacity: 0.8;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        &:active {
+          transform: scale(1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}

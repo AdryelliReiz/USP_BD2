@@ -1,0 +1,137 @@
+.identification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(var(--purple-01), var(--purple-03));
+  position: relative; /* Permite posicionar elementos absolutos */
+
+  h1 {
+    font-size: 2.0rem;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0.5rem;
+  }
+
+  .cpf-input-container {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.6); /* Borda translúcida */
+      border-radius: 12px; /* Bordas arredondadas */
+      background-color: rgba(255, 255, 255, 0.15); /* Fundo translúcido */
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      outline: none; /* Remove o contorno padrão */
+      transition: all 0.3s ease-in-out;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7); /* Placeholder branco translúcido */
+        font-size: 1rem;
+      }
+
+      &:focus {
+        border: 1px solid rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  .skip-button {
+    background-color: transparent;
+    color: #ddd;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+
+    &:hover {
+      color: #ddd;
+    }
+  }
+
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%;
+    max-width: 300px;
+
+    .keypad-button {
+      background-color: var(--purple-01);
+      border: none;
+      border-radius: 8px;
+      padding: 1.1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #7d1fbf;
+      }
+
+      &:active {
+        background-color: #5a008f;
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  .footer-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 13rem;
+
+    .back-button,
+    .next-button {
+      background-color: #a346ff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      gap: 5px; /* Espaçamento entre o texto e o símbolo */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 2rem;
+
+      &:hover {
+        background-color: #7d1fbf;
+        color: #fff;
+      }
+
+      &:active {
+        background-color: #5a008f;
+        transform: scale(0.95);
+      }
+    }
+
+    .next-button {
+      margin-left: auto; /* Garante alinhamento à direita */
+    }
+  }
+}

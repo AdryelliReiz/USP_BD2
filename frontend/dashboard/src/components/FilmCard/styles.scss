@@ -1,0 +1,35 @@
+.film-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-0.25rem);
+    }
+
+    .film-card-header {
+        img {
+            width: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .film-card-body {
+        h2 {
+            font-size: 1.175rem;
+            font-weight: 500;
+            color: var(--title);
+            margin: 0.5rem 0;
+        }
+        p {
+            font-size: 0.925rem;
+            color: var(--text);
+        }
+    }
+}

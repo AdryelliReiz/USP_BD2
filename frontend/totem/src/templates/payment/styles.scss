@@ -1,0 +1,138 @@
+.payment-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--purple-01), var(--purple-03));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  .p-content {
+    width: 100%;
+    height: 100vh;
+    min-height:100vh;flex-direction: column;
+    max-width: 1180px;
+    padding: 1rem 1rem;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .p-header {
+      width: 100%;
+      color: var(--white);
+  }
+  .p-title {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    margin-top: -70px;
+    margin-bottom: -70px;
+    font-size: 1.3rem;
+  }
+     .descricao {
+      width: 100%;
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -90px;
+      font-size:1.2rem ;
+    }
+  
+    .valor {
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      /*background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;*/
+      margin-bottom: -90px;
+      font-size: 1.2rem;
+    }
+  
+      .ingressos {
+        color: white;
+        width: 100%;
+        height: 100vr;
+        margin-bottom: -69px;
+       
+      }     
+
+      .botoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 30px;
+
+  
+        button {  
+          padding: 1rem 1.5rem;
+          font-size: 1.2rem;
+          color: #fff;
+          background-color: transparent;
+          border: 1px solid #ffffff;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+  
+          &:hover {
+            background-color: #ffffff;
+            color: #4c017e;
+          }
+        }
+      }
+  
+      .voltar-container {
+        display: flex; /* Torna o contêiner flexível */ 
+        width: 100%;      
+        padding: 5px; /* Adiciona espaçamento ao redor do botão */
+      
+        .voltar-button {
+          background-color: #a346ff; /* Cor de fundo do botão */
+          color: black; /* Cor do texto */
+          font-size: 16px; /* Tamanho do texto */
+          font-weight: bold; /* Texto em negrito */
+          border: none; /* Remove bordas */
+          border-radius: 8px; /* Bordas arredondadas */
+          padding: 10px 20px; /* Espaçamento interno (vertical x horizontal) */
+          cursor: pointer; /* Cursor tipo "mão" */
+          display: inline-flex; /* Alinhamento interno flex */
+          align-items: center; /* Centraliza verticalmente o conteúdo */
+          gap: 5px; /* Espaçamento entre o texto e o símbolo */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+          transition: all 0.3s ease-in-out; /* Animação para interatividade */
+      
+          &:hover {
+            background-color: #902edf; /* Cor de fundo no hover */
+            color: #fff; /* Texto branco no hover */
+          }
+      
+          &:active {
+            transform: scale(0.96); /* Reduz levemente o tamanho ao clicar */
+          }
+      
+          &::before {
+            content: '<'; /* Adiciona o símbolo de "Voltar" */
+            font-size: 18px; /* Tamanho do símbolo */
+            margin-right: 8px; /* Espaçamento entre o símbolo e o texto */
+            font-weight: bold; /* Torna o símbolo mais visível */
+          }
+        }
+      }
+      
+      .divi {
+        border-top: 3px solid rgba(255, 255, 255, 0.5); /* Linha tracejada */
+        width: 110%; /* Faz a linha ocupar toda a largura do contêiner */
+        margin-bottom: -70px;
+      }
+
+      .divisoria {
+        border-top: 3px solid rgba(255, 255, 255, 0.5); /* Linha tracejada */
+        width: 110%; /* Faz a linha ocupar toda a largura do contêiner */ 
+      margin-bottom: -35px;
+      }
+        }
+
+        
+      }
