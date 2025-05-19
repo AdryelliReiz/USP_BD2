@@ -34,17 +34,12 @@ else:
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-c2%n09x21&fi%t7hx=s91i2m2fkxu(%_p0j4_!k9nsc94q)*mg"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-# ALLOWED_HOSTS = ["0.0.0.0/0", "localhost", "10.8.9.150", "127.0.0.1:8000", "0.tcp.sa.ngrok.io"]
+SECRET_KEY = env("DJANGO_SECRET_KEY", default = "default-secret-key")
 
 # Settings
 DEBUG = env("DEBUG")
 # SECRET_KEY = env("SECRET_KEY", default="default-secret-key")
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["0.0.0.0/0", "localhost", "10.8.9.150", "127.0.0.1:8000", "0.tcp.sa.ngrok.io"])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["0.0.0.0/0", "localhost", "127.0.0.1:8000"])
 
 
 # Application definition
@@ -99,18 +94,14 @@ WSGI_APPLICATION = "cinema_backend.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'cinemaDB',
-    #     'USER': 'cinemaUser',
-    #     'PASSWORD': 'Cinema@Senha007',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
-    'default': env.db(
-        "DATABASE_URL",
-        default="postgres://cinemaUser:Cinema@Senha007@localhost:5432/cinemaDB"
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env("DATABASE_NAME", default="cineach"),
+        'USER': env("DATABASE_USER", default="postgres"),
+        'PASSWORD': env("DATABASE_PASSWORD", default="pass"),
+        'HOST': env("DATABASE_HOST", default="db"),
+        'PORT': env("DATABASE_PORT", default="5432"),
+    }
 }
 
 
@@ -189,8 +180,9 @@ SIMPLE_JWT = {
 }
 # os.environ.get("DJANGO_SECRET_KEY", get_random_secret_key())
 
-# CORS_ALLOWED_ORIGINS = [
-#     'http://0.0.0.0',
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'http://0.0.0.0',
+    'http://localhost'
+]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True

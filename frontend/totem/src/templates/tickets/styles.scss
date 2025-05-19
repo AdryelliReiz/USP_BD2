@@ -1,6 +1,6 @@
 .tickets-container {
     width: 100%;
-    height: 100vh;
+   min-height: 100vh;
     background: linear-gradient(var(--purple-01), var(--purple-03));
     display: flex;
     flex-direction: column;
@@ -126,7 +126,19 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 2rem;
+
+        p {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .tickets-i {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
         .voltar-button,
         .ingressos-button {

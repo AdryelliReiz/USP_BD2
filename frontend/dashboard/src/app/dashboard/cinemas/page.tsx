@@ -8,67 +8,38 @@ import { useEffect, useState } from "react";
 import { BiPlus, BiSearch, BiTrash, BiEdit } from "react-icons/bi";
 import {MdClose} from "react-icons/md";
 
-const cinemasData = [
-    {
-        nome: 'Cineflix',
-        cpf: '00.000.000/0000-00',
-        gerente: 'João da Silva',
-        gerenteId: '000.000.000-01',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-    {
-        nome: 'Cinemark',
-        cpf: '00.000.000/0000-00',
-        gerente: 'Maria da Silva',
-        gerenteId: '000.000.000-02',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-    {
-        nome: 'Cineart',
-        cpf: '00.000.000/0000-00',
-        gerente: 'José da Silva',
-        gerenteId: '000.000.000-03',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-    {
-        nome: 'Cinépolis',
-        cpf: '00.000.000/0000-00',
-        gerente: 'Ana da Silva',
-        gerenteId: '000.000.000-04',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-    {
-        nome: 'CineSystem',
-        cpf: '00.000.000/0000-00',
-        gerente: 'Carlos da Silva',
-        gerenteId: '000.000.000-05',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-    {
-        nome: 'CineShow',
-        cpf: '00.000.000/0000-00',
-        gerente: 'Antônio da Silva',
-        gerenteId: '000.000.000-06',
-        telefone: '(00) 0000-0000',
-        endereco: 'Rua dos Cinemas, 0000',
-    },
-]
+type ICinemaData = {
+    cinema_nome: string;
+    cnpj: string;
+    gerente_nome: string;
+    gerente_id: string;
+    telefone: string;
+    rua: string;
+    n_end: number;
+    complemento?: string;
+}
+
+type Employees = {
+    nome: string;
+    sobrenome: string;
+    cpf: string;
+}
 
 export default function CinemasPage(){
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [cinemaSelected, setCinemaSelected] = useState(NaN);
+    const [cinemasData, setCinemasData] = useState<ICinemaData[]>([]);
+    const [cinemaSelected, setCinemaSelected] = useState(0);
+    const [search, setSearch] = useState('');
+
     // Estados de edição de dados do cinema selecionado
     const [nome, setNome] = useState('');
     const [gerente, setGerente] = useState('');
     const [telefone, setTelefone] = useState('');
-    const [CEP, setCEP] = useState('');
-    const [number, setNumber] = useState('');
-    const [complement, setComplement] = useState('');
+    const [CEP, setRua] = useState('');
+    const [number, setNumber] = useState<number>();
+    const [complement, setComplement] = useState<string | null>();
+
+    const [employees, setEmployees] = useState<Employees[]>([]);
 
     const { sessionUser } = useSession();
 
@@ -77,25 +48,68 @@ export default function CinemasPage(){
             setNome('');
             setGerente('');
             setTelefone('');
-            setCEP('');
-            setNumber('');
+            setRua('');
+            setNumber(0);
             setComplement('');
         } else  {
-            setNome(cinemasData[cinemaIndex].nome);
-            setGerente(cinemasData[cinemaIndex].gerenteId);
+            setNome(cinemasData[cinemaIndex].cinema_nome);
+            setGerente(cinemasData[cinemaIndex].gerente_id);
             setTelefone(cinemasData[cinemaIndex].telefone);
-            setCEP('');
-            setNumber('');
-            setComplement('');
+            setRua(cinemasData[cinemaIndex].rua);
+            setNumber(cinemasData[cinemaIndex].n_end);
+            setComplement(cinemasData[cinemaIndex].complemento);
         }
 
         setCinemaSelected(cinemaIndex);
         setModalIsOpen(!modalIsOpen);
     }
+  
+    useEffect(() => {
+        async function searchAllCinemas() {
+            const { data, status } = await api.get('/admin/cinemas?search=');
 
-    //useEffect(() => {
-    //    const {} = api.get('/cinemas');
-    //W}, [])
+            if (status === 200){
+                setCinemasData(data);
+            }
+        }
+
+        searchAllCinemas()
+    },[]);
+
+    async function searchCinemas(){
+        const { data, status } = await api.get(`/admin/cinemas?search=${search}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${sessionUser?.access_token}`
+            }
+        });
+
+        if (status === 200){
+            setCinemasData(data);
+        }
+    }
+
+    useEffect(() => {
+        if(modalIsOpen) {
+            async function getAllEmployees(){
+                const { data, status } = await api.get(`/admin/cinemas/employees/${cinemasData[cinemaSelected].cnpj}/`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${sessionUser?.access_token}`
+                    }
+                });
+                
+                if (status === 200){
+                    setEmployees(data);
+                }
+            }
+    
+            getAllEmployees()
+        } else {
+            setEmployees([]);
+        }
+
+    }, [modalIsOpen, cinemaSelected]);
     
     return (
         <section>
@@ -110,8 +124,8 @@ export default function CinemasPage(){
                         <h4>Procurando algo em especifico</h4>
                         <div className="dash-actions">
                             <div className="search-container">
-                                <input type="text" placeholder="Buscar cinema" />
-                                <button className="search-btn" >
+                                <input type="text" placeholder="Buscar cinema" value={search} onChange={(e) => setSearch(e.target.value)} />
+                                <button onClick={searchCinemas} className="search-btn" >
                                     Buscar
                                     <BiSearch size={20} />
                                 </button>
@@ -123,27 +137,29 @@ export default function CinemasPage(){
                             </Link>
                         </div>
 
-                        <Table
-                            columns={['Nome', 'CNPJ', 'Gerente', 'Telefone', 'Endereço', 'Ações']}
-                            data={cinemasData.map((cinema, index) => [
-                                cinema.nome,
-                                cinema.cpf,
-                                cinema.gerente,
-                                cinema.telefone,
-                                cinema.endereco,
-                                
-                                <div key={cinema.cpf} className="td-actions" >
-                                    <Link href={`/dashboard/cinemas/${cinema.cpf.replace(/\D/g, "")}`} key="view">Visualizar</Link>
-                                    <button key="edit" onClick={() => toggleModal(index)}>
-                                        <BiEdit size={18} />
-                                    </button>
-                                    <button key="delete">
-                                        <BiTrash size={18} />
-                                    </button>
-                                </div>
-                                
-                            ])}
-                        />
+                        {cinemasData.length > 0 && (
+                            <Table
+                                columns={['Nome', 'CNPJ', 'Gerente', 'Telefone', 'Endereço', 'Ações']}
+                                data={cinemasData.map((cinema, index) => [
+                                    cinema.cinema_nome,
+                                    cinema.cnpj,
+                                    cinema.gerente_nome,
+                                    cinema.telefone,
+                                    cinema.rua + ', ' + cinema.n_end + (cinema.complemento ? ' - ' + cinema.complemento : ''),
+                                    
+                                    <div key={cinema.cnpj} className="td-actions" >
+                                        <Link href={`/dashboard/cinemas/${cinema.cnpj.replace(/\D/g, "")}`} key="view">Visualizar</Link>
+                                        <button key="edit" onClick={() => toggleModal(index)}>
+                                            <BiEdit size={18} />
+                                        </button>
+                                        <button key="delete">
+                                            <BiTrash size={18} />
+                                        </button>
+                                    </div>
+                                    
+                                ])}
+                            />
+                        )}
                     </div>
 
                     {modalIsOpen && (
@@ -152,7 +168,7 @@ export default function CinemasPage(){
                                 <div className="modal-header">
                                     <div>
                                         <h3>Editar dados</h3>
-                                        <p>{cinemasData[cinemaSelected].nome}</p>
+                                        <p>{cinemasData[cinemaSelected].cinema_nome}</p>
                                     </div>
 
                                     <button onClick={() => toggleModal(NaN)} >
@@ -169,20 +185,19 @@ export default function CinemasPage(){
                                         <div className="input-group">
                                             <label htmlFor="gerente">Gerente</label>
                                             <select id="gerente" value={gerente} onChange={(e) => setGerente(e.target.value)}>
-                                                <option value={cinemasData[cinemaSelected].gerente} disabled>
-                                                    {cinemasData[cinemaSelected].gerente} (Gerente atual)
+                                                <option value={cinemasData[cinemaSelected].gerente_nome} disabled>
+                                                    {cinemasData[cinemaSelected].gerente_nome} (Gerente atual)
                                                 </option>
-                                                <option value="000.000.000-01">João da Silva</option>
-                                                <option value="000.000.000-02">Maria da Silva</option>
-                                                <option value="000.000.000-03">José da Silva</option>
-                                                <option value="000.000.000-04">Ana da Silva</option>
-                                                <option value="000.000.000-05">Carlos da Silva</option>
-                                                <option value="000.000.000-06">Antônio da Silva</option>
+                                                {employees.map((employee, index) => (
+                                                    <option key={index} value={employee.cpf} >
+                                                        {employee.nome} {employee.sobrenome}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         {
                                             // Se o gerente for diferente do gerente atual, exibir campo para preencher email e senha
-                                            gerente !== cinemasData[cinemaSelected].gerenteId && (
+                                            gerente !== cinemasData[cinemaSelected].gerente_id && (
                                                 <>
                                                     <div className="input-group">
                                                         <label htmlFor="email">E-mail do novo gerente</label>
@@ -201,15 +216,15 @@ export default function CinemasPage(){
                                         </div>
                                         <div className="input-group">
                                             <label htmlFor="CEP">CEP</label>
-                                            <input type="text" id="CEP" value={CEP} onChange={(e) => setCEP(e.target.value)} />
+                                            <input type="text" id="CEP" value={CEP} onChange={(e) => setRua(e.target.value)} />
                                         </div>
                                         <div className="input-group">
                                             <label htmlFor="number">Número</label>
-                                            <input type="text" id="number" value={number} onChange={(e) => setNumber(e.target.value)} />
+                                            <input type="text" id="number" value={number} onChange={(e) => setNumber(Number(e.target.value))} />
                                         </div>
                                         <div className="input-group">
                                             <label htmlFor="complement">Complemento</label>
-                                            <input type="text" id="complement" value={complement} onChange={(e) => setComplement(e.target.value)} />
+                                            <input type="text" id="complement" value={complement || ""} onChange={(e) => setComplement(e.target.value)} />
                                         </div>
                                     </form>
                                     

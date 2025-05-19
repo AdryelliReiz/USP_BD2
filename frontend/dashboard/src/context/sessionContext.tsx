@@ -16,6 +16,7 @@ export const SessionProvider = ({ children }: { children: ReactNode }) => {
 
     useEffect(() => {
         getUserSession().then((res) => {
+            console.log("setando sessão do usuário")
             setSessionUser(res);
         });
     }, []);

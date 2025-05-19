@@ -1,29 +1,24 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { RiArmchairLine } from "react-icons/ri";
 import { TbArmchair2Off } from "react-icons/tb";
 import { InformationsContext } from "../../contexts/informationsProvider";
 import "./styles.scss";
+import api from "../../services/api";
+
+type Seat = {
+  numero: number;
+  letra: string;
+  ocupada: boolean;
+  tipo: string;
+} 
 
 const Poltrona = () => {
-  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
-  const { tabActive, setTabActive } = useContext(InformationsContext);
-
-  const seats = [   
-    ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8"],
-    ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8"],
-    ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"],
-    ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
-    ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8"],
-    ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"],
-    ["G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8"],
-    ["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8"],
-    ["I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8"],
-  ];
-
-  const occupiedSeats = ["B3", "C4", "D4", "D5"];
+  const { tabActive, setTabActive, selectedSeats, setSelectedSeats, selectedSession } = useContext(InformationsContext);
+  const [seats, setSeats] = useState<Seat[]>([]);
 
   const toggleSeat = (seat: string) => {
-    if (occupiedSeats.includes(seat)) return;
+    //verufica se o assento selecionado já está ocupado
+    if(seats.find((s) => s.letra + s.numero === seat)?.ocupada) return;
 
     if (selectedSeats.includes(seat)) {
       setSelectedSeats(selectedSeats.filter((s) => s !== seat));
@@ -31,6 +26,20 @@ const Poltrona = () => {
       setSelectedSeats([...selectedSeats, seat]);
     }
   };
+
+  useEffect(() => {
+    // seta a poltrona selecionada para null
+    setSelectedSeats([]);
+
+    async function fetchSets() {
+      console.log(selectedSession)
+      const { data } = await api.get(`/totem/seats/${selectedSession}/`);
+      console.log(data)
+      setSeats(data);
+    }
+
+    fetchSets()
+  }, [])
 
   return (
     <div className="poltrona-page">
@@ -55,24 +64,24 @@ const Poltrona = () => {
           <div className="seats-container">
             {seats.flat().map((seat) => (
               <div
-                key={seat}
+                key={seat.letra + seat.numero}
                 className={`seat ${
-                  occupiedSeats.includes(seat)
+                  (seat.ocupada)
                     ? "occupied"
-                    : selectedSeats.includes(seat)
+                    : selectedSeats.includes(seat.letra + seat.numero)
                     ? "selected"
-                    : seat.startsWith("A")
+                    : seat.letra === "A" || seat.letra === "B"
                     ? "vip"
                     : "available"
                 }`}
-                onClick={() => toggleSeat(seat)}
+                onClick={() => toggleSeat(seat.letra + seat.numero)}
               >
-                {occupiedSeats.includes(seat) ? (
+                {seat.ocupada ? (
                   <TbArmchair2Off />
                 ) : (
                   <RiArmchairLine />
                 )}
-                <span>{seat}</span>
+                <span>{seat.letra + seat.numero}</span>
               </div>
             ))}
           </div>

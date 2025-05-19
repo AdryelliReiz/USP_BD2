@@ -1,6 +1,6 @@
 .cinema-container {
   width: 100%; /* Garante que o container ocupe toda a largura */
-  height: 100vh; /* Altura total da tela */
+ min-height: 100vh; /* Altura total da tela */
   background: linear-gradient(var(--purple-01), var(--purple-03)); /* Mantém o gradiente de fundo */
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   .content {
     max-width: 1200px; /* Define um limite para o conteúdo interno */
     width: 100%; /* Garante que o conteúdo ocupe a largura total disponível */
-    margin: 0 auto; /* Centraliza o conteúdo no meio da tela */
+    margin: 2rem auto; /* Centraliza o conteúdo no meio da tela */
     display: flex;
     gap: 2rem;
     justify-content: space-between;

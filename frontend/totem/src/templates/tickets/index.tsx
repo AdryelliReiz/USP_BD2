@@ -1,34 +1,92 @@
-import { useContext, useState } from "react";
-import { InformationsContext } from "../../contexts/informationsProvider";
-import TicketCard, { ITicketCardProps } from "../../components/ticketCard";
+import { useContext, useEffect, useState } from "react";
+import { InformationsContext, SelectedTicket } from "../../contexts/informationsProvider";
+import TicketCard from "../../components/ticketCard";
 import "./styles.scss";
+import api from "../../services/api";
+import formatarHora from "../../utils/formatarHora";
 
-const tickets: Array<ITicketCardProps> = [
-    { name: "Inteira", value: 24, type: "monetario" },
-    { name: "Meia", value: 12, type: "monetario" },
-    { name: "Club", value: 240, type: "pontos" },
-];
+type Ticket = {
+    valor: number;
+    nome: string;
+    tipo_pago: "monetario" | "pontos";
+}
+
+type Data = {
+    pontos: number
+    ingressos: Ticket[]
+}
 
 export default function Tickets() {
-    const { tabActive, setTabActive, setSelectedTickets } = useContext(InformationsContext);
+    const { tabActive, setTabActive, selectedTickets, setSelectedTickets, CPF, selectedSeats, selectedSession, selectedMovieName, selectedSessionTime } = useContext(InformationsContext);
 
-    const [selected, setSelected] = useState<{ [key: string]: number }>({});
+    const [allTickets, setAllTickets] = useState<Ticket[]>([]);
+    const [pontos, setPontos] = useState<number>(0);  
+   
 
-    const updateSelection = (name: string, quantity: number) => {
-        setSelected((prev) => ({ ...prev, [name]: quantity }));
+    const updateSelection = (id: number, quantity: number, operation: "minus" | "plus") => {
+
+        // Verifica se a quantidade fornecida é válida (não pode ser negativa)
+        if (quantity < 0) return false;
+    
+        const totalSelectedTickets = selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0);
+    
+        // Verifica se a nova quantidade ultrapassa o número de assentos disponíveis
+        if (operation === "plus" && (selectedSeats.length - totalSelectedTickets - 1) < 0) {
+            return false;
+        }
+    
+        // Lógica de atualização dos ingressos
+        let updatedTickets;
+    
+        const ticketExists = selectedTickets.some(ticket => ticket.name === allTickets[id].nome );
+    
+        if (ticketExists) {
+            // Atualiza a quantidade do ingresso se ele já existir.
+            updatedTickets = selectedTickets.map(ticket => {
+                if (ticket.name === allTickets[id].nome) {
+                    const newQuantity = operation === "plus" ? ticket.quantity + 1 : ticket.quantity - 1;
+                    if (newQuantity <= 0) {
+                        return null; // Marca para remoção se a quantidade for zero.
+                    }
+                    return { ...ticket, quantity: newQuantity };
+                }
+                return ticket;
+            }).filter(Boolean); // Remove os tickets com quantidade zero.
+        } else if (operation === "plus") {
+            // Adiciona um novo ingresso se ele ainda não estiver na lista (somente ao adicionar).
+            updatedTickets = [...selectedTickets, { name: allTickets[id].nome, value: allTickets[id].valor, tipo: allTickets[id].tipo_pago, quantity: 1 }];
+        } else {
+            // Não faz nada se tentarmos remover um ingresso que não existe.
+            return false;
+        }
+    
+        // Atualiza o estado com a nova lista de ingressos selecionados.
+        setSelectedTickets(updatedTickets.filter(ticket => ticket !== null) as SelectedTicket[]);
+    
+        return true;
     };
 
     const confirmarIngressos = () => {
-        const ingressosSelecionados = tickets
-            .filter((ticket) => selected[ticket.name] > 0)
-            .map((ticket) => ({
-                name: ticket.name,
-                quantity: selected[ticket.name],
-                value: ticket.value,
-            }));
-        setSelectedTickets(ingressosSelecionados);
+        if(selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0) === 0 
+            || selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0) !== selectedSeats.length
+        ) return;
+
         setTabActive(tabActive + 1);
     };
+
+    useEffect(() => {
+        // seta os ingressos selecionados para null
+        setSelectedTickets([]);
+
+        async function fetchTickets() {
+            const { data } = await api.get<Data>(`/totem/tickets/${selectedSession}/?cpf=${CPF}`);
+
+            setAllTickets(data.ingressos);
+            setPontos(data.pontos);
+        }
+
+        fetchTickets();
+    }, [])
 
     return (
         <div className="tickets-container">
@@ -42,19 +100,19 @@ export default function Tickets() {
                 </div>
 
                 <div className="t-session-information">
-                    <h3>Deadpool & Wolverine</h3>
-                    <p><strong>Sessão - 20h30</strong></p>
-                    <p>Assentos: J8, J9</p>
+                    <h3>{selectedMovieName}</h3>
+                    <p><strong>Sessão - {formatarHora(selectedSessionTime)}</strong></p>
+                    <p>Assentos: {selectedSeats.map(seat => <span>{seat} </span>)}</p>
                 </div>
 
                 <div className="t-tickets">
-                    {tickets.map((ticket, index) => (
+                    {allTickets.map((ticket, index) => (
                         <TicketCard
                             key={index}
-                            name={ticket.name}
-                            value={ticket.value}
-                            type={ticket.type}
-                            onQuantityChange={(quantity) => updateSelection(ticket.name, quantity)}
+                            name={ticket.nome}
+                            value={ticket.valor}
+                            type={ticket.tipo_pago}
+                            onQuantityChange={(quantity, operation) => updateSelection(index, quantity, operation)}
                         />
                     ))}
                 </div>
@@ -64,9 +122,19 @@ export default function Tickets() {
                         Voltar
                     </button>
 
-                    <button className="ingressos-button" onClick={confirmarIngressos}>
-                        Ingressos Selecionados
-                    </button>
+                    {CPF != "" && (
+                        <div className="pontos">
+                            <p>Pontos: {pontos}</p>
+                        </div>
+                    )}
+
+                    <div className="tickets-i">
+                        <p>{selectedTickets.reduce((total, seat) => total + seat.quantity, 0)} Ingressos Selecionados</p>
+
+                        <button className="ingressos-button" onClick={confirmarIngressos}>
+                            Comprar ingressos
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

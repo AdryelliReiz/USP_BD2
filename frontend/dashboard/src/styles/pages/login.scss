@@ -10,7 +10,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+   min-height: 100vh;
     padding: 0 1.5rem;
     background: linear-gradient(var(--purple-01), var(--purple-03));
 

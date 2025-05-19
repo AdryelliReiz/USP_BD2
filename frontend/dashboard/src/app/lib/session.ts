@@ -23,7 +23,12 @@ export async function getUserSession() {
 
     const payload = decodeJwt(data.session)
 
-    const session = payload as ISession;
+    const dataSession = payload as ISession;
+
+    const session = {
+        ...dataSession,
+        access_token: data.session,
+    }
 
 	return session;
 }
