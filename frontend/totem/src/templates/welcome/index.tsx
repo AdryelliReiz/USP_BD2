@@ -11,7 +11,7 @@ export default function Welcome() {
                 <h1>CINEACH</h1>
 
                 <button onClick={() => setTabActive(tabActive + 1)} >
-                    COMEÇAR
+                    ACESSAR
                 </button>
             </div>
         </div>

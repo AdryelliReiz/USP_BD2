@@ -33,13 +33,17 @@ class AdminLoginView(ViewSet):
         user_data = RawSQLHelper.execute_query(query, [email])
 
         if not user_data:
+            print("No user found with the provided email.")
             return Response({"error": "Invalid email or password"}, status=status.HTTP_401_UNAUTHORIZED)
 
         user_data = user_data[0]
         print(user_data)
+        print(password)
+        print(user_data["senha"])
 
         # Verify password
-        if not check_password(password, user_data["senha"]):
+        if password != user_data["senha"]:
+            print("Password does not match.")
             return Response({"error": "Invalid email or passwordd"}, status=status.HTTP_401_UNAUTHORIZED)
 
         # Generate JWT tokens
