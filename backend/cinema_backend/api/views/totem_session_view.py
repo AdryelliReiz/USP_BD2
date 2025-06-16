@@ -15,11 +15,12 @@ class TotemSessionView(ViewSet):
             f.duracao,
             f.class_ind,
             f.descricao,
+            f.cartaz,
             s.numero AS sala_numero,
             s.numero AS sessao_numero,
             sa.suporta_3d,
             sa.suporta_imax,
-            sa.leg_ou_dub
+            sa.leg_ou_dub,
         FROM sessao AS s
         INNER JOIN filme AS f ON s.filme_id = f.id
         INNER JOIN sala AS sa ON s.sala_id = sa.numero

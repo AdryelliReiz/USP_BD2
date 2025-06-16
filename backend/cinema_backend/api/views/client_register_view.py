@@ -50,23 +50,36 @@ class ClientRegisterView(ViewSet):
 
         if user_data:
             return Response({"error": "User is already registered!"}, status=status.HTTP_401_UNAUTHORIZED)
+        
+        # If exist ingressos with this CPF, sum all points
+        pontos_query = """
+            SELECT tipo, valor
+            FROM ingresso
+            WHERE cliente_id = %s
+        """
+        ingressos = RawSQLHelper.execute_query(pontos_query, [cpf])
+
+        pontos = 0
+        if ingressos:
+            for ingresso in ingressos:
+                pontos += ingresso['valor']
 
         if complement:
             insertQuery = """
                 INSERT INTO cliente
-                ("cpf", "nome", "sobrenome", "telefone", "email", "rua", "n_end", "complemento", "cep", "senha")
+                ("cpf", "nome", "sobrenome", "telefone", "email", "rua", "n_end", "complemento", "cep", "senha", "quantidade_pontos")
                 VALUES
-                ('%s', '%s', '%s', %s, '%s', '%s', %s, '%s', '%s', '%s')
+                ('%s', '%s', '%s', %s, '%s', '%s', %s, '%s', '%s', '%s', '%s')
             """
-            registrationResult = RawSQLHelper.execute_query(insertQuery, [cpf, firstName, lastName, phoneNumber, email, street, streetNumber, complement, cep, password])
+            registrationResult = RawSQLHelper.execute_query(insertQuery, [cpf, firstName, lastName, phoneNumber, email, street, streetNumber, complement, cep, password, pontos])
         else:
             insertQuery = """
                 INSERT INTO cliente
-                ("cpf", "nome", "sobrenome", "telefone", "email", "rua", "n_end", "cep", "senha")
+                ("cpf", "nome", "sobrenome", "telefone", "email", "rua", "n_end", "cep", "senha", "quantidade_pontos")
                 VALUES
-                ('%s', '%s', '%s', %s, '%s', '%s', %s, '%s', '%s')
+                ('%s', '%s', '%s', %s, '%s', '%s', %s, '%s', '%s', '%s')
             """
-            registrationResult = RawSQLHelper.execute_query(insertQuery, [cpf, firstName, lastName, phoneNumber, email, street, streetNumber, cep, password])
+            registrationResult = RawSQLHelper.execute_query(insertQuery, [cpf, firstName, lastName, phoneNumber, email, street, streetNumber, cep, password, pontos])
 
         if registrationResult:
             print("Successful registration!")

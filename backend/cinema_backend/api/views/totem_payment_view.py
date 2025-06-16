@@ -32,12 +32,11 @@ class TotemPaymentView(ViewSet):
         total_monetary_cost = 0
         if cpf:
             client_points_query = """
-            SELECT SUM(qtde) AS total_pontos
-            FROM pontos
-            WHERE cliente_id = %s
+            SELECT quantidade_pontos FROM cliente
+            WHERE cpf = %s
             """
             client_points_result = RawSQLHelper.execute_query(client_points_query, [cpf])
-            client_points_balance = client_points_result[0]['total_pontos'] if client_points_result else 0
+            client_points_balance = client_points_result[0]['quantidade_pontos'] if client_points_result else 0
 
         # Calculate total costs and validate ticket types
         for seat in selected_seats:
@@ -56,39 +55,44 @@ class TotemPaymentView(ViewSet):
         elif not payment_method:
             return Response({"error": "Payment method is required unless only points are used."}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Insert data into 'ingresso' table
+        # Insert data into 'ingresso' table (no more 'pertence' table)
         ticket_insert_query = """
-        INSERT INTO ingresso (tipo, valor, data, hora, forma_pagamento, cliente_id)
-        VALUES (%s, %s, CURRENT_DATE, CURRENT_TIME, %s, %s)
+        INSERT INTO ingresso (
+            tipo, valor, data, hora, forma_pagamento, cliente_id, sessao_id,
+            poltrona_numero, poltrona_letra, poltrona_sala_id
+        )
+        VALUES (%s, %s, CURRENT_DATE, CURRENT_TIME, %s, %s, %s, %s, %s, %s)
         RETURNING id
         """
         ticket_ids = []
         for seat in selected_seats:
             ticket_type = 1 if seat.get("type") == "meia" else 2 if seat.get("type") == "inteiro" else 3
             ticket_value = seat.get("value")
+            poltrona_numero = seat.get("seat_number")
+            poltrona_letra = seat.get("seat_letter")
+            poltrona_sala_id = seat.get("sala_id")
             ticket_result = RawSQLHelper.execute_query(
-                ticket_insert_query,
-                [ticket_type, ticket_value, payment_method, cpf]
+            ticket_insert_query,
+            [
+                ticket_type,
+                ticket_value,
+                payment_method,
+                cpf,
+                session_id,
+                poltrona_numero,
+                poltrona_letra,
+                poltrona_sala_id
+            ]
             )
             ticket_ids.append(ticket_result[0]['id'])
 
-        # Insert data into 'pertence' table
-        seat_insert_query = """
-        INSERT INTO pertence (ingresso_id, sessao_n, poltrona_n, poltrona_l, sala_id)
-        VALUES (%s, %s, %s, %s, %s)
-        """
-        for ticket_id, seat in zip(ticket_ids, selected_seats):
-            RawSQLHelper.execute_query(
-                seat_insert_query,
-                [ticket_id, session_id, seat.get("seat_number"), seat.get("seat_letter"), seat.get("sala_id")]
-            )
-
-        # Deduct points if applicable
-        if total_points_required > 0 and cpf:
-            deduct_points_query = """
-            INSERT INTO pontos (data, hora, qtde, cliente_id)
-            VALUES (CURRENT_DATE, CURRENT_TIME, %s, %s)
+        if cpf:
+            # Update the client's points balance: add total_monetary_cost and subtract total_points_required
+            update_client_points_query = """
+            UPDATE cliente
+            SET quantidade_pontos = quantidade_pontos + %s - %s
+            WHERE cpf = %s
             """
-            RawSQLHelper.execute_query(deduct_points_query, [-total_points_required, cpf])
+            RawSQLHelper.execute_query(update_client_points_query, [total_monetary_cost, total_points_required, cpf])
 
         return Response({"message": "Sale registered successfully."}, status=status.HTTP_201_CREATED)

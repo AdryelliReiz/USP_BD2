@@ -11,6 +11,11 @@ services:
       POSTGRES_PASSWORD: password_adry_default
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U adry -d cineach"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     ports:
       - "5432:5432"
 
@@ -31,7 +36,8 @@ services:
       - DB_USER=adry
       - DB_PASS=password_adry_default
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
       - "8000:8000"
 
