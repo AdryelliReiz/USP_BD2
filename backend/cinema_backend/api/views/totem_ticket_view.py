@@ -24,7 +24,7 @@ class TotemTicketView(ViewSet):
             valor,
             CASE
                 WHEN tipo = 1 THEN 'meia'
-                WHEN tipo = 2 THEN 'inteiro'
+                WHEN tipo = 2 THEN 'inteira'
                 WHEN tipo = 3 THEN 'club'
                 ELSE 'unknown'
             END AS nome,

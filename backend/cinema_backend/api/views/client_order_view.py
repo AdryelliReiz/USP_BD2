@@ -1,10 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
-from rest_framework.permissions import AllowAny
 from api.utils import RawSQLHelper
 from rest_framework import status
-from django.contrib.auth.hashers import check_password
-from rest_framework_simplejwt.tokens import RefreshToken
 
 class ClientOrderView(ViewSet):
     """
@@ -13,12 +10,10 @@ class ClientOrderView(ViewSet):
     def retrieve(self, request, pk):
 
         orderQuery = """
-        SELECT I.data, C.nome, F.titulo, I.tipo
+        SELECT I.id, I.data, I.hora C.nome as nome_cinema, F.titulo as nome_filme, I.tipo, I.valor, S.sala_id, I.poltrona_numero, I.poltrona_letra
         FROM ingresso as I
-        INNER JOIN pertence AS P
-        ON I.id = P.ingresso_id
         INNER JOIN sessao AS S
-        ON P.sessao_n = S.numero
+        ON I.sessao_id = S.numero
         INNER JOIN filme AS F
         ON F.id = S.filme_id
         INNER JOIN sala AS L
@@ -31,4 +26,4 @@ class ClientOrderView(ViewSet):
 
         orderQueryList = RawSQLHelper.execute_query(orderQuery, [pk])
 
-        return Response(orderQueryList);
+        return Response(orderQueryList, status=status.HTTP_200_OK);

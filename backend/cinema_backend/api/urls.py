@@ -11,7 +11,6 @@ router.register(r'admin/login', AdminLoginView, basename='admin-login')
 # Cinema Management
 
 router.register(r'admin/cinemas', CinemaView, basename='cinemas')
-router.register(r'admin/cinemas/employees', CinemaEmployeeView, basename='cinema-admin-employees')
 
 # Employee Management
 

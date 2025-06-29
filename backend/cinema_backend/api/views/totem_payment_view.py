@@ -66,7 +66,7 @@ class TotemPaymentView(ViewSet):
         """
         ticket_ids = []
         for seat in selected_seats:
-            ticket_type = 1 if seat.get("type") == "meia" else 2 if seat.get("type") == "inteiro" else 3
+            ticket_type = 1 if seat.get("type") == "meia" else 2 if seat.get("type") == "inteira" else 3
             ticket_value = seat.get("value")
             poltrona_numero = seat.get("seat_number")
             poltrona_letra = seat.get("seat_letter")

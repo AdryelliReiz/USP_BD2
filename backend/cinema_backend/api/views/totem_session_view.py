@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 from api.utils import RawSQLHelper
 from rest_framework.permissions import AllowAny
+from rest_framework import status
 
 class TotemSessionView(ViewSet):
     permission_classes = [AllowAny]
@@ -15,18 +16,19 @@ class TotemSessionView(ViewSet):
             f.duracao,
             f.class_ind,
             f.descricao,
+            f.class_ind,
             f.cartaz,
-            s.numero AS sala_numero,
+            sa.numero AS sala_numero,
             s.numero AS sessao_numero,
             sa.suporta_3d,
             sa.suporta_imax,
-            sa.leg_ou_dub,
+            s.leg_ou_dub
         FROM sessao AS s
         INNER JOIN filme AS f ON s.filme_id = f.id
         INNER JOIN sala AS sa ON s.sala_id = sa.numero
-        WHERE s.numero = %s AND s.data = %s
+        WHERE s.numero = %s AND s.data = %s AND s.cancelada = FALSE
         ORDER BY sa.numero, s.leg_ou_dub, s.hora
         """
 
         client_data = RawSQLHelper.execute_query(query, [pk, date])
-        return Response(client_data)
+        return Response(client_data, status=sttatus.HTTP_200_OK)

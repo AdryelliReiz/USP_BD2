@@ -1,39 +1,32 @@
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
-from rest_framework.permissions import AllowAny
 from api.utils import RawSQLHelper
 from rest_framework import status
-from django.contrib.auth.hashers import check_password
-from rest_framework_simplejwt.tokens import RefreshToken
 class ClientPointsView(ViewSet):
     """
     Retrieves last point score and point history.
     """
     def retrieve(self, request, pk):
         scoreQuery = """
-        SELECT SUM(qtde)
-        FROM pontos
-        WHERE cliente_id = %s
+        SELECT quantidade_pontos
+        FROM cliente
+        WHERE cpf = %s
         """
 
-        scoreSum = RawSQLHelper.execute_query(scoreQuery, [pk])
+        score = RawSQLHelper.execute_query(scoreQuery, [pk])
 
         historyQuery = """
-        SELECT data, hora, qtde
-        FROM pontos
+        SELECT id, data, hora, tipo, valor
+        FROM ingresso
         WHERE cliente_id = %s
+        ORDER BY data DESC, hora DESC
         """
 
         historyList = RawSQLHelper.execute_query(historyQuery, [pk])
 
-        entry = []
+        response = {
+            "score": score[0]['quantidade_pontos'] if score else 0,
+            "history": historyList
+        }
 
-        # for point in historyList:
-        #     print(point[0])
-        #         if(point > 0):
-        #             entry.append([item[0], item[1], 'Acúmulo', item[2]])
-        #         else:
-        #             entry.append([item[0], item[1], 'Débito', item[2]])
-
-
-        return Response(scoreSum + entry)
+        return Response(response, status=status.HTTP_200_OK)

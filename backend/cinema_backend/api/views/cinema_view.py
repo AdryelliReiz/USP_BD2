@@ -12,8 +12,8 @@ class CinemaView(ViewSet):
         SELECT
         C.nome AS cinema_nome,
         C.cnpj,
-        F.nome,
-        F.sobrenome,
+        F.nome as gerente_nome,
+        F.sobrenome as gerente_sobrenome,
         C.rua,
         C.n_end,
         C.complemento,
@@ -25,7 +25,7 @@ class CinemaView(ViewSet):
         INNER JOIN
         gerente AS G ON F.cpf = G.cpf
         WHERE
-        C.nome ILIKE %s
+        C.nome LIKE %s
         """
 
         client_data = RawSQLHelper.execute_query(query, [f"%{pk}%"])
@@ -68,4 +68,24 @@ class CinemaView(ViewSet):
             """
             registrationResult = RawSQLHelper.execute_query_execute(insertQuery, [name, cnpj, phoneNumber, street, streetNumber, cep])
 
+        return Response(status=status.HTTP_200_OK)
+    
+    def update(self, request, pk=None):
+        fields = ["nome", "telefone", "rua", "n_end", "complemento", "cep"]
+        updates = []
+        values = []
+
+        for field in fields:
+            value = request.data.get(field)
+            if value is not None:
+                updates.append(f"{field} = %s")
+                values.append(value)
+
+        if not updates:
+            return Response({"error": "No fields to update."}, status=status.HTTP_400_BAD_REQUEST)
+
+        updateQuery = f"UPDATE cinema SET {', '.join(updates)} WHERE cnpj = %s"
+        values.append(pk)
+
+        RawSQLHelper.execute_query_execute(updateQuery, values)
         return Response(status=status.HTTP_200_OK)
