@@ -141,3 +141,13 @@ CREATE TABLE administrador (
   senha VARCHAR(128),
   FOREIGN KEY (cpf) REFERENCES funcionario(cpf)
 );
+
+
+-- TYPE para inserir ingressos
+CREATE TYPE tipo_poltrona_sessao AS (
+    sessao_id INT,
+    poltrona_numero INT,
+    poltrona_letra CHAR(1),
+    poltrona_sala_id INT,
+    sessao_data DATE
+);

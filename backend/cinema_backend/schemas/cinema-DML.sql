@@ -8,7 +8,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000007', 'isabela.rodrigues107@email.com', '5511998750006', 'Isabela', 'Rodrigues', 'Rua do Amor', 787, 'Apto 2', '10000007', 'CriptoLabirinto107&', 0),
 ('00000000008', 'joao.almeida108@email.com', '5511998750007', 'João', 'Almeida', 'Avenida da Harmonia', 898, 'Andar 10', '10000008', 'InviolavelCofre108*', 0),
 ('00000000009', 'larissa.gomes109@email.com', '5511998750008', 'Larissa', 'Gomes', 'Praça da Luz', 909, NULL, '10000009', 'GuardiãEscudo109(', 0),
-('00000000010', 'marcos.fernandes110@email.com', '5511998750009', 'Marcos', 'Fernandes', 'Rua do Futuro', 1010, 'Casa C', '10000010', 'EscondidaSentinela110)', 0),
+('00000000010', 'marcos.fernandes110@email.com', '5511998750009', 'Marcos', 'Fernandes', 'Rua do Futuro', 1010, 'Casa C', '10000010', 'EscondidaSentinela110', 0),
 ('00000000011', 'natalia.souza111@email.com', '55119987500010', 'Natalia', 'Souza', 'Rua da Esperança', 1121, 'Bloco D', '10000011', 'ForteSenha111!', 0),
 ('00000000012', 'otavio.lima112@email.com', '5511998750011', 'Otavio', 'Lima', 'Avenida da Paz', 1232, 'Apto 4', '10000012', 'SeguraCodificada112@', 0),
 ('00000000013', 'paula.monteiro113@email.com', '5511998750012', 'Paula', 'Monteiro', 'Travessa dos Sonhos', 1343, NULL, '10000013', 'MisteriosaPassagem113#', 0),
@@ -18,7 +18,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000017', 'ursula.goncalves117@email.com', '5511998750016', 'Ursula', 'Gonçalves', 'Avenida das Árvores', 1787, 'Cobertura', '10000017', 'CriptoCofre117&', 0),
 ('00000000018', 'victor.dias118@email.com', '5511998750017', 'Victor', 'Dias', 'Rua do Mar', 1898, 'Casa de Praia', '10000018', 'InviolavelEscudo118*', 0),
 ('00000000019', 'wanderley.ferreira119@email.com', '5511998750018', 'Wanderley', 'Ferreira', 'Praça do Céu', 1909, NULL, '10000019', 'GuardiãSentinela119(', 0),
-('00000000020', 'xenia.rocha120@email.com', '5511998750019', 'Xênia', 'Rocha', 'Rua da Montanha', 2010, 'Chalé 2', '10000020', 'EscondidaChave120)', 0),
+('00000000020', 'xenia.rocha120@email.com', '5511998750019', 'Xênia', 'Rocha', 'Rua da Montanha', 2010, 'Chalé 2', '10000020', 'EscondidaChave120', 0),
 ('00000000021', 'yasmin.mendes121@email.com', '5511998750020', 'Yasmin', 'Mendes', 'Avenida do Lago', 2121, 'Casa principal', '10000021', 'ForteCodificada121!', 0),
 ('00000000022', 'zeca.nunes122@email.com', '5511998750021', 'Zeca', 'Nunes', 'Rua da Floresta', 2232, NULL, '10000022', 'SeguraPassagem122@', 0),
 ('00000000023', 'amanda.carvalho123@email.com', '5511998750022', 'Amand', 'Carvalho', 'Alameda dos Beija-Flores', 2343, 'Apto 6', '10000023', 'MisteriosaProtecao123#', 0),
@@ -28,7 +28,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000027', 'erika.campos127@email.com', '5511998750026', 'Erika', 'Campos', 'Travessa do Campo Verde', 2787, 'Apto 7', '10000027', 'CriptoEscudo127&', 0),
 ('00000000028', 'fabio.queiroz128@email.com', '5511998750027', 'Fabio', 'Queiroz', 'Rua dos Ventos', 2898, NULL, '10000028', 'InviolavelSentinela128*', 0),
 ('00000000029', 'giovanna.ramos129@email.com', '5511998750028', 'Giovanna', 'Ramos', 'Avenida dos Pescadores', 2909, 'Barco 4', '10000029', 'GuardiãChave129(', 0),
-('00000000030', 'henrique.tavares130@email.com', '5511998750029', 'Henrique', 'Tavares', 'Rua da Colina', 3010, 'Casa com vista 2', '10000030', 'EscondidaSenha130)', 0),
+('00000000030', 'henrique.tavares130@email.com', '5511998750029', 'Henrique', 'Tavares', 'Rua da Colina', 3010, 'Casa com vista 2', '10000030', 'EscondidaSenha130', 0),
 ('00000000031', 'ingrid.vieira131@email.com', '5511998750030', 'Ingrid', 'Vieira', 'Alameda das Rosas', 3121, 'Jardim 3', '10000031', 'ForteCodificada131!', 0),
 ('00000000032', 'julio.xavier132@email.com', '5511998750031', 'Julio', 'Xavier', 'Rua dos Pomares', 3232, NULL, '10000032', 'SeguraPassagem132@', 0),
 ('00000000033', 'karina.yoshida133@email.com', '5511998750032', 'Karina', 'Yoshida', 'Avenida das Cachoeiras', 3343, 'Fazenda 4', '10000033', 'MisteriosaProtecao133#', 0),
@@ -38,7 +38,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000037', 'olivia.machado137@email.com', '5511998750036', 'Olivia', 'Machado', 'Avenida das Margaridas', 3787, 'Jardim 4', '10000037', 'CriptoEscudo137&', 0),
 ('00000000038', 'pedro.neves138@email.com', '5511998750037', 'Pedro', 'Neves', 'Travessa dos Rios', 3898, NULL, '10000038', 'InviolavelSentinela138*', 0),
 ('00000000039', 'quintana.barbosa139@email.com', '5511998750038', 'Quintana', 'Barbosa', 'Rua das Pedras', 3909, 'Casa de pedra 2', '10000039', 'GuardiãChave139(', 0),
-('00000000040', 'rodrigo.reis140@email.com', '5511998750039', 'Rodrigo', 'Reis', 'Alameda dos Sabores', 4010, 'Restaurante 2', '10000040', 'EscondidaSenha140)', 0),
+('00000000040', 'rodrigo.reis140@email.com', '5511998750039', 'Rodrigo', 'Reis', 'Alameda dos Sabores', 4010, 'Restaurante 2', '10000040', 'EscondidaSenha140', 0),
 ('00000000041', 'sabrina.pinheiro141@email.com', '5511998750040', 'Sabrina', 'Pinheiro', 'Rua do Eco', 4121, NULL, '10000041', 'ForteCodificada141!', 0),
 ('00000000042', 'tarcisio.freitas142@email.com', '5511998750041', 'Tarcisio', 'Freitas', 'Avenida dos Pardais', 4232, 'Ninho 2', '10000042', 'SeguraPassagem142@', 0),
 ('00000000043', 'vanessa.guimaraes143@email.com', '5511998750042', 'Vanessa', 'Guimarães', 'Travessa do Vento Frio', 4343, 'Apto 9', '10000043', 'MisteriosaProtecao143#', 0),
@@ -48,7 +48,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000047', 'zaira.sales147@email.com', '5511998750046', 'Zaira', 'Sales', 'Avenida da Harmonia', 4787, 'Musica 2', '10000047', 'CriptoEscudo147&', 0),
 ('00000000048', 'alicea.brito148@email.com', '5511998750047', 'Alicea', 'Brito', 'Rua da Fantasia', 4898, 'Reino 2', '10000048', 'InviolavelSentinela148*', 0),
 ('00000000049', 'brunoa.cunha149@email.com', '5511998750048', 'Brunoa', 'Cunha', 'Travessa dos Pássaros Livres', 4909, NULL, '10000049', 'GuardiãChave149(', 0),
-('00000000050', 'carlaa.melo150@email.com', '551199875000049', 'Carlaa', 'Melo', 'Rua do Pôr do Sol', 5010, 'Chale 3', '10000050', 'EscondidaSenha150)', 0),
+('00000000050', 'carlaa.melo150@email.com', '551199875000049', 'Carlaa', 'Melo', 'Rua do Pôr do Sol', 5010, 'Chale 3', '10000050', 'EscondidaSenha150', 0),
 ('00000000051', 'daniela.silva151@email.com', '5511998750050', 'Daniela', 'Silva', 'Alameda das Flores Roxas', 5121, 'Jardim 5', '10000051', 'ForteCodificada151!', 0),
 ('00000000052', 'elise.santos152@email.com', '5511998750051', 'Elise', 'Santos', 'Rua dos Cajueiros', 5232, NULL, '10000052', 'SeguraPassagem152@', 0),
 ('00000000053', 'fernande.oliveira153@email.com', '5511998750052', 'Fernande', 'Oliveira', 'Avenida das Dunas', 5343, 'Praia 2', '10000053', 'MisteriosaProtecao153#', 0),
@@ -58,7 +58,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000057', 'joaoa.rodrigues157@email.com', '55119987500056', 'Joaoa', 'Rodrigues', 'Rua da Inovação', 5787, 'Startup 2', '10000057', 'CriptoEscudo157&', 0),
 ('00000000058', 'larissaa.almeida158@email.com', '55119987500057', 'Larissaa', 'Almeida', 'Alameda da Criatividade', 5898, 'Atelie 3', '10000058', 'InviolavelSentinela158*', 0),
 ('00000000059', 'marcose.gomes159@email.com', '55119987500058', 'Marcose', 'Gomes', 'Rua da Aventura', 5909, NULL, '10000059', 'GuardiãChave159(', 0),
-('00000000060', 'nataliae.fernandes160@email.com', '5511998750059', 'Nataliae', 'Fernandes', 'Avenida do Conhecimento', 6010, 'Biblioteca 2', '10000060', 'EscondidaSenha160)', 0),
+('00000000060', 'nataliae.fernandes160@email.com', '5511998750059', 'Nataliae', 'Fernandes', 'Avenida do Conhecimento', 6010, 'Biblioteca 2', '10000060', 'EscondidaSenha160', 0),
 ('00000000061', 'otavioe.souza161@email.com', '5511998750060', 'Otavioe', 'Souza', 'Travessa da Sabedoria', 6121, NULL, '10000061', 'ForteCodificada161!', 0),
 ('00000000062', 'paulaa.lima162@email.com', '5511998750061', 'Paulaa', 'Lima', 'Rua da Simpatia', 6232, 'Apto 10', '10000062', 'SeguraPassagem162@', 0),
 ('00000000063', 'rafaela.monteiro163@email.com', '5511998750062', 'Rafaela', 'Monteiro', 'Alameda do Carinho', 6343, 'Casa 7', '10000063', 'MisteriosaProtecao163#', 0),
@@ -68,7 +68,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000067', 'victore.goncalves167@email.com', '5511998750066', 'Victore', 'Gonçalves', 'Rua da Gratidão', 6787, 'Lar Feliz 2', '10000067', 'CriptoEscudo167&', 0),
 ('00000000068', 'wanderle.dias168@email.com', '5511998750067', 'Wanderle', 'Dias', 'Alameda da Paz', 6898, 'Parque 2', '10000068', 'InviolavelSentinela168*', 0),
 ('00000000069', 'xeniaa.ferreira169@email.com', '5511998750068', 'Xeniaa', 'Ferreira', 'Rua da Felicidade', 6909, 'Casa da Joia 2', '10000069', 'GuardiãChave169(', 0),
-('00000000070', 'yasmina.rocha170@email.com', '5511998750069', 'Yasmina', 'Rocha', 'Avenida da Sorte', 7010, NULL, '10000070', 'EscondidaSenha170)', 0),
+('00000000070', 'yasmina.rocha170@email.com', '5511998750069', 'Yasmina', 'Rocha', 'Avenida da Sorte', 7010, NULL, '10000070', 'EscondidaSenha170', 0),
 ('00000000071', 'zecaa.mendes171@email.com', '5511998750070', 'Zecaa', 'Mendes', 'Travessa da Inspiração', 7121, 'Atelie 4', '10000071', 'ForteCodificada171!', 0),
 ('00000000072', 'amandaa.nunes172@email.com', '5511998750071', 'Amandaa', 'Nunes', 'Rua do Entendimento', 7232, NULL, '10000072', 'SeguraPassagem172@', 0),
 ('00000000073', 'bernardo.carvalho173@email.com', '5511998750072', 'Bernardo', 'Carvalho', 'Alameda da Criatividade', 7343, 'Estudio 2', '10000073', 'MisteriosaProtecao173#', 0),
@@ -78,7 +78,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000077', 'fabioo.campos177@email.com', '5511998750076', 'Fabioo', 'Campos', 'Rua da Curiosidade', 7787, NULL, '10000077', 'CriptoEscudo177&', 0),
 ('00000000078', 'giovann.queiroz178@email.com', '5511998750077', 'Giovann', 'Queiroz', 'Alameda dos Desafios', 7898, 'Ginásio 2', '10000078', 'InviolavelSentinela178*', 0),
 ('00000000079', 'henriquez.ramos179@email.com', '5511998750078', 'Henriquez', 'Ramos', 'Rua da Vitória', 7909, 'Pódio 2', '10000079', 'GuardiãChave179(', 0),
-('00000000080', 'ingrida.tavares180@email.com', '5511998750079', 'Ingrida', 'Tavares', 'Avenida do Triunfo', 8010, NULL, '10000080', 'EscondidaSenha180)', 0),
+('00000000080', 'ingrida.tavares180@email.com', '5511998750079', 'Ingrida', 'Tavares', 'Avenida do Triunfo', 8010, NULL, '10000080', 'EscondidaSenha180', 0),
 ('00000000081', 'julia.vieira181@email.com', '5511998750080', 'Julia', 'Vieira', 'Travessa da Prosperidade', 8121, 'Tesouro 2', '10000081', 'ForteCodificada181!', 0),
 ('00000000082', 'karino.xavier182@email.com', '5511998750081', 'Karino', 'Xavier', 'Rua da Abundância', 8232, NULL, '10000082', 'SeguraPassagem182@', 0),
 ('00000000083', 'luca.yoshida183@email.com', '5511998750082', 'Luca', 'Yoshida', 'Alameda da Riqueza', 8343, 'Banco 2', '10000083', 'MisteriosaProtecao183#', 0),
@@ -88,7 +88,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000087', 'pedroo.machado187@email.com', '5511998750086', 'Pedroo', 'Machado', 'Rua da Memória', 8787, 'Museu 2', '10000087', 'CriptoEscudo187&', 0),
 ('00000000088', 'quintina.neves188@email.com', '5511998750087', 'Quintina', 'Neves', 'Alameda da História', 8898, NULL, '10000088', 'InviolavelSentinela188*', 0),
 ('00000000089', 'rodrig.barbosa189@email.com', '5511998750088', 'Rodrig', 'Barbosa', 'Rua do Legado', 8909, 'Monumentos 2', '10000089', 'GuardiãChave189(', 0),
-('00000000090', 'sabrin.reis190@email.com', '5511998750089', 'Sabrin', 'Reis', 'Avenida da Herança', 9010, NULL, '10000090', 'EscondidaSenha190)', 0),
+('00000000090', 'sabrin.reis190@email.com', '5511998750089', 'Sabrin', 'Reis', 'Avenida da Herança', 9010, NULL, '10000090', 'EscondidaSenha190', 0),
 ('00000000091', 'tarcisioo.pinheiro191@email.com', '5511998750090', 'Tarcisioo', 'Pinheiro', 'Travessa da Sabedoria Antiga', 9121, 'Ruinas 2', '10000091', 'ForteCodificada191!', 0),
 ('00000000092', 'vaness.freitas192@email.com', '5511998750091', 'Vaness', 'Freitas', 'Rua do Mistério', 9232, NULL, '10000092', 'SeguraPassagem192@', 0),
 ('00000000093', 'wagne.guimaraes193@email.com', '5511998750092', 'Wagne', 'Guimarães', 'Alameda do Inexplicável', 9343, 'Area 51 2', '10000093', 'MisteriosaProtecao193#', 0),
@@ -98,7 +98,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000097', 'alice.sales197@email.com', '5511998750096', 'Alice', 'Sales', 'Rua do Descobrimento', 9787, 'Mapa 2', '10000097', 'CriptoEscudo197&', 0),
 ('00000000098', 'bruno.brito198@email.com', '5511998750097', 'Bruno', 'Brito', 'Alameda da Novidade', 9898, NULL, '10000098', 'InviolavelSentinela198*', 0),
 ('00000000099', 'carla.cunha199@email.com', '5511998750098', 'Carla', 'Cunha', 'Rua da Transformação', 9909, 'Metamorfose 2', '10000099', 'GuardiãChave199(', 0),
-('00000000100', 'daniel.melo200@email.com', '5511998750099', 'Daniel', 'Melo', 'Avenida da Reinvenção', 10010, NULL, '10000100', 'EscondidaSenha200)', 0),
+('00000000100', 'daniel.melo200@email.com', '5511998750099', 'Daniel', 'Melo', 'Avenida da Reinvenção', 10010, NULL, '10000100', 'EscondidaSenha200', 0),
 ('00000000101', 'elisa.silva201@email.com', '5511998750100', 'Elisa', 'Silva', 'Rua das Flores', 123, 'Apto 101', '01000001', 'ForteChave201!', 0),
 ('00000000102', 'fernando.santos202@email.com', '5511998750101', 'Fernando', 'Santos', 'Avenida Principal', 456, NULL, '02000002', 'SeguraSenha202@', 0),
 ('00000000103', 'gabriela.oliveira203@email.com', '5511998750102', 'Gabriela', 'Oliveira', 'Travessa da Lua', 789, 'Casa fundos', '03000003', 'MisteriosaCodificada203#', 0),
@@ -153,7 +153,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000152', 'gabriel.santos252@email.com', '5511998550035', 'Gabriel', 'Santos', 'Rua dos Cajueiros', 4040, NULL, '52000052', 'SeguraPassagem252@', 0),
 ('00000000153', 'huga.oliveira253@email.com', '5511998550036', 'Huga', 'Oliveira', 'Avenida das Dunas', 4141, 'Praia 1', '53000053', 'MisteriosaProtecao253#', 0),
 ('00000000154', 'isabel.pereira254@email.com', '5511998550037', 'Isabel', 'Pereira', 'Travessa das Estrelas Cadentes', 4242, 'Observatorio', '54000054', 'InteligenteFortaleza254$', 0),
-('00000000155', 'joaoa.costa255@email.com', '5511998550038', 'Joaoa', 'Costa', 'Rua do Silêncio', 4343, NULL, '5511998550000ecretaLabirinto255%', 0),
+('00000000155', 'joaoa.costa255@email.com', '5511998550038', 'Joaoa', 'Costa', 'Rua do Silêncio', 4343, NULL, '55119985', 'ecretaLabirinto255%', 0),
 ('00000000156', 'larissaa.martins256@email.com', '5511998550039', 'Larissaa', 'Martins', 'Avenida do Amanhecer', 4444, 'Nascer do Sol', '56000056', 'BlindadaCofre256^', 0),
 ('00000000157', 'marcose.rodrigues257@email.com', '5511998550040', 'Marcose', 'Rodrigues', 'Rua da Inovação', 4545, 'Startup 1', '57000057', 'CriptoEscudo257&', 0),
 ('00000000158', 'nataliae.almeida258@email.com', '5511998550041', 'Nataliae', 'Almeida', 'Alameda da Criatividade', 4646, 'Atelie 1', '58000058', 'InviolavelSentinela258*', 0),
@@ -353,7 +353,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000352', 'larissaa.santos452@email.com', '5511979750029', 'Larissaa', 'Santos', 'Rua dos Cajueiros', 5232, NULL, '52000052', 'SeguraPassagem452@', 0),
 ('00000000353', 'marcose.oliveira453@email.com', '5511979750030', 'Marcose', 'Oliveira', 'Avenida das Dunas', 5343, 'Praia 2', '53000053', 'MisteriosaProtecao453#', 0),
 ('00000000354', 'nataliae.pereira454@email.com', '5511979750031', 'Nataliae', 'Pereira', 'Travessa das Estrelas Cadentes', 5454, 'Observatorio 2', '54000054', 'InteligenteFortaleza454$', 0),
-('00000000355', 'otavioe.costa455@email.com', '5511979750032', 'Otavioe', 'Costa', 'Rua do Silêncio', 5565, NULL, '5511979750000ecretaLabirinto455%', 0),
+('00000000355', 'otavioe.costa455@email.com', '5511979750032', 'Otavioe', 'Costa', 'Rua do Silêncio', 5565, NULL, '55119797', 'ecretaLabirinto455%', 0),
 ('00000000356', 'paulaa.martins456@email.com', '5511979750033', 'Paulaa', 'Martins', 'Avenida do Amanhecer', 5676, 'Nascer do Sol 2', '56000056', 'BlindadaCofre456^', 0),
 ('00000000357', 'rafaela.rodrigues457@email.com', '5511979750034', 'Rafaela', 'Rodrigues', 'Rua da Inovação', 5787, 'Startup 2', '57000057', 'CriptoEscudo457&', 0),
 ('00000000358', 'sofiaa.almeida458@email.com', '5511979750035', 'Sofiaa', 'Almeida', 'Alameda da Criatividade', 5898, 'Atelie 3', '58000058', 'InviolavelSentinela458*', 0),
@@ -453,7 +453,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000452', 'nataliae.santos552@email.com', '5519998750051', 'Nataliae', 'Santos', 'Rua dos Cajueiros', 5232, NULL, '52000052', 'SeguraPassagem462@', 0),
 ('00000000453', 'otavioe.oliveira553@email.com', '5519998750052', 'Otavioe', 'Oliveira', 'Avenida das Dunas', 5343, 'Praia 2', '53000053', 'MisteriosaProtecao463#', 0),
 ('00000000454', 'paulaa.pereira554@email.com', '5519998750053', 'Paulaa', 'Pereira', 'Travessa das Estrelas Cadentes', 5454, 'Observatorio 2', '54000054', 'InteligenteFortaleza464$', 0),
-('00000000455', 'rafaela.costa555@email.com', '55199987500054', 'Rafaela', 'Costa', 'Rua do Silêncio', 5565, NULL, 'ecretaLabirinto465%', 0),
+('00000000455', 'rafaela.costa555@email.com', '55199987500054', 'Rafaela', 'Costa', 'Rua do Silêncio', 5565, NULL, '00000000', 'ecretaLabirinto465%', 0),
 ('00000000456', 'sofiaa.martins556@email.com', '55199987500055', 'Sofiaa', 'Martins', 'Avenida do Amanhecer', 5676, 'Nascer do Sol 2', '56000056', 'BlindadaCofre466^', 0),
 ('00000000457', 'thiagoe.rodrigues557@email.com', '55199987500056', 'Thiagoe', 'Rodrigues', 'Rua da Inovação', 5787, 'Startup 2', '57000057', 'CriptoEscudo467&', 0),
 ('00000000458', 'ursulae.almeida558@email.com', '55199987500057', 'Ursulae', 'Almeida', 'Alameda da Criatividade', 5898, 'Atelie 3', '58000058', 'InviolavelSentinela468*', 0),
@@ -496,7 +496,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000495', 'gabriela.duarte595@email.com', '5519998750094', 'Gabriela', 'Duarte', 'Avenida da Busca', 9565, 'Expedição 2', '10000095', 'SecretaLabirinto505%', 0),
 ('00000000496', 'hugo.figueiredo596@email.com', '5519998750095', 'Hugo', 'Figueiredo', 'Travessa da Jornada', 9676, NULL, '96000096', 'BlindadaCofre506^', 0),
 ('00000000497', 'isabela.sales597@email.com', '5519998750096', 'Isabela', 'Sales', 'Rua do Descobrimento', 9787, 'Mapa 2', '10000097', 'CriptoEscudo507&', 0),
-('00000000098', 'bruno.brito198@email.com', '5519998750097', 'Bruno', 'Brito', 'Alameda da Novidade', 9898, NULL, '10000098', 'InviolavelSentinela198*', 0),
+('00000004498', 'bruno.brito198@email.com', '5519998750097', 'Bruno', 'Brito', 'Alameda da Novidade', 9898, NULL, '10000098', 'InviolavelSentinela198*', 0),
 ('00000000498', 'joao.brito598@email.com', '5519998750098', 'João', 'Brito', 'Alameda da Novidade', 9898, NULL, '98000098', 'InviolavelSentinela508*', 0),
 ('00000000499', 'larissa.cunha599@email.com', '5519998750099', 'Larissa', 'Cunha', 'Rua da Transformação', 9909, 'Metamorfose 2', '99000099', 'GuardiãChave509(', 0),
 ('00000000500', 'marcos.melo600@email.com', '5519998750100', 'Marcos', 'Melo', 'Avenida da Reinvenção', 10010, NULL, '10000100', 'EscondidaSenha510)', 0),
@@ -554,7 +554,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000552', 'paulaa.santos652@email.com', '5519998550036', 'Paulaa', 'Santos', 'Rua dos Cajueiros', 5232, NULL, '52000052', 'SeguraPassagem652@', 0),
 ('00000000553', 'rafaela.oliveira653@email.com', '5519998550037', 'Rafaela', 'Oliveira', 'Avenida das Dunas', 5343, 'Praia 2', '53000053', 'MisteriosaProtecao653#', 0),
 ('00000000554', 'sofiaa.pereira654@email.com', '5519998550038', 'Sofiaa', 'Pereira', 'Travessa das Estrelas Cadentes', 5454, 'Observatorio 2', '54000054', 'InteligenteFortaleza654$', 0),
-('00000000555', 'thiagoe.costa655@email.com', '5519998550039', 'Thiagoe', 'Costa', 'Rua do Silêncio', 5565, NULL, 'ecretaLabirinto655%', 0),
+('00000000555', 'thiagoe.costa655@email.com', '5519998550039', 'Thiagoe', 'Costa', 'Rua do Silêncio', 5565, NULL, '11111111', 'ecretaLabirinto655%', 0),
 ('00000000556', 'ursulae.martins656@email.com', '5519998550040', 'Ursulae', 'Martins', 'Avenida do Amanhecer', 5676, 'Nascer do Sol 2', '56000056', 'BlindadaCofre656^', 0),
 ('00000000557', 'victore.rodrigues657@email.com', '5519998550041', 'Victore', 'Rodrigues', 'Rua da Inovação', 5787, 'Startup 2', '57000057', 'CriptoEscudo657&', 0),
 ('00000000558', 'wanderle.almeida658@email.com', '5519998550042', 'Wanderle', 'Almeida', 'Alameda da Criatividade', 5898, 'Atelie 3', '58000058', 'InviolavelSentinela658*', 0),
@@ -642,7 +642,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000640', 'erika.goncalves@email.com', '5519998530022', 'Erika', 'Gonçalves', 'Avenida dos Pescadores', 1717, 'Barco 3', '29000029', 'Peixe29(', 0),
 ('00000000641', 'fabio.carvalho@email.com', '5519998530023', 'Fabio', 'Carvalho', 'Rua da Colina', 1818, 'Casa com vista', '30000030', 'Vista30)', 0),
 ('00000000642', 'giovanna.alves@email.com', '5519998530024', 'Giovanna', 'Alves', 'Alameda das Rosas', 1919, 'Jardim 1', '31000031', 'Rosa31!', 0),
-('00000000246', 'carlaa.figueiredo346@email.com', '5519998530025', 'Carlaa', 'Figueiredo', 'Rua do Vale', 4676, 'Vale Verde 2', '10000046', 'BlindadaCofre346^', 0),
+('00000112460', 'carlaa.figueiredo346@email.com', '5519998530025', 'Carlaa', 'Figueiredo', 'Rua do Vale', 4676, 'Vale Verde 2', '10000046', 'BlindadaCofre346^', 0),
 ('00000000643', 'henrique.azevedo@email.com', '5519998530026', 'Henrique', 'Azevedo', 'Rua dos Pomares', 2020, NULL, '32000032', 'Fruta32@', 0),
 ('00000000644', 'ingrid.barros@email.com', '5519998530027', 'Ingrid', 'Barros', 'Avenida das Cachoeiras', 2121, 'Fazenda 3', '33000033', 'Queda33#', 0),
 ('00000000645', 'julio.campos@email.com', '5519998530028', 'Julio', 'Campos', 'Rua dos Cedros', 2222, 'Sitio 4', '34000034', 'Madeira34$', 0),
@@ -666,7 +666,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000663', 'bruno.nascimento@email.com', '5519998530046', 'Bruno', 'Nascimento', 'Rua dos Cajueiros', 4040, NULL, '52000052', 'Caju52@', 0),
 ('00000000664', 'clara.ferreira@email.com', '5519998530047', 'Clara', 'Ferreira', 'Avenida das Dunas', 4141, 'Praia 1', '53000053', 'Areia53#', 0),
 ('00000000665', 'david.martins@email.com', '5519998530048', 'David', 'Martins', 'Travessa das Estrelas Cadentes', 4242, 'Observatorio', '54000054', 'Meteoro54$', 0),
-('00000000666', 'eloa.pereira@email.com', '5519998530049', 'Eloá', 'Pereira', 'Rua do Silencio', 4343, NULL, 'ilencio55%', 0),
+('00000000666', 'eloa.pereira@email.com', '5519998530049', 'Eloá', 'Pereira', 'Rua do Silencio', 4343, NULL, '12345678', 'ilencio55%', 0),
 ('00000000667', 'felipe.rodrigues@email.com', '5519998530050', 'Felipe', 'Rodrigues', 'Avenida do Amanhecer', 4444, 'Nascer do Sol', '56000056', 'Amanhecer56^', 0),
 ('00000000668', 'gabriel.costa@email.com', '5519998530051', 'Gabriel', 'Costa', 'Rua da Inovacao', 4545, 'Startup 1', '57000057', 'Inova57&', 0),
 ('00000000669', 'helena.almeida@email.com', '5519998530052', 'Helena', 'Almeida', 'Alameda da Criatividade', 4646, 'Atelie 1', '58000058', 'Criar58*', 0),
@@ -690,7 +690,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000687', 'adam.dias@email.com', '5519998530070', 'Adam', 'Dias', 'Travessa do Som', 6464, 'Estudio de Som', '76000076', 'Som76^', 0),
 ('00000000688', 'beatriz.ferreira@email.com', '5519998530071', 'Beatriz', 'Ferreira', 'Rua da Curiosidade', 6565, NULL, '77000077', 'Curioso77&', 0),
 ('00000000689', 'carlos.gomes@email.com', '5519998530072', 'Carlos', 'Gomes', 'Alameda dos Desafios', 6666, 'Ginásio', '78000078', 'Desafio78*', 0),
-('00000000294', 'bruno.pacheco394@email.com', '5519998530073', 'Bruno', 'Pacheco', 'Rua da Curiosidade Profunda', 9454, NULL, '94000094', 'InteligenteFortaleza394$', 0),
+('00000001294', 'bruno.pacheco394@email.com', '5519998530073', 'Bruno', 'Pacheco', 'Rua da Curiosidade Profunda', 9454, NULL, '94000094', 'InteligenteFortaleza394$', 0),
 ('00000000690', 'diana.martins@email.com', '5519998530074', 'Diana', 'Martins', 'Rua da Vitoria', 6767, 'Pódio', '79000079', 'Vitoria79(', 0),
 ('00000000691', 'eduardo.nascimento@email.com', '5519998530075', 'Eduardo', 'Nascimento', 'Avenida do Triunfo', 6868, NULL, '80000080', 'Triunfo80)', 0),
 ('00000000692', 'fernanda.oliveira@email.com', '5519998530076', 'Fernanda', 'Oliveira', 'Travessa da Prosperidade', 6969, 'Tesouro', '81000081', 'Prospera81!', 0),
@@ -743,7 +743,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000739', 'diego.queiroz28@email.com', '5519979750022', 'Diego', 'Queiroz', 'Rua dos Ventos', 1616, NULL, '28000028', 'InviolavelSentinela28*', 0),
 ('00000000740', 'erika.ramos29@email.com', '5519979750023', 'Erika', 'Ramos', 'Avenida dos Pescadores', 1717, 'Barco 3', '29000029', 'GuardiãChave29(', 0),
 ('00000000741', 'fabio.tavares30@email.com', '5519979750024', 'Fabio', 'Tavares', 'Rua da Colina', 1818, 'Casa com vista', '30000030', 'EscondidaSenha30)', 0),
-('00000000348', 'gabriel.brito448@email.com', '5519979750025', 'Gabriel', 'Brito', 'Rua da Fantasia', 4898, 'Reino 2', '48000048', 'InviolavelSentinela448*', 0),
+('00000001348', 'gabriel.brito448@email.com', '5519979750025', 'Gabriel', 'Brito', 'Rua da Fantasia', 4898, 'Reino 2', '04800004', 'InviolavelSentinela448*', 0),
 ('00000000742', 'giovanna.vieira31@email.com', '5519979750026', 'Giovanna', 'Vieira', 'Alameda das Rosas', 1919, 'Jardim 1', '31000031', 'ForteCodificada31!', 0),
 ('00000000743', 'henrique.xavier32@email.com', '5519979750027', 'Henrique', 'Xavier', 'Rua dos Pomares', 2020, NULL, '32000032', 'SeguraPassagem32@', 0),
 ('00000000744', 'ingrid.yoshida33@email.com', '5519979750028', 'Ingrid', 'Yoshida', 'Avenida das Cachoeiras', 2121, 'Fazenda 3', '33000033', 'MisteriosaProtecao33#', 0),
@@ -768,7 +768,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000763', 'carlaa.santos52@email.com', '5519979750047', 'Carlaa', 'Santos', 'Rua dos Cajueiros', 4040, NULL, '52000052', 'SeguraPassagem52@', 0),
 ('00000000764', 'daniela.oliveira53@email.com', '5519979750048', 'Daniela', 'Oliveira', 'Avenida das Dunas', 4141, 'Praia 1', '53000053', 'MisteriosaProtecao53#', 0),
 ('00000000765', 'elise.pereira54@email.com', '5519979750049', 'Elise', 'Pereira', 'Travessa das Estrelas Cadentes', 4242, 'Observatorio', '54000054', 'InteligenteFortaleza54$', 0),
-('00000000766', 'fernande.costa55@email.com', '5519979750050', 'Fernande', 'Costa', 'Rua do Silêncio', 4343, NULL, 'ecretaLabirinto55%', 0),
+('00000000766', 'fernande.costa55@email.com', '5519979750050', 'Fernande', 'Costa', 'Rua do Silêncio', 4343, NULL, '22222222', 'ecretaLabirinto55%', 0),
 ('00000000767', 'gabriel.martins56@email.com', '551997975051', 'Gabriel', 'Martins', 'Avenida do Amanhecer', 4444, 'Nascer do Sol', '56000056', 'BlindadaCofre56^', 0),
 ('00000000768', 'huga.rodrigues57@email.com', '5519979750052', 'Huga', 'Rodrigues', 'Rua da Inovação', 4545, 'Startup 1', '57000057', 'CriptoEscudo57&', 0),
 ('00000000769', 'isabel.almeida58@email.com', '5519979750053', 'Isabel', 'Almeida', 'Alameda da Criatividade', 4646, 'Atelie 1', '58000058', 'InviolavelSentinela58*', 0),
@@ -777,7 +777,7 @@ INSERT INTO cliente (cpf, email, telefone, nome, sobrenome, rua, n_end, compleme
 ('00000000772', 'marcose.souza61@email.com', '5519979750056', 'Marcose', 'Souza', 'Travessa da Sabedoria', 4949, NULL, '61000061', 'ForteCodificada61!', 0),
 ('00000000773', 'nataliae.lima62@email.com', '5519979750057', 'Nataliae', 'Lima', 'Rua da Simpatia', 5050, 'Apto 909', '62000062', 'SeguraPassagem62@', 0),
 ('00000000774', 'otavioe.monteiro63@email.com', '5519979750058', 'Otavioe', 'Monteiro', 'Alameda do Carinho', 5151, 'Casa 6', '63000063', 'MisteriosaProtecao63#', 0),
-('00000000382', 'quintina.xavier482@email.com', '5519979750059', 'Quintina', 'Xavier', 'Rua da Abundância', 8232, NULL, '82000082', 'SeguraPassagem482@', 0),
+('00000001382', 'quintina.xavier482@email.com', '5519979750059', 'Quintina', 'Xavier', 'Rua da Abundância', 8232, NULL, '08200008', 'SeguraPassagem482@', 0),
 ('00000000775', 'paulaa.pires64@email.com', '5519979750060', 'Paulaa', 'Pires', 'Rua da Sinceridade', 5252, NULL, '64000064', 'InteligenteFortaleza64$', 0),
 ('00000000776', 'rafaela.ribeiro65@email.com', '5519979750061', 'Rafaela', 'Ribeiro', 'Avenida da Confiança', 5353, 'Escritorio 2', '65000065', 'SecretaLabirinto65%', 0),
 ('00000000777', 'sofiaa.cardoso66@email.com', '5519979750062', 'Sofiaa', 'Cardoso', 'Travessa da Esperança', 5454, 'Sonho 1', '66000066', 'BlindadaCofre66^', 0),
@@ -887,362 +887,621 @@ INSERT INTO sala (numero, profundidade, largura, suporta_imax, suporta_3d, qtde_
 (2, 15, 15, true, true, 225, '12345678000101', true),
 (3, 8, 10, false, true, 80, '12345678000101', true),
 (4, 12, 14, false, false, 168, '12345678000101', true),
+(51, 10, 10, false, true, 120, '12345678000101', true),
+(52, 15, 15, true, true, 225, '12345678000101', true),
+(53, 8, 10, false, true, 80, '12345678000101', true),
+(54, 12, 14, false, false, 168, '12345678000101', true),
+(55, 12, 14, false, false, 168, '12345678000101', true),
+
+-- Salas para o cinema 12345678000102
 (5, 9, 11, false, true, 99, '12345678000102', true),
 (6, 14, 14, false, true, 196, '12345678000102', true),
 (7, 10, 10, false, false, 100, '12345678000102', true),
 (8, 11, 13, false, true, 143, '12345678000102', true),
 (9, 13, 15, false, true, 195, '12345678000102', true),
 (10, 7, 9, false, false, 63, '12345678000102', false),
+(56, 14, 14, false, true, 196, '12345678000102', true),
+(57, 10, 10, false, false, 100, '12345678000102', true),
+(58, 11, 13, false, true, 143, '12345678000102', true),
+(59, 13, 15, false, true, 195, '12345678000102', true),
+(60, 7, 9, false, false, 63, '12345678000102', false),
 
--- Salas para o cinema 12345678000102
+-- Salas para o cinema 12345678000103
 (11, 11, 11, false, true, 121, '12345678000103', true),
 (12, 14, 15, true, true, 210, '12345678000103', true),
 (13, 9, 12, false, true, 108, '12345678000103', true),
 (14, 10, 13, false, false, 130, '12345678000103', true),
 (15, 8, 14, false, true, 112, '12345678000103', true),
+(61, 11, 11, false, true, 121, '12345678000103', true),
+(62, 14, 15, true, true, 210, '12345678000103', true),
+(63, 9, 12, false, true, 108, '12345678000103', true),
+(64, 10, 13, false, false, 130, '12345678000103', true),
+(65, 8, 14, false, true, 112, '12345678000103', true),
+
+-- Salas para o cinema 12345678000104
 (16, 15, 14, false, true, 210, '12345678000104', true),
 (17, 12, 10, false, false, 120, '12345678000104', true),
 (18, 13, 13, false, true, 169, '12345678000104', true),
 (19, 14, 15, false, true, 210, '12345678000104', true),
 (20, 8, 8, false, false, 64, '12345678000104', true),
+(66, 15, 14, false, true, 210, '12345678000104', true),
+(67, 12, 10, false, false, 120, '12345678000104', true),
+(68, 13, 13, false, true, 169, '12345678000104', true),
+(69, 14, 15, false, true, 210, '12345678000104', true),
+(70, 8, 8, false, false, 64, '12345678000104', true),
 
--- Salas para o cinema 12345678000103
+-- Salas para o cinema 12345678000105
 (21, 12, 12, false, true, 144, '12345678000105', true),
 (22, 15, 14, true, true, 210, '12345678000105', true),
 (23, 10, 11, false, true, 110, '12345678000105', true),
 (24, 11, 14, false, false, 154, '12345678000105', true),
 (25, 9, 13, false, true, 117, '12345678000105', true),
+(71, 12, 12, false, true, 144, '12345678000105', true),
+(72, 15, 14, true, true, 210, '12345678000105', true),
+(73, 10, 11, false, true, 110, '12345678000105', true),
+(74, 11, 14, false, false, 154, '12345678000105', true),
+(75, 9, 13, false, true, 117, '12345678000105', true),
+
+-- Salas para o cinema 12345678000106
 (26, 13, 14, false, true, 182, '12345678000106', true),
 (27, 11, 10, false, false, 110, '12345678000106', true),
 (28, 12, 13, false, true, 156, '12345678000106', true),
 (29, 15, 15, false, true, 225, '12345678000106', true),
 (30, 9, 9, false, false, 81, '12345678000106', true),
 
-
--- Salas para o cinema 12345678000104
+-- Salas para o cinema 12345678000107
 (31, 12, 12, false, true, 144, '12345678000107', true),
 (32, 15, 14, true, true, 210, '12345678000107', true),
 (33, 10, 11, false, true, 110, '12345678000107', true),
 (34, 11, 14, false, false, 154, '12345678000107', true),
 (35, 9, 13, false, true, 117, '12345678000107', true),
+
+-- Salas para o cinema 12345678000108
 (36, 13, 14, false, true, 182, '12345678000108', true),
 (37, 11, 10, false, false, 110, '12345678000108', true),
 (38, 12, 13, false, true, 156, '12345678000108', true),
 (39, 15, 15, false, true, 225, '12345678000108', true),
 (40, 9, 9, false, false, 81, '12345678000108', true),
 
--- Salas para o cinema 12345678000105
+-- Salas para o cinema 12345678000109
 (41, 11, 11, false, true, 121, '12345678000109', true),
 (42, 14, 15, true, true, 210, '12345678000109', true),
 (43, 9, 12, false, true, 108, '12345678000109', true),
 (44, 10, 13, false, false, 130, '12345678000109', true),
 (45, 8, 14, false, true, 112, '12345678000109', true),
+
+-- Salas para o cinema 12345678000110
 (46, 15, 14, false, true, 210, '12345678000110', true),
 (47, 12, 10, false, false, 120, '12345678000110', true),
 (48, 13, 13, false, true, 169, '12345678000110', true),
 (49, 14, 15, false, true, 210, '12345678000110', true),
 (50, 8, 8, false, false, 64, '12345678000110', true);
 
-INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id) VALUES
+INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada) VALUES
 -- Sessões para a Sala 1
-(true, false, '2025-06-16', '14:00:00', 1, 2),
-(false, false, '2025-06-16', '17:00:00', 1, 3),
-(true, true, '2025-06-16', '20:00:00', 1, 4),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 1, 5),
-(true, false, '2025-06-17', '17:00:00', 1, 6),
-(false, false, '2025-06-17', '20:00:00', 5, 7),
-(true, true, '2025-06-18', '14:00:00', 5, 8),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 5, 9),
-(true, false, '2025-06-18', '20:00:00', 5, 10),
-(false, false, '2025-06-19', '14:00:00', 5, 11),
-
--- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 2, 3),
-(false, false, '2025-06-16', '17:00:00', 2, 4),
-(true, true, '2025-06-16', '20:00:00', 2, 5),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 2, 6),
-(true, false, '2025-06-17', '17:00:00', 2, 7),
-(false, false, '2025-06-17', '20:00:00', 6, 8),
-(true, true, '2025-06-18', '14:00:00', 6, 9),
-(false, false, '2025-06-18', '17:00:00', 6, 10),
-(true, false, '2025-06-18', '20:00:00', 6, 11),
-(false, false, '2025-06-19', '14:00:00', 6, 12),
-
--- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 3, 4),
-(false, false, '2025-06-16', '17:00:00', 3, 5),
-(true, true, '2025-06-16', '20:00:00', 3, 6),
-(false, false, '2025-06-17', '14:00:00', 3, 7),
-(true, false, '2025-06-17', '17:00:00', 3, 8),
-(false, false, '2025-06-17', '20:00:00', 7, 9),
-(true, true, '2025-06-18', '14:00:00', 7, 10),
-(false, false, '2025-06-18', '17:00:00', 7, 11),
-(true, false, '2025-06-18', '20:00:00', 7, 12),
-(false, false, '2025-06-19', '14:00:00', 7, 13),
-
--- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 4, 5),
-(false, false, '2025-06-16', '17:00:00', 4, 6),
-(true, false, '2025-06-16', '20:00:00', 4, 7),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 4, 8),
-(true, false, '2025-06-17', '17:00:00', 4, 9),
-(false, false, '2025-06-17', '20:00:00', 8, 10),
-(true, false, '2025-06-18', '14:00:00', 8, 11),
-(false, false, '2025-06-18', '17:00:00', 8, 12),
-(true, false, '2025-06-18', '20:00:00', 8, 13),
-(false, false, '2025-06-19', '14:00:00', 8, 14),
+(true, false, '2025-06-20', '14:00:00', 1, 2, false),
+(false, false, '2025-06-16', '17:00:00', 1, 3, false),
+(true, true, '2025-06-16', '20:00:00', 1, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 1, 5, false),
+(true, false, '2025-06-17', '17:00:00', 1, 6, false),
 
 -- Sessões para a Sala 5
-(true, false, '2025-06-16', '14:00:00', 9, 4),
-(false, false, '2025-06-16', '17:00:00', 9, 5),
-(true, true, '2025-06-16', '20:00:00', 9, 6),
-(false, false, '2025-06-17', '14:00:00', 9, 7),
-(true, false, '2025-06-17', '17:00:00', 9, 8),
-(false, false, '2025-06-17', '20:00:00', 10, 9),
-(true, true, '2025-06-18', '14:00:00', 10, 10),
-(false, false, '2025-06-18', '17:00:00', 10, 11),
-(true, false, '2025-06-18', '20:00:00', 10, 12),
-(false, false, '2025-06-19', '14:00:00', 10, 13),
-
--- Sessões para a Sala 1
-(true, false, '2025-06-16', '14:00:00', 11, 2),
-(false, false, '2025-06-16', '17:00:00', 11, 3),
-(true, true, '2025-06-16', '20:00:00', 11, 4),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 11, 5),
-(true, false, '2025-06-17', '17:00:00', 11, 6),
-(false, false, '2025-06-17', '20:00:00', 12, 7),
-(true, true, '2025-06-18', '14:00:00', 12, 8),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 12, 9),
-(true, false, '2025-06-18', '20:00:00', 12, 10),
-(false, false, '2025-06-19', '14:00:00', 12, 11),
+(false, false, '2025-06-17', '20:00:00', 5, 7, false),
+(true, true, '2025-06-18', '14:00:00', 5, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 5, 9, false),
+(true, false, '2025-06-18', '20:00:00', 5, 10, false),
+(false, false, '2025-06-19', '14:00:00', 5, 11, true),
 
 -- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 13, 3),
-(false, false, '2025-06-16', '17:00:00', 13, 4),
-(true, true, '2025-06-16', '20:00:00', 13, 5),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 13, 6),
-(true, false, '2025-06-17', '17:00:00', 13, 7),
-(false, false, '2025-06-17', '20:00:00', 14, 8),
-(true, true, '2025-06-18', '14:00:00', 14, 9),
-(false, false, '2025-06-18', '17:00:00', 14, 10),
-(true, false, '2025-06-18', '20:00:00', 14, 11),
-(false, false, '2025-06-19', '14:00:00', 14, 12),
+(true, false, '2025-06-16', '14:00:00', 2, 3, false),
+(false, false, '2025-06-16', '17:00:00', 2, 4, false),
+(true, true, '2025-06-16', '20:00:00', 2, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 2, 6, false),
+(true, false, '2025-06-17', '17:00:00', 2, 7, false),
+
+-- Sessões para a Sala 6
+(false, false, '2025-06-17', '20:00:00', 6, 8, false),
+(true, true, '2025-06-18', '14:00:00', 6, 9, false),
+(false, false, '2025-06-18', '17:00:00', 6, 10, true),
+(true, false, '2025-06-18', '20:00:00', 6, 11, false),
+(false, false, '2025-06-19', '14:00:00', 6, 12, false),
 
 -- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 15, 4),
-(false, false, '2025-06-16', '17:00:00', 15, 5),
-(true, true, '2025-06-16', '20:00:00', 15, 6),
-(false, false, '2025-06-17', '14:00:00', 15, 7),
-(true, false, '2025-06-17', '17:00:00', 15, 8),
-(false, false, '2025-06-17', '20:00:00', 16, 9),
-(true, true, '2025-06-18', '14:00:00', 16, 10),
-(false, false, '2025-06-18', '17:00:00', 16, 11),
-(true, false, '2025-06-18', '20:00:00', 16, 12),
-(false, false, '2025-06-19', '14:00:00', 16, 13),
+(true, false, '2025-06-16', '14:00:00', 3, 4, false),
+(false, false, '2025-06-16', '17:00:00', 3, 5, false),
+(true, true, '2025-06-16', '20:00:00', 3, 6, false),
+(false, false, '2025-06-17', '14:00:00', 3, 7, true),
+(true, false, '2025-06-17', '17:00:00', 3, 8, false),
+
+-- Sessões para a Sala 7
+(false, false, '2025-06-17', '20:00:00', 7, 9, false),
+(true, true, '2025-06-18', '14:00:00', 7, 10, false),
+(false, false, '2025-06-18', '17:00:00', 7, 11, false),
+(true, false, '2025-06-18', '20:00:00', 7, 12, false),
+(false, false, '2025-06-19', '14:00:00', 7, 13, false),
 
 -- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 17, 5),
-(false, false, '2025-06-16', '17:00:00', 17, 6),
-(true, false, '2025-06-16', '20:00:00', 17, 7),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 17, 8),
-(true, false, '2025-06-17', '17:00:00', 17, 9),
-(false, false, '2025-06-17', '20:00:00', 18, 10),
-(true, false, '2025-06-18', '14:00:00', 18, 11),
-(false, false, '2025-06-18', '17:00:00', 18, 12),
-(true, false, '2025-06-18', '20:00:00', 18, 13),
-(false, false, '2025-06-19', '14:00:00', 18, 14),
+(true, false, '2025-06-16', '14:00:00', 4, 5, false),
+(false, false, '2025-06-16', '17:00:00', 4, 6, false),
+(true, false, '2025-06-16', '20:00:00', 4, 7, true),   -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 4, 8, false),
+(true, false, '2025-06-17', '17:00:00', 4, 9, false),
 
--- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 19, 4),
-(false, false, '2025-06-16', '17:00:00', 19, 5),
-(true, true, '2025-06-16', '20:00:00', 19, 6),
-(false, false, '2025-06-17', '14:00:00', 19, 7),
-(true, false, '2025-06-17', '17:00:00', 19, 8),
-(false, false, '2025-06-17', '20:00:00', 20, 9),
-(true, true, '2025-06-18', '14:00:00', 20, 10),
-(false, false, '2025-06-18', '17:00:00', 20, 11),
-(true, false, '2025-06-18', '20:00:00', 20, 12),
-(false, false, '2025-06-19', '14:00:00', 20, 13),
+-- Sessões para a Sala 8
+(false, false, '2025-06-17', '20:00:00', 8, 10, false),
+(true, false, '2025-06-18', '14:00:00', 8, 11, false),
+(false, false, '2025-06-18', '17:00:00', 8, 12, false),
+(true, false, '2025-06-18', '20:00:00', 8, 13, false),
+(false, false, '2025-06-19', '14:00:00', 8, 14, false),
 
--- Sessões para a Sala 1
-(true, false, '2025-06-16', '14:00:00', 21, 2),
-(false, false, '2025-06-16', '17:00:00', 21, 3),
-(true, true, '2025-06-16', '20:00:00', 21, 4),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 21, 5),
-(true, false, '2025-06-17', '17:00:00', 21, 6),
-(false, false, '2025-06-17', '20:00:00', 25, 7),
-(true, true, '2025-06-18', '14:00:00', 25, 8),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 25, 9),
-(true, false, '2025-06-18', '20:00:00', 25, 10),
-(false, false, '2025-06-19', '14:00:00', 25, 11),
+-- Sessões para a Sala 9
+(true, false, '2025-06-16', '14:00:00', 9, 4, false),
+(false, false, '2025-06-16', '17:00:00', 9, 5, true),
+(true, true, '2025-06-16', '20:00:00', 9, 6, false),
+(false, false, '2025-06-17', '14:00:00', 9, 7, false),
+(true, false, '2025-06-17', '17:00:00', 9, 8, false),
 
--- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 22, 3),
-(false, false, '2025-06-16', '17:00:00', 22, 4),
-(true, true, '2025-06-16', '20:00:00', 22, 5),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 22, 6),
-(true, false, '2025-06-17', '17:00:00', 22, 7),
-(false, false, '2025-06-17', '20:00:00', 26, 8),
-(true, true, '2025-06-18', '14:00:00', 26, 9),
-(false, false, '2025-06-18', '17:00:00', 26, 10),
-(true, false, '2025-06-18', '20:00:00', 26, 11),
-(false, false, '2025-06-19', '14:00:00', 26, 12),
+-- Sessões para a Sala 10
+(false, false, '2025-06-17', '20:00:00', 10, 9, false),
+(true, true, '2025-06-18', '14:00:00', 10, 10, false),
+(false, false, '2025-06-18', '17:00:00', 10, 11, false),
+(true, false, '2025-06-18', '20:00:00', 10, 12, false),
+(false, false, '2025-06-19', '14:00:00', 10, 13, false),
 
--- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 23, 4),
-(false, false, '2025-06-16', '17:00:00', 23, 5),
-(true, true, '2025-06-16', '20:00:00', 23, 6),
-(false, false, '2025-06-17', '14:00:00', 23, 7),
-(true, false, '2025-06-17', '17:00:00', 23, 8),
-(false, false, '2025-06-17', '20:00:00', 27, 9),
-(true, true, '2025-06-18', '14:00:00', 27, 10),
-(false, false, '2025-06-18', '17:00:00', 27, 11),
-(true, false, '2025-06-18', '20:00:00', 27, 12),
-(false, false, '2025-06-19', '14:00:00', 27, 13),
+-- Sessões para a Sala 11
+(true, false, '2025-06-16', '14:00:00', 11, 2, false),
+(false, false, '2025-06-16', '17:00:00', 11, 3, false),
+(true, true, '2025-06-16', '20:00:00', 11, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 11, 5, false),
+(true, false, '2025-06-17', '17:00:00', 11, 6, false),
 
--- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 24, 5),
-(false, false, '2025-06-16', '17:00:00', 24, 6),
-(true, false, '2025-06-16', '20:00:00', 24, 7),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 24, 8),
-(true, false, '2025-06-17', '17:00:00', 24, 9),
-(false, false, '2025-06-17', '20:00:00', 28, 10),
-(true, false, '2025-06-18', '14:00:00', 28, 11),
-(false, false, '2025-06-18', '17:00:00', 28, 12),
-(true, false, '2025-06-18', '20:00:00', 28, 13),
-(false, false, '2025-06-19', '14:00:00', 28, 14);
+-- Sessões para a Sala 12
+(false, false, '2025-06-17', '20:00:00', 12, 7, false),
+(true, true, '2025-06-18', '14:00:00', 12, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 12, 9, false),
+(true, false, '2025-06-18', '20:00:00', 12, 10, false),
+(false, false, '2025-06-19', '14:00:00', 12, 11, false),
 
--- Sessões para a Sala 5
-(true, false, '2025-06-16', '14:00:00', 29, 4),
-(false, false, '2025-06-16', '17:00:00', 29, 5),
-(true, true, '2025-06-16', '20:00:00', 29, 6),
-(false, false, '2025-06-17', '14:00:00', 29, 7),
-(true, false, '2025-06-17', '17:00:00', 29, 8),
-(false, false, '2025-06-17', '20:00:00', 30, 9),
-(true, true, '2025-06-18', '14:00:00', 30, 30),
-(false, false, '2025-06-18', '17:00:00', 30, 11),
-(true, false, '2025-06-18', '20:00:00', 30, 12),
-(false, false, '2025-06-19', '14:00:00', 30, 13),
+-- Sessões para a Sala 13
+(true, false, '2025-06-16', '14:00:00', 13, 3, true),
+(false, false, '2025-06-16', '17:00:00', 13, 4, false),
+(true, true, '2025-06-16', '20:00:00', 13, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 13, 6, false),
+(true, false, '2025-06-17', '17:00:00', 13, 7, false),
 
--- Sessões para a Sala 1
-(true, false, '2025-06-16', '14:00:00', 31, 2),
-(false, false, '2025-06-16', '17:00:00', 31, 3),
-(true, true, '2025-06-16', '20:00:00', 31, 4),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 31, 5),
-(true, false, '2025-06-17', '17:00:00', 31, 6),
-(false, false, '2025-06-17', '20:00:00', 35, 7),
-(true, true, '2025-06-18', '14:00:00', 35, 8),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 35, 9),
-(true, false, '2025-06-18', '20:00:00', 35, 10),
-(false, false, '2025-06-19', '14:00:00', 35, 11),
+-- Sessões para a Sala 14
+(false, false, '2025-06-17', '20:00:00', 14, 8, false),
+(true, true, '2025-06-18', '14:00:00', 14, 9, false),
+(false, false, '2025-06-18', '17:00:00', 14, 10, false),
+(true, false, '2025-06-18', '20:00:00', 14, 11, false),
+(false, false, '2025-06-19', '14:00:00', 14, 12, false),
 
--- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 32, 3),
-(false, false, '2025-06-16', '17:00:00', 32, 4),
-(true, true, '2025-06-16', '20:00:00', 32, 5),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 32, 6),
-(true, false, '2025-06-17', '17:00:00', 32, 7),
-(false, false, '2025-06-17', '20:00:00', 36, 8),
-(true, true, '2025-06-18', '14:00:00', 36, 9),
-(false, false, '2025-06-18', '17:00:00', 36, 10),
-(true, false, '2025-06-18', '20:00:00', 36, 11),
-(false, false, '2025-06-19', '14:00:00', 36, 12),
+-- Sessões para a Sala 15
+(true, false, '2025-06-16', '14:00:00', 15, 4, false),
+(false, false, '2025-06-16', '17:00:00', 15, 5, false),
+(true, true, '2025-06-16', '20:00:00', 15, 6, false),
+(false, false, '2025-06-17', '14:00:00', 15, 7, true),
+(true, false, '2025-06-17', '17:00:00', 15, 8, false),
 
--- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 33, 4),
-(false, false, '2025-06-16', '17:00:00', 33, 5),
-(true, true, '2025-06-16', '20:00:00', 33, 6),
-(false, false, '2025-06-17', '14:00:00', 33, 7),
-(true, false, '2025-06-17', '17:00:00', 33, 8),
-(false, false, '2025-06-17', '20:00:00', 37, 9),
-(true, true, '2025-06-18', '14:00:00', 37, 10),
-(false, false, '2025-06-18', '17:00:00', 37, 11),
-(true, false, '2025-06-18', '20:00:00', 37, 12),
-(false, false, '2025-06-19', '14:00:00', 37, 13),
+-- Sessões para a Sala 16
+(false, false, '2025-06-17', '20:00:00', 16, 9, false),
+(true, true, '2025-06-18', '14:00:00', 16, 10, false),
+(false, false, '2025-06-18', '17:00:00', 16, 11, false),
+(true, false, '2025-06-18', '20:00:00', 16, 12, false),
+(false, false, '2025-06-19', '14:00:00', 16, 13, false),
 
--- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 34, 5),
-(false, false, '2025-06-16', '17:00:00', 34, 6),
-(true, false, '2025-06-16', '20:00:00', 34, 7),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 34, 8),
-(true, false, '2025-06-17', '17:00:00', 34, 9),
-(false, false, '2025-06-17', '20:00:00', 38, 10),
-(true, false, '2025-06-18', '14:00:00', 38, 11),
-(false, false, '2025-06-18', '17:00:00', 38, 12),
-(true, false, '2025-06-18', '20:00:00', 38, 13),
-(false, false, '2025-06-19', '14:00:00', 38, 14),
+-- Sessões para a Sala 17 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 17, 5, false),
+(false, false, '2025-06-16', '17:00:00', 17, 6, false),
+(true, false, '2025-06-16', '20:00:00', 17, 7, false),  -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 17, 8, false),
+(true, false, '2025-06-17', '17:00:00', 17, 9, false),
 
--- Sessões para a Sala 5
-(true, false, '2025-06-16', '14:00:00', 39, 4),
-(false, false, '2025-06-16', '17:00:00', 39, 5),
-(true, true, '2025-06-16', '20:00:00', 39, 6),
-(false, false, '2025-06-17', '14:00:00', 39, 7),
-(true, false, '2025-06-17', '17:00:00', 39, 8),
-(false, false, '2025-06-17', '20:00:00', 40, 9),
-(true, true, '2025-06-18', '14:00:00', 40, 10),
-(false, false, '2025-06-18', '17:00:00', 40, 11),
-(true, false, '2025-06-18', '20:00:00', 40, 12),
-(false, false, '2025-06-19', '14:00:00', 40, 13),
+-- Sessões para a Sala 18
+(false, false, '2025-06-17', '20:00:00', 18, 10, true),
+(true, false, '2025-06-18', '14:00:00', 18, 11, false),
+(false, false, '2025-06-18', '17:00:00', 18, 12, false),
+(true, false, '2025-06-18', '20:00:00', 18, 13, false),
+(false, false, '2025-06-19', '14:00:00', 18, 14, false),
 
--- Sessões para a Sala 1
-(true, false, '2025-06-16', '14:00:00', 41, 2),
-(false, false, '2025-06-16', '17:00:00', 41, 3),
-(true, true, '2025-06-16', '20:00:00', 41, 4),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 41, 5),
-(true, false, '2025-06-17', '17:00:00', 41, 6),
-(false, false, '2025-06-17', '20:00:00', 45, 7),
-(true, true, '2025-06-18', '14:00:00', 45, 8),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 45, 9),
-(true, false, '2025-06-18', '20:00:00', 45, 10),
-(false, false, '2025-06-19', '14:00:00', 45, 11),
+-- Sessões para a Sala 19
+(true, false, '2025-06-16', '14:00:00', 19, 4, false),
+(false, false, '2025-06-16', '17:00:00', 19, 5, false),
+(true, true, '2025-06-16', '20:00:00', 19, 6, true),
+(false, false, '2025-06-17', '14:00:00', 19, 7, false),
+(true, false, '2025-06-17', '17:00:00', 19, 8, false),
 
--- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 42, 3),
-(false, false, '2025-06-16', '17:00:00', 42, 4),
-(true, true, '2025-06-16', '20:00:00', 42, 5),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 42, 6),
-(true, false, '2025-06-17', '17:00:00', 42, 7),
-(false, false, '2025-06-17', '20:00:00', 46, 8),
-(true, true, '2025-06-18', '14:00:00', 46, 9),
-(false, false, '2025-06-18', '17:00:00', 46, 10),
-(true, false, '2025-06-18', '20:00:00', 46, 11),
-(false, false, '2025-06-19', '14:00:00', 46, 12),
+-- Sessões para a Sala 20
+(false, false, '2025-06-17', '20:00:00', 20, 9, false),
+(true, true, '2025-06-18', '14:00:00', 20, 10, false),
+(false, false, '2025-06-18', '17:00:00', 20, 11, false),
+(true, false, '2025-06-18', '20:00:00', 20, 12, false),
+(false, false, '2025-06-19', '14:00:00', 20, 13, false),
 
--- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 43, 4),
-(false, false, '2025-06-16', '17:00:00', 43, 5),
-(true, true, '2025-06-16', '20:00:00', 43, 6),
-(false, false, '2025-06-17', '14:00:00', 43, 7),
-(true, false, '2025-06-17', '17:00:00', 43, 8),
-(false, false, '2025-06-17', '20:00:00', 47, 9),
-(true, true, '2025-06-18', '14:00:00', 47, 10),
-(false, false, '2025-06-18', '17:00:00', 47, 11),
-(true, false, '2025-06-18', '20:00:00', 47, 12),
-(false, false, '2025-06-19', '14:00:00', 47, 13),
+-- Sessões para a Sala 21
+(true, false, '2025-06-16', '14:00:00', 21, 2, false),
+(false, false, '2025-06-16', '17:00:00', 21, 3, false),
+(true, true, '2025-06-16', '20:00:00', 21, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 21, 5, false),
+(true, false, '2025-06-17', '17:00:00', 21, 6, false),
 
--- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 44, 5),
-(false, false, '2025-06-16', '17:00:00', 44, 6),
-(true, false, '2025-06-16', '20:00:00', 44, 7),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 44, 8),
-(true, false, '2025-06-17', '17:00:00', 44, 9),
-(false, false, '2025-06-17', '20:00:00', 48, 10),
-(true, false, '2025-06-18', '14:00:00', 48, 11),
-(false, false, '2025-06-18', '17:00:00', 48, 12),
-(true, false, '2025-06-18', '20:00:00', 48, 13),
-(false, false, '2025-06-19', '14:00:00', 48, 14),
+-- Sessões para a Sala 25
+(false, false, '2025-06-17', '20:00:00', 25, 7, false),
+(true, true, '2025-06-18', '14:00:00', 25, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 25, 9, false),
+(true, false, '2025-06-18', '20:00:00', 25, 10, false),
+(false, false, '2025-06-19', '14:00:00', 25, 11, false),
 
--- Sessões para a Sala 5
-(true, false, '2025-06-16', '14:00:00', 49, 4),
-(false, false, '2025-06-16', '17:00:00', 49, 5),
-(true, true, '2025-06-16', '20:00:00', 49, 6),
-(false, false, '2025-06-17', '14:00:00', 49, 7),
-(true, false, '2025-06-17', '17:00:00', 49, 8),
-(false, false, '2025-06-17', '20:00:00', 50, 9),
-(true, true, '2025-06-18', '14:00:00', 50, 10),
-(false, false, '2025-06-18', '17:00:00', 50, 11),
-(true, false, '2025-06-18', '20:00:00', 50, 12),
-(false, false, '2025-06-19', '14:00:00', 50, 13);
+-- Sessões para a Sala 22
+(true, false, '2025-06-16', '14:00:00', 22, 3, false),
+(false, false, '2025-06-16', '17:00:00', 22, 4, false),
+(true, true, '2025-06-16', '20:00:00', 22, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 22, 6, true),
+(true, false, '2025-06-17', '17:00:00', 22, 7, false),
+-- Sessões para a Sala 26
+(false, false, '2025-06-17', '20:00:00', 26, 8, false),
+(true, true, '2025-06-18', '14:00:00', 26, 9, false),
+(false, false, '2025-06-18', '17:00:00', 26, 10, false),
+(true, false, '2025-06-18', '20:00:00', 26, 11, false),
+(false, false, '2025-06-19', '14:00:00', 26, 12, false),
+
+-- Sessões para a Sala 23
+(true, false, '2025-06-16', '14:00:00', 23, 4, false),
+(false, false, '2025-06-16', '17:00:00', 23, 5, false),
+(true, true, '2025-06-16', '20:00:00', 23, 6, true),
+(false, false, '2025-06-17', '14:00:00', 23, 7, false),
+(true, false, '2025-06-17', '17:00:00', 23, 8, false),
+
+-- Sessões para a Sala 27
+(false, false, '2025-06-17', '20:00:00', 27, 9, false),
+(true, true, '2025-06-18', '14:00:00', 27, 10, false),
+(false, false, '2025-06-18', '17:00:00', 27, 11, false),
+(true, false, '2025-06-18', '20:00:00', 27, 12, false),
+(false, false, '2025-06-19', '14:00:00', 27, 13, false),
+
+-- Sessões para a Sala 24 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 24, 5, false),
+(false, false, '2025-06-16', '17:00:00', 24, 6, false),
+(true, false, '2025-06-16', '20:00:00', 24, 7, false),  -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 24, 8, false),
+(true, false, '2025-06-17', '17:00:00', 24, 9, false),
+
+-- Sessões para a Sala 28
+(false, false, '2025-06-17', '20:00:00', 28, 10, false),
+(true, false, '2025-06-18', '14:00:00', 28, 11, false),
+(false, false, '2025-06-18', '17:00:00', 28, 12, true),
+(true, false, '2025-06-18', '20:00:00', 28, 13, false),
+(false, false, '2025-06-19', '14:00:00', 28, 14, false),
+
+-- Sessões para a Sala 29
+(true, false, '2025-06-16', '14:00:00', 29, 4, true),
+(false, false, '2025-06-16', '17:00:00', 29, 5, false),
+(true, true, '2025-06-16', '20:00:00', 29, 6, false),
+(false, false, '2025-06-17', '14:00:00', 29, 7, false),
+(true, false, '2025-06-17', '17:00:00', 29, 8, false),
+
+-- Sessões para a Sala 30
+(false, false, '2025-06-17', '20:00:00', 30, 9, false),
+(true, true, '2025-06-18', '14:00:00', 30, 10, false),
+(false, false, '2025-06-18', '17:00:00', 30, 11, false),
+(true, false, '2025-06-18', '20:00:00', 30, 12, false),
+(false, false, '2025-06-19', '14:00:00', 30, 13, false),
+
+-- Sessões para a Sala 31
+(true, false, '2025-06-16', '14:00:00', 31, 2, false),
+(false, false, '2025-06-16', '17:00:00', 31, 3, false),
+(true, true, '2025-06-16', '20:00:00', 31, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 31, 5, false),
+(true, false, '2025-06-17', '17:00:00', 31, 6, false),
+
+-- Sessões para a Sala 35
+(false, false, '2025-06-17', '20:00:00', 35, 7, false),
+(true, true, '2025-06-18', '14:00:00', 35, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 35, 9, false),
+(true, false, '2025-06-18', '20:00:00', 35, 10, false),
+(false, false, '2025-06-19', '14:00:00', 35, 11, true),
+
+-- Sessões para a Sala 32
+(true, false, '2025-06-16', '14:00:00', 32, 3, false),
+(false, false, '2025-06-16', '17:00:00', 32, 4, false),
+(true, true, '2025-06-16', '20:00:00', 32, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 32, 6, false),
+(true, false, '2025-06-17', '17:00:00', 32, 7, true),
+
+-- Sessões para a Sala 36
+(false, false, '2025-06-17', '20:00:00', 36, 8, false),
+(true, true, '2025-06-18', '14:00:00', 36, 9, false),
+(false, false, '2025-06-18', '17:00:00', 36, 10, false),
+(true, false, '2025-06-18', '20:00:00', 36, 11, false),
+(false, false, '2025-06-19', '14:00:00', 36, 12, false),
+
+-- Sessões para a Sala 33
+(true, false, '2025-06-16', '14:00:00', 33, 4, false),
+(false, false, '2025-06-16', '17:00:00', 33, 5, false),
+(true, true, '2025-06-16', '20:00:00', 33, 6, false),
+(false, false, '2025-06-17', '14:00:00', 33, 7, false),
+(true, false, '2025-06-17', '17:00:00', 33, 8, false),
+
+-- Sessões para a Sala 37
+(false, false, '2025-06-17', '20:00:00', 37, 9, false),
+(true, true, '2025-06-18', '14:00:00', 37, 10, false),
+(false, false, '2025-06-18', '17:00:00', 37, 11, false),
+(true, false, '2025-06-18', '20:00:00', 37, 12, false),
+(false, false, '2025-06-19', '14:00:00', 37, 13, false),
+
+-- Sessões para a Sala 34 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 34, 5, false),
+(false, false, '2025-06-16', '17:00:00', 34, 6, false),
+(true, false, '2025-06-16', '20:00:00', 34, 7, false),  -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 34, 8, false),
+(true, false, '2025-06-17', '17:00:00', 34, 9, false),
+
+-- Sessões para a Sala 38
+(false, false, '2025-06-17', '20:00:00', 38, 10, false),
+(true, false, '2025-06-18', '14:00:00', 38, 11, false),
+(false, false, '2025-06-18', '17:00:00', 38, 12, false),
+(true, false, '2025-06-18', '20:00:00', 38, 13, false),
+(false, false, '2025-06-19', '14:00:00', 38, 14, false),
+
+-- Sessões para a Sala 39
+(true, false, '2025-06-16', '14:00:00', 39, 4, false),
+(false, false, '2025-06-16', '17:00:00', 39, 5, false),
+(true, true, '2025-06-16', '20:00:00', 39, 6, false),
+(false, false, '2025-06-17', '14:00:00', 39, 7, false),
+(true, false, '2025-06-17', '17:00:00', 39, 8, false),
+
+-- Sessões para a Sala 40
+(false, false, '2025-06-17', '20:00:00', 40, 9, false),
+(true, true, '2025-06-18', '14:00:00', 40, 10, false),
+(false, false, '2025-06-18', '17:00:00', 40, 11, true),
+(true, false, '2025-06-18', '20:00:00', 40, 12, false),
+(false, false, '2025-06-19', '14:00:00', 40, 13, false),
+
+-- Sessões para a Sala 41
+(true, false, '2025-06-16', '14:00:00', 41, 2, false),
+(false, false, '2025-06-16', '17:00:00', 41, 3, false),
+(true, true, '2025-06-16', '20:00:00', 41, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 41, 5, false),
+(true, false, '2025-06-17', '17:00:00', 41, 6, false),
+
+-- Sessões para a Sala 45
+(false, false, '2025-06-17', '20:00:00', 45, 7, false),
+(true, true, '2025-06-18', '14:00:00', 45, 8, true),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 45, 9, false),
+(true, false, '2025-06-18', '20:00:00', 45, 10, false),
+(false, false, '2025-06-19', '14:00:00', 45, 11, false),
+
+-- Sessões para a Sala 42
+(true, false, '2025-06-16', '14:00:00', 42, 3, false),
+(false, false, '2025-06-16', '17:00:00', 42, 4, false),
+(true, true, '2025-06-16', '20:00:00', 42, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 42, 6, false),
+(true, false, '2025-06-17', '17:00:00', 42, 7, false),
+
+-- Sessões para a Sala 46
+(false, false, '2025-06-17', '20:00:00', 46, 8, false),
+(true, true, '2025-06-18', '14:00:00', 46, 9, false),
+(false, false, '2025-06-18', '17:00:00', 46, 10, false),
+(true, false, '2025-06-18', '20:00:00', 46, 11, false),
+(false, false, '2025-06-19', '14:00:00', 46, 12, false),
+
+-- Sessões para a Sala 43
+(true, false, '2025-06-16', '14:00:00', 43, 4, false),
+(false, false, '2025-06-16', '17:00:00', 43, 5, false),
+(true, true, '2025-06-16', '20:00:00', 43, 6, true),
+(false, false, '2025-06-17', '14:00:00', 43, 7, false),
+(true, false, '2025-06-17', '17:00:00', 43, 8, false),
+
+-- Sessões para a Sala 47
+(false, false, '2025-06-17', '20:00:00', 47, 9, false),
+(true, true, '2025-06-18', '14:00:00', 47, 10, false),
+(false, false, '2025-06-18', '17:00:00', 47, 11, false),
+(true, false, '2025-06-18', '20:00:00', 47, 12, false),
+(false, false, '2025-06-19', '14:00:00', 47, 13, false),
+
+-- Sessões para a Sala 44 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 44, 5, false),
+(false, false, '2025-06-16', '17:00:00', 44, 6, false),
+(true, false, '2025-06-16', '20:00:00', 44, 7, false),  -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 44, 8, false),
+(true, false, '2025-06-17', '17:00:00', 44, 9, false),
+
+-- Sessões para a Sala 48
+(false, false, '2025-06-17', '20:00:00', 48, 10, false),
+(true, false, '2025-06-18', '14:00:00', 48, 11, false),
+(false, false, '2025-06-18', '17:00:00', 48, 12, false),
+(true, false, '2025-06-18', '20:00:00', 48, 13, false),
+(false, false, '2025-06-19', '14:00:00', 48, 14, false),
+
+-- Sessões para a Sala 49
+(true, false, '2025-06-16', '14:00:00', 49, 4, false),
+(false, false, '2025-06-16', '17:00:00', 49, 5, false),
+(true, true, '2025-06-16', '20:00:00', 49, 6, false),
+(false, false, '2025-06-17', '14:00:00', 49, 7, false),
+(true, false, '2025-06-17', '17:00:00', 49, 8, false),
+
+-- Sessões para a Sala 50
+(false, false, '2025-06-17', '20:00:00', 50, 9, false),
+(true, true, '2025-06-18', '14:00:00', 50, 10, false),
+(false, false, '2025-06-18', '17:00:00', 50, 11, false),
+(true, false, '2025-06-18', '20:00:00', 50, 12, false),
+(false, false, '2025-06-19', '14:00:00', 50, 13, false),
+
+-- Sessões para a Sala 51
+(true, false, '2025-06-16', '14:00:00', 51, 2, false),
+(false, false, '2025-06-16', '17:00:00', 51, 3, false),
+(true, true, '2025-06-16', '20:00:00', 51, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 51, 5, false),
+(true, false, '2025-06-17', '17:00:00', 51, 6, false),
+
+-- Sessões para a Sala 55
+(false, false, '2025-06-17', '20:00:00', 55, 7, false),
+(true, true, '2025-06-18', '14:00:00', 55, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 55, 9, false),
+(true, false, '2025-06-18', '20:00:00', 55, 10, false),
+(false, false, '2025-06-19', '14:00:00', 55, 11, true),
+
+-- Sessões para a Sala 52
+(true, false, '2025-06-16', '14:00:00', 52, 3, false),
+(false, false, '2025-06-16', '17:00:00', 52, 4, false),
+(true, true, '2025-06-16', '20:00:00', 52, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 52, 6, false),
+(true, false, '2025-06-17', '17:00:00', 52, 7, false),
+
+-- Sessões para a Sala 56
+(false, false, '2025-06-17', '20:00:00', 56, 8, false),
+(true, true, '2025-06-18', '14:00:00', 56, 9, false),
+(false, false, '2025-06-18', '17:00:00', 56, 10, true),
+(true, false, '2025-06-18', '20:00:00', 56, 11, false),
+(false, false, '2025-06-19', '14:00:00', 56, 12, false),
+
+-- Sessões para a Sala 53
+(true, false, '2025-06-16', '14:00:00', 53, 4, false),
+(false, false, '2025-06-16', '17:00:00', 53, 5, false),
+(true, true, '2025-06-16', '20:00:00', 53, 6, false),
+(false, false, '2025-06-17', '14:00:00', 53, 7, true),
+(true, false, '2025-06-17', '17:00:00', 53, 8, false),
+
+-- Sessões para a Sala 57
+(false, false, '2025-06-17', '20:00:00', 57, 9, false),
+(true, true, '2025-06-18', '14:00:00', 57, 10, false),
+(false, false, '2025-06-18', '17:00:00', 57, 11, false),
+(true, false, '2025-06-18', '20:00:00', 57, 12, false),
+(false, false, '2025-06-19', '14:00:00', 57, 13, false),
+
+-- Sessões para a Sala 54 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 54, 5, false),
+(false, false, '2025-06-16', '17:00:00', 54, 6, false),
+(true, false, '2025-06-16', '20:00:00', 54, 7, true),   -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 54, 8, false),
+(true, false, '2025-06-17', '17:00:00', 54, 9, false),
+
+-- Sessões para a Sala 58
+(false, false, '2025-06-17', '20:00:00', 58, 10, false),
+(true, false, '2025-06-18', '14:00:00', 58, 11, false),
+(false, false, '2025-06-18', '17:00:00', 58, 12, false),
+(true, false, '2025-06-18', '20:00:00', 58, 13, false),
+(false, false, '2025-06-19', '14:00:00', 58, 14, false),
+
+-- Sessões para a Sala 59
+(true, false, '2025-06-16', '14:00:00', 59, 4, false),
+(false, false, '2025-06-16', '17:00:00', 59, 5, true),
+(true, true, '2025-06-16', '20:00:00', 59, 6, false),
+(false, false, '2025-06-17', '14:00:00', 59, 7, false),
+(true, false, '2025-06-17', '17:00:00', 59, 8, false),
+
+-- Sessões para a Sala 60
+(false, false, '2025-06-17', '20:00:00', 60, 9, false),
+(true, true, '2025-06-18', '14:00:00', 60, 10, false),
+(false, false, '2025-06-18', '17:00:00', 60, 11, false),
+(true, false, '2025-06-18', '20:00:00', 60, 12, false),
+(false, false, '2025-06-19', '14:00:00', 60, 13, false),
+
+-- Sessões para a Sala 61
+(true, false, '2025-06-16', '14:00:00', 61, 2, false),
+(false, false, '2025-06-16', '17:00:00', 61, 3, false),
+(true, true, '2025-06-16', '20:00:00', 61, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 61, 5, false),
+(true, false, '2025-06-17', '17:00:00', 61, 6, false),
+
+-- Sessões para a Sala 62
+(false, false, '2025-06-17', '20:00:00', 62, 7, false),
+(true, true, '2025-06-18', '14:00:00', 62, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 62, 9, false),
+(true, false, '2025-06-18', '20:00:00', 62, 10, false),
+(false, false, '2025-06-19', '14:00:00', 62, 11, false),
+
+-- Sessões para a Sala 63
+(true, false, '2025-06-16', '14:00:00', 63, 3, true),
+(false, false, '2025-06-16', '17:00:00', 63, 4, false),
+(true, true, '2025-06-16', '20:00:00', 63, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 63, 6, false),
+(true, false, '2025-06-17', '17:00:00', 63, 7, false),
+
+-- Sessões para a Sala 64
+(false, false, '2025-06-17', '20:00:00', 64, 8, false),
+(true, true, '2025-06-18', '14:00:00', 64, 9, false),
+(false, false, '2025-06-18', '17:00:00', 64, 10, false),
+(true, false, '2025-06-18', '20:00:00', 64, 11, false),
+(false, false, '2025-06-19', '14:00:00', 64, 12, false),
+
+-- Sessões para a Sala 65
+(true, false, '2025-06-16', '14:00:00', 65, 4, false),
+(false, false, '2025-06-16', '17:00:00', 65, 5, false),
+(true, true, '2025-06-16', '20:00:00', 65, 6, false),
+(false, false, '2025-06-17', '14:00:00', 65, 7, true),
+(true, false, '2025-06-17', '17:00:00', 65, 8, false),
+
+-- Sessões para a Sala 66
+(false, false, '2025-06-17', '20:00:00', 66, 9, false),
+(true, true, '2025-06-18', '14:00:00', 66, 10, false),
+(false, false, '2025-06-18', '17:00:00', 66, 11, false),
+(true, false, '2025-06-18', '20:00:00', 66, 12, false),
+(false, false, '2025-06-19', '14:00:00', 66, 13, false),
+
+-- Sessões para a Sala 67 (esta sala não suporta 3D, segundo os dados anteriores)
+(true, false, '2025-06-16', '14:00:00', 67, 5, false),
+(false, false, '2025-06-16', '17:00:00', 67, 6, false),
+(true, false, '2025-06-16', '20:00:00', 67, 7, false),  -- eh_3d é false
+(false, false, '2025-06-17', '14:00:00', 67, 8, false),
+(true, false, '2025-06-17', '17:00:00', 67, 9, false),
+
+-- Sessões para a Sala 68
+(false, false, '2025-06-17', '20:00:00', 68, 10, true),
+(true, false, '2025-06-18', '14:00:00', 68, 11, false),
+(false, false, '2025-06-18', '17:00:00', 68, 12, false),
+(true, false, '2025-06-18', '20:00:00', 68, 13, false),
+(false, false, '2025-06-19', '14:00:00', 68, 14, false),
+
+-- Sessões para a Sala 69
+(true, false, '2025-06-16', '14:00:00', 69, 4, false),
+(false, false, '2025-06-16', '17:00:00', 69, 5, false),
+(true, true, '2025-06-16', '20:00:00', 69, 6, true),
+(false, false, '2025-06-17', '14:00:00', 69, 7, false),
+(true, false, '2025-06-17', '17:00:00', 69, 8, false),
+
+-- Sessões para a Sala 70
+(false, false, '2025-06-17', '20:00:00', 70, 9, false),
+(true, true, '2025-06-18', '14:00:00', 70, 10, false),
+(false, false, '2025-06-18', '17:00:00', 70, 11, false),
+(true, false, '2025-06-18', '20:00:00', 70, 12, false),
+(false, false, '2025-06-19', '14:00:00', 70, 13, false),
+
+-- Sessões para a Sala 71
+(true, false, '2025-06-16', '14:00:00', 71, 2, false),
+(false, false, '2025-06-16', '17:00:00', 71, 3, false),
+(true, true, '2025-06-16', '20:00:00', 71, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-17', '14:00:00', 71, 5, false),
+(true, false, '2025-06-17', '17:00:00', 71, 6, false),
+
+-- Sessões para a Sala 75
+(false, false, '2025-06-17', '20:00:00', 75, 7, false),
+(true, true, '2025-06-18', '14:00:00', 75, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-18', '17:00:00', 75, 9, false),
+(true, false, '2025-06-18', '20:00:00', 75, 10, false),
+(false, false, '2025-06-19', '14:00:00', 75, 11, false),
+
+-- Sessões para a Sala 72
+(true, false, '2025-06-16', '14:00:00', 72, 3, false),
+(false, false, '2025-06-16', '17:00:00', 72, 4, false),
+(true, true, '2025-06-16', '20:00:00', 72, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-17', '14:00:00', 72, 6, true),
+(true, false, '2025-06-17', '17:00:00', 72, 7, false),
+
+-- Sessões para a Sala 74
+(false, false, '2025-06-17', '20:00:00', 74, 8, false),
+(true, true, '2025-06-18', '14:00:00', 74, 9, false),
+(false, false, '2025-06-18', '17:00:00', 74, 10, false),
+(true, false, '2025-06-18', '20:00:00', 74, 11, false),
+(false, false, '2025-06-19', '14:00:00', 74, 12, false),
+
+-- Sessões para a Sala 75
+(true, false, '2025-06-16', '14:00:00', 75, 4, false),
+(false, false, '2025-06-16', '17:00:00', 75, 5, false),
+(true, true, '2025-06-16', '20:00:00', 75, 6, true),
+(false, false, '2025-06-17', '14:00:00', 75, 7, false),
+(true, false, '2025-06-17', '17:00:00', 75, 8, false);
+
 
 INSERT INTO funcionario (cpf, nome, sobrenome, data_inicio_contratado, data_fim_contrato, trabalha_em) VALUES
 -- Funcionários para o cinema 12345678000101
@@ -1388,3 +1647,167 @@ INSERT INTO administrador (cpf, email, senha) VALUES
 ('88888888802', 'elisa.brito@emailcorp.com', 'AdmEldorado*Mark'),
 ('99999999902', 'sarah.brito@emailcorp.com', 'AdmReserva(Nit)'),
 ('10101010107', 'yuri.siqueira@emailcorp.com', 'AdmCineBSB_107');
+
+
+-- Poltronas
+DO $$
+DECLARE
+    -- Declara uma variável do tipo RECORD para armazenar cada linha da tabela 'sala' durante o loop.
+    sala_rec RECORD;
+    -- Variáveis para os contadores dos loops de fileiras e poltronas.
+    contador_letra INTEGER;
+    contador_numero INTEGER;
+BEGIN
+    -- Etapa 1: Limpar a tabela 'poltrona' e tabelas relacionadas para evitar dados duplicados.
+    -- O CASCADE remove registros dependentes (ex: ingressos).
+    RAISE NOTICE 'Limpando a tabela de poltronas (e registros relacionados)...';
+    TRUNCATE TABLE poltrona RESTART IDENTITY CASCADE;
+
+    RAISE NOTICE 'Iniciando o processo de inserção de poltronas...';
+
+    -- Etapa 2: Iterar sobre cada sala que está ativa no sistema.
+    -- Isso evita a criação de poltronas para salas desativadas ou em manutenção.
+    FOR sala_rec IN
+        SELECT numero, profundidade, largura
+        FROM sala
+        WHERE eh_ativo = TRUE
+    LOOP
+        RAISE NOTICE 'Gerando poltronas para a Sala ID: % (Dimensões: %x%)', sala_rec.numero, sala_rec.profundidade, sala_rec.largura;
+
+        -- Etapa 3: Loop para as fileiras (profundidade). A letra será gerada a partir deste contador.
+        FOR contador_letra IN 1..sala_rec.profundidade LOOP
+            -- Verifica se o número de fileiras não ultrapassa o alfabeto (26 letras).
+            IF contador_letra > 26 THEN
+                RAISE WARNING 'A profundidade da sala % excede 26 fileiras. Fileiras após a letra Z serão ignoradas.', sala_rec.numero;
+                EXIT; -- Sai do loop de letras para esta sala.
+            END IF;
+
+            -- Etapa 4: Loop para as poltronas em cada fileira (largura).
+            FOR contador_numero IN 1..sala_rec.largura LOOP
+
+                -- Etapa 5: Inserir a poltrona na tabela.
+                INSERT INTO poltrona (
+                    numero,
+                    letra,
+                    sala_id,
+                    tipo
+                ) VALUES (
+                    contador_numero,                  -- Número da poltrona na fileira (ex: 1, 2, 3...)
+                    CHR(64 + contador_letra),         -- Converte o contador da fileira em uma letra (1->'A', 2->'B', ...)
+                    sala_rec.numero,                  -- ID da sala à qual a poltrona pertence
+                    1                                 -- Define um 'tipo' padrão (ex: 1 = Padrão). Ajuste se necessário.
+                );
+
+            END LOOP; -- Fim do loop de números de poltrona
+        END LOOP; -- Fim do loop de letras de fileira
+
+        RAISE NOTICE 'Poltronas para a Sala ID: % inseridas com sucesso.', sala_rec.numero;
+
+    END LOOP; -- Fim do loop de salas
+
+    RAISE NOTICE 'Processo de preenchimento da tabela de poltronas concluído.';
+END $$;
+
+DO $$
+DECLARE
+    v_clientes CHAR(11)[];
+    v_poltronas tipo_poltrona_sessao[];
+    v_total_ingressos INT := 0;
+
+    v_poltrona tipo_poltrona_sessao;
+    v_cliente_id CHAR(11);
+    v_valor NUMERIC(10,2);
+    v_data_compra DATE;
+    v_hora_compra TIME;
+    v_forma_pagamento VARCHAR(50);
+    v_tipo SMALLINT;
+    v_index INT;
+
+    formas_pagamento VARCHAR[] := ARRAY['dinheiro', 'débito', 'crédito', 'pix'];
+    valores_permitidos NUMERIC[] := ARRAY[20.00, 40.00, 60.00, 80.00];
+BEGIN
+    RAISE NOTICE 'Carregando clientes e poltronas disponíveis...';
+
+    -- Carrega todos os clientes em um array
+    SELECT array_agg(cpf) INTO v_clientes FROM cliente;
+
+    -- Carrega todas as combinações de sessões + poltronas disponíveis
+    FOR v_poltrona IN
+        SELECT 
+            s.numero,
+            p.numero,
+            p.letra,
+            s.sala_id,
+            s.data
+        FROM sessao s
+        JOIN poltrona p ON s.sala_id = p.sala_id
+        WHERE s.cancelada = FALSE
+        AND NOT EXISTS (
+            SELECT 1 FROM ingresso i
+            WHERE i.sessao_id = s.numero
+              AND i.poltrona_numero = p.numero
+              AND i.poltrona_letra = p.letra
+        )
+    LOOP
+        v_poltronas := array_append(v_poltronas, v_poltrona);
+    END LOOP;
+
+    RAISE NOTICE 'Total de clientes: %, Total de poltronas disponíveis: %', array_length(v_clientes, 1), array_length(v_poltronas, 1);
+
+    -- Loop de inserção
+    WHILE v_total_ingressos < 10000 AND array_length(v_poltronas,1) > 0 LOOP
+        -- Escolhe índice aleatório da poltrona disponível
+        v_index := floor(random() * array_length(v_poltronas,1) + 1)::INT;
+        v_poltrona := v_poltronas[v_index];
+
+        -- Remove poltrona usada (swap com a última e remove última posição)
+        v_poltronas[v_index] := v_poltronas[array_upper(v_poltronas,1)];
+        v_poltronas := v_poltronas[1:array_upper(v_poltronas,1)-1];
+
+        -- Cliente aleatório
+        v_cliente_id := v_clientes[floor(random() * array_length(v_clientes,1) + 1)::INT];
+
+        -- Dados do ingresso
+        v_valor := valores_permitidos[floor(random() * array_length(valores_permitidos, 1)) + 1];
+        v_tipo := (floor(random() * 3) + 1)::SMALLINT;
+        v_forma_pagamento := formas_pagamento[floor(random() * array_length(formas_pagamento, 1)) + 1];
+        v_data_compra := CURRENT_DATE - ((floor(random() * 30) + 1)::INT * INTERVAL '1 day');
+
+        -- Horário entre 10:00 e 22:00 horas (inclusive), arredondado para hora cheia
+        v_hora_compra := MAKE_TIME(
+            floor(random() * 13 + 10)::INT,  -- gera número inteiro entre 10 e 22
+            0,
+            0
+        );
+
+        -- Inserção
+        INSERT INTO ingresso (
+            tipo,
+            valor,
+            data,
+            hora,
+            forma_pagamento,
+            cliente_id,
+            sessao_id,
+            poltrona_numero,
+            poltrona_letra,
+            poltrona_sala_id
+        )
+        VALUES (
+            v_tipo,
+            v_valor,
+            v_data_compra,
+            v_hora_compra,
+            v_forma_pagamento,
+            v_cliente_id,
+            v_poltrona.sessao_id,
+            v_poltrona.poltrona_numero,
+            v_poltrona.poltrona_letra,
+            v_poltrona.poltrona_sala_id
+        );
+
+        v_total_ingressos := v_total_ingressos + 1;
+    END LOOP;
+
+    RAISE NOTICE 'Inserção finalizada: % ingressos inseridos.', v_total_ingressos;
+END $$;
