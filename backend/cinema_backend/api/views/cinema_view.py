@@ -6,14 +6,14 @@ from rest_framework import status
 
 class CinemaView(ViewSet):
     permission_classes = [AllowAny]
-    def retrieve(self, request, pk):
+    def list(self, request):
+        search = request.query_params.get("search")
 
         query = """
         SELECT
         C.nome AS cinema_nome,
         C.cnpj,
-        F.nome as gerente_nome,
-        F.sobrenome as gerente_sobrenome,
+        F.nome || ' ' || F.sobrenome as gerente_nome_completo,
         C.rua,
         C.n_end,
         C.complemento,
@@ -28,7 +28,7 @@ class CinemaView(ViewSet):
         C.nome LIKE %s
         """
 
-        client_data = RawSQLHelper.execute_query(query, [f"%{pk}%"])
+        client_data = RawSQLHelper.execute_query(query, [f"%{search}%"])
         return Response(client_data)
 
     def create(self, request):

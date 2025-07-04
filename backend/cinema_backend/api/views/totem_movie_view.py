@@ -3,14 +3,15 @@ from rest_framework.viewsets import ViewSet
 from api.utils import RawSQLHelper
 from rest_framework.permissions import AllowAny
 from django.utils import timezone
+import base64
 
 
 class TotemMovieView(ViewSet):
     permission_classes = [AllowAny]
-    def retrieve(self, request, pk):
 
-        today = timezone.localdate()
-        now = timezone.localtime().time()
+    def retrieve(self, request, pk):
+        today = timezone.localdate().isoformat()           # 'YYYY-MM-DD'
+        now = timezone.localtime().strftime('%H:%M:%S')    # 'HH:MM:SS'
 
         query = """
             SELECT
@@ -36,8 +37,8 @@ class TotemMovieView(ViewSet):
             WHERE
                 sa.cinema_id = %s
                 AND (
-                se.data > %s
-                OR (se.data = %s AND se.hora >= %s)
+                    se.data >= %s
+                    OR (se.data = %s AND se.hora >= %s)
                 )
             GROUP BY
                 se.data, f.id, f.titulo, f.ano, f.diretor, f.class_ind, f.idioma, f.duracao, f.eh_dub, f.fim_contrato, f.descricao

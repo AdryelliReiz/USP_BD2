@@ -8,7 +8,7 @@ class CinemaReportView(viewsets.ViewSet):
 
     permission_classes = [IsAdmin]
 
-    def get(self, request):
+    def list(self, request):
         cnpj = request.query_params.get("cinema_cnpj")
 
          # 1. Faturamento do mes anterior

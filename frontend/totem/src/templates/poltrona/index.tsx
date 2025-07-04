@@ -62,30 +62,48 @@ const Poltrona = () => {
         <div className="container">
           <div className="screen">TELA</div>
           <div className="seats-container">
-            {seats.flat().map((seat) => (
-              <div
-                key={seat.letra + seat.numero}
-                className={`seat ${
-                  (seat.ocupada)
-                    ? "occupied"
-                    : selectedSeats.includes(seat.letra + seat.numero)
-                    ? "selected"
-                    : seat.letra === "A" || seat.letra === "B"
-                    ? "vip"
-                    : "available"
-                }`}
-                onClick={() => toggleSeat(seat.letra + seat.numero)}
-              >
-                {seat.ocupada ? (
-                  <TbArmchair2Off />
-                ) : (
-                  <RiArmchairLine />
-                )}
-                <span>{seat.letra + seat.numero}</span>
-              </div>
-            ))}
+            {(() => {
+              // Agrupar os assentos por letra (fileira)
+              const seatsByRow = seats.reduce<Record<string, Seat[]>>((acc, seat) => {
+                if (!acc[seat.letra]) acc[seat.letra] = [];
+                acc[seat.letra].push(seat);
+                return acc;
+              }, {});
+
+              // Ordenar as letras das fileiras
+              const sortedLetters = Object.keys(seatsByRow).sort((a, b) => a.localeCompare(b));
+
+              return sortedLetters.map((letra) => (
+                <div key={letra} className="seat-row">
+                  <span className="row-label">{letra}</span>
+                  <div className="row-seats">
+                    {seatsByRow[letra]
+                      .sort((a, b) => a.numero - b.numero)
+                      .map((seat) => (
+                        <div
+                          key={seat.letra + seat.numero}
+                          className={`seat ${
+                            seat.ocupada
+                              ? "occupied"
+                              : selectedSeats.includes(seat.letra + seat.numero)
+                              ? "selected"
+                              : seat.letra === "A" || seat.letra === "B"
+                              ? "vip"
+                              : "available"
+                          }`}
+                          onClick={() => toggleSeat(seat.letra + seat.numero)}
+                        >
+                          {seat.ocupada ? <TbArmchair2Off /> : <RiArmchairLine />}
+                          <span>{seat.letra + seat.numero}</span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ));
+            })()}
           </div>
         </div>
+
       </div>
       <div className="footer">
         <button

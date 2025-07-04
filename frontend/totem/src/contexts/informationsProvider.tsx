@@ -5,7 +5,7 @@ export interface SelectedTicket {
     name: string; // Nome do ingresso
     quantity: number; // Quantidade selecionada
     value: number; // Valor unitário
-    tipo: 'monetario' | 'pontos'; // Tipo do ingresso
+    tipo: number // Tipo do ingresso
 }
 type Payment = "credito" | "debito" | "pix" | null;
 

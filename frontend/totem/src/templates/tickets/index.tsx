@@ -6,6 +6,7 @@ import api from "../../services/api";
 import formatarHora from "../../utils/formatarHora";
 
 type Ticket = {
+    tipo: number;
     valor: number;
     nome: string;
     tipo_pago: "monetario" | "pontos";
@@ -54,7 +55,7 @@ export default function Tickets() {
             }).filter(Boolean); // Remove os tickets com quantidade zero.
         } else if (operation === "plus") {
             // Adiciona um novo ingresso se ele ainda não estiver na lista (somente ao adicionar).
-            updatedTickets = [...selectedTickets, { name: allTickets[id].nome, value: allTickets[id].valor, tipo: allTickets[id].tipo_pago, quantity: 1 }];
+            updatedTickets = [...selectedTickets, { name: allTickets[id].nome, value: allTickets[id].valor, tipo: allTickets[id].tipo, quantity: 1 }];
         } else {
             // Não faz nada se tentarmos remover um ingresso que não existe.
             return false;
@@ -111,7 +112,7 @@ export default function Tickets() {
                             key={index}
                             name={ticket.nome}
                             value={ticket.valor}
-                            type={ticket.tipo_pago}
+                            type={ticket.tipo}
                             onQuantityChange={(quantity, operation) => updateSelection(index, quantity, operation)}
                         />
                     ))}

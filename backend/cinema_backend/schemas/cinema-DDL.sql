@@ -22,7 +22,7 @@ CREATE TABLE filme (
   diretor VARCHAR(255),
   class_ind SMALLINT,
   idioma VARCHAR(50),
-  duracao INTERVAL,
+  duracao TIME,
   eh_dub BOOLEAN,
   fim_contrato DATE,
   descricao TEXT,
@@ -140,14 +140,4 @@ CREATE TABLE administrador (
   email VARCHAR(255),
   senha VARCHAR(128),
   FOREIGN KEY (cpf) REFERENCES funcionario(cpf)
-);
-
-
--- TYPE para inserir ingressos
-CREATE TYPE tipo_poltrona_sessao AS (
-    sessao_id INT,
-    poltrona_numero INT,
-    poltrona_letra CHAR(1),
-    poltrona_sala_id INT,
-    sessao_data DATE
 );

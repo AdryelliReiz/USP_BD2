@@ -18,7 +18,7 @@ type sessionsMovieData = {
   fim_contrato: string;
   descricao: string;
   sessions: string[];
-  poster_url?: string;
+  cartaz?: string;
 }
 
 const Cinema: React.FC = () => {
@@ -77,9 +77,19 @@ const Cinema: React.FC = () => {
               )}
               className="film-poster-button"
             >
-              {film.poster_url ? <img src={film.poster_url} alt={film.titulo} className="film-poster" />
-              :   <img src="https://dummyimage.com/500x750/000/fff.jpg&text=Erro+na+imagem" alt={film.titulo} className="film-poster" />
-              }
+                {film.cartaz ? (
+                <img
+                  src={`data:image/jpeg;base64,${film.cartaz}`}
+                  alt={film.titulo}
+                  className="film-poster"
+                />
+                ) : (
+                <img
+                  src="https://dummyimage.com/500x750/000/fff.jpg&text=Erro+na+imagem"
+                  alt={film.titulo}
+                  className="film-poster"
+                />
+                )}
               
             </button>
             <p className="film-title">{film.titulo}</p>

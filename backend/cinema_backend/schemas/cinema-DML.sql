@@ -823,28 +823,6 @@ INSERT INTO genero (id, nome) VALUES
 (15, 'Faroeste'),
 (16, 'Policial');
 
-INSERT INTO filme (id, titulo, ano, diretor, class_ind, idioma, duracao, eh_dub, fim_contrato, descricao, cartaz) VALUES
-(1, 'A Herança de Órion', 2025, 'Sofia Almeida', 12, 'Português', '02:15:00', TRUE, '2028-12-31', 'Uma jovem astrônoma descobre que é herdeira de uma tecnologia ancestral capaz de salvar ou destruir a galáxia.', NULL),
-(2, 'O Riso no Fim do Mundo', 2025, 'Ricardo Mendes', 14, 'Português', '01:48:00', TRUE, '2029-05-20', 'Em meio a um apocalipse bizarro, um grupo de comediantes tenta manter o bom humor como forma de sobrevivência.', NULL),
-(3, 'Sombras do Silêncio', 2025, 'Juliana Costa', 16, 'Inglês', '01:55:00', FALSE, '2028-11-10', 'Uma família se muda para uma casa isolada onde qualquer ruído atrai criaturas mortais que caçam pelo som.', NULL),
-(4, 'Crônicas de Neo-Lisboa', 2025, 'Tiago Valente', 14, 'Português', '02:30:00', TRUE, '2030-01-15', 'Numa Lisboa futurista e distópica, um detetive investiga uma conspiração que envolve a elite da cidade e inteligência artificial.', NULL),
-(5, 'O Último Acorde', 2025, 'Clara Nunes', 10, 'Português', '02:05:00', TRUE, '2029-08-01', 'A jornada emocionante de uma jovem musicista que tenta salvar o teatro de sua cidade através de um grande espetáculo musical.', NULL),
-(6, 'Fronteira Esquecida', 2025, 'Marcos Oliveira', 16, 'Espanhol', '02:10:00', FALSE, '2028-09-22', 'Dois pistoleiros rivais precisam unir forças para proteger uma pequena cidade de um barão de terras impiedoso no sertão.', NULL),
-(7, 'A Viagem de Pipa', 2025, 'Ana Beatriz Leal', 0, 'Português', '01:32:00', TRUE, '2030-03-30', 'Uma pequena capivara curiosa embarca em uma grande aventura pela Mata Atlântica para encontrar sua família.', NULL),
-(8, 'Código Vermelho: Antártida', 2025, 'Lucas Barros', 14, 'Inglês', '02:25:00', FALSE, '2028-07-14', 'Uma equipe de cientistas em uma base remota na Antártida precisa lutar por sua vida quando um experimento falha e liberta uma ameaça.', NULL),
-(9, 'Nosso Lugar ao Sol', 2025, 'Fernanda Lima', 12, 'Português', '01:58:00', TRUE, '2029-06-18', 'Um romance de verão entre dois jovens de mundos diferentes que floresce em uma pequena cidade litorânea.', NULL),
-(10, 'Guardiões da Floresta Amazônica', 2025, 'Carlos Saldanha', 10, 'Português', '01:45:00', TRUE, '2029-10-05', 'Um documentário que segue a vida de ativistas e povos indígenas na linha de frente da proteção da Amazônia.', NULL),
-(11, 'O Legado do Dragão de Jade', 2025, 'Beatriz Rocha', 12, 'Mandarim', '02:08:00', FALSE, '2028-04-12', 'Uma jovem guerreira precisa dominar os cinco estilos do kung fu para recuperar um artefato místico roubado de seu templo.', NULL),
-(12, 'Labirinto de Espelhos', 2025, 'Gabriel Pereira', 16, 'Português', '02:12:00', TRUE, '2029-02-28', 'Um detetive atormentado pelo passado mergulha em um caso de assassinato onde cada pista revela mais sobre seus próprios demônios.', NULL),
-(13, 'O Resgate do Soldado Fernandes', 2025, 'Sérgio Machado', 16, 'Português', '02:40:00', TRUE, '2028-06-06', 'Durante a Segunda Guerra Mundial, um pelotão da FEB enfrenta perigos na Itália para resgatar um companheiro capturado.', NULL),
-(14, 'A Revolta das Máquinas Domésticas', 2025, 'Mariana Gomes', 10, 'Inglês', '01:35:00', TRUE, '2029-11-11', 'Quando a torradeira, o aspirador e a geladeira se cansam de ser maltratados, eles iniciam uma revolução cômica em casa.', NULL),
-(15, 'Ecos da Montanha Gelada', 2025, 'Rodrigo Santoro', 14, 'Português', '02:18:00', TRUE, '2028-10-20', 'Um alpinista precisa sobreviver aos perigos da natureza e a uma caçada humana após testemunhar um crime nas montanhas.', NULL),
-(16, 'A Confraria dos Segredos', 2025, 'Alice Braga', 14, 'Francês', '02:02:00', FALSE, '2029-09-09', 'Uma historiadora descobre uma sociedade secreta em Paris que guarda um segredo capaz de mudar o curso da história.', NULL),
-(17, 'O Predador das Profundezas', 2025, 'Felipe Moraes', 16, 'Inglês', '01:40:00', FALSE, '2028-08-08', 'Um grupo de mergulhadores libera acidentalmente uma criatura pré-histórica de uma caverna submarina.', NULL),
-(18, 'A Rainha de Copas', 2025, 'Carla Camurati', 18, 'Português', '02:22:00', TRUE, '2029-07-07', 'Drama intenso sobre a ascensão e queda de uma poderosa e manipuladora chefe do crime organizado no Rio de Janeiro.', NULL),
-(19, 'Planeta Verde: Uma Nova Esperança', 2025, 'Fernando Meirelles', 10, 'Português', '01:50:00', TRUE, '2030-04-22', 'Documentário otimista mostrando inovações e projetos ao redor do mundo que estão combatendo as mudanças climáticas.', NULL),
-(20, 'O Feitiço da Lua Sangrenta', 2025, 'Lúcia Murat', 14, 'Inglês', '01:59:00', FALSE, '2029-12-13', 'Em uma vila medieval, uma jovem acusada de bruxaria precisa provar sua inocência enquanto um mal antigo desperta.', NULL);
-
 INSERT INTO genero_filme (genero_id, filme_id) VALUES
 (4, 1), (12, 1),
 (2, 2), (3, 2),
@@ -980,527 +958,527 @@ INSERT INTO sala (numero, profundidade, largura, suporta_imax, suporta_3d, qtde_
 INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada) VALUES
 -- Sessões para a Sala 1
 (true, false, '2025-06-20', '14:00:00', 1, 2, false),
-(false, false, '2025-06-16', '17:00:00', 1, 3, false),
-(true, true, '2025-06-16', '20:00:00', 1, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 1, 5, false),
-(true, false, '2025-06-17', '17:00:00', 1, 6, false),
+(false, false, '2025-06-30', '17:00:00', 1, 3, false),
+(true, true, '2025-06-30', '20:00:00', 1, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-06', '14:00:00', 1, 5, false),
+(true, false, '2025-07-05', '17:00:00', 1, 6, false),
 
 -- Sessões para a Sala 5
-(false, false, '2025-06-17', '20:00:00', 5, 7, false),
-(true, true, '2025-06-18', '14:00:00', 5, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 5, 9, false),
-(true, false, '2025-06-18', '20:00:00', 5, 10, false),
-(false, false, '2025-06-19', '14:00:00', 5, 11, true),
+(false, false, '2025-07-06', '20:00:00', 5, 7, false),
+(true, true, '2025-07-04', '14:00:00', 5, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 5, 9, false),
+(true, false, '2025-07-04', '20:00:00', 5, 10, false),
+(false, false, '2025-07-05', '14:00:00', 5, 11, true),
 
 -- Sessões para a Sala 2
-(true, false, '2025-06-16', '14:00:00', 2, 3, false),
-(false, false, '2025-06-16', '17:00:00', 2, 4, false),
-(true, true, '2025-06-16', '20:00:00', 2, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 2, 6, false),
-(true, false, '2025-06-17', '17:00:00', 2, 7, false),
+(true, false, '2025-06-30', '14:00:00', 2, 3, false),
+(false, false, '2025-07-04', '17:00:00', 2, 4, false),
+(true, true, '2025-06-30', '20:00:00', 2, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 2, 6, false),
+(true, false, '2025-06-29', '17:00:00', 2, 7, false),
 
 -- Sessões para a Sala 6
-(false, false, '2025-06-17', '20:00:00', 6, 8, false),
-(true, true, '2025-06-18', '14:00:00', 6, 9, false),
-(false, false, '2025-06-18', '17:00:00', 6, 10, true),
-(true, false, '2025-06-18', '20:00:00', 6, 11, false),
-(false, false, '2025-06-19', '14:00:00', 6, 12, false),
+(false, false, '2025-06-29', '20:00:00', 6, 8, false),
+(true, true, '2025-07-04', '14:00:00', 6, 9, false),
+(false, false, '2025-07-04', '17:00:00', 6, 10, true),
+(true, false, '2025-07-04', '20:00:00', 6, 11, false),
+(false, false, '2025-07-05', '14:00:00', 6, 12, false),
 
 -- Sessões para a Sala 3
-(true, false, '2025-06-16', '14:00:00', 3, 4, false),
-(false, false, '2025-06-16', '17:00:00', 3, 5, false),
-(true, true, '2025-06-16', '20:00:00', 3, 6, false),
-(false, false, '2025-06-17', '14:00:00', 3, 7, true),
-(true, false, '2025-06-17', '17:00:00', 3, 8, false),
+(true, false, '2025-06-30', '14:00:00', 3, 4, false),
+(false, false, '2025-06-30', '17:00:00', 3, 5, false),
+(true, true, '2025-06-30', '20:00:00', 3, 6, false),
+(false, false, '2025-07-04', '14:00:00', 3, 7, true),
+(true, false, '2025-06-29', '17:00:00', 3, 8, false),
 
 -- Sessões para a Sala 7
-(false, false, '2025-06-17', '20:00:00', 7, 9, false),
-(true, true, '2025-06-18', '14:00:00', 7, 10, false),
-(false, false, '2025-06-18', '17:00:00', 7, 11, false),
-(true, false, '2025-06-18', '20:00:00', 7, 12, false),
-(false, false, '2025-06-19', '14:00:00', 7, 13, false),
+(false, false, '2025-06-29', '20:00:00', 7, 9, false),
+(true, true, '2025-07-04', '14:00:00', 7, 10, false),
+(false, false, '2025-07-04', '17:00:00', 7, 11, false),
+(true, false, '2025-07-04', '20:00:00', 7, 12, false),
+(false, false, '2025-07-05', '14:00:00', 7, 13, false),
 
 -- Sessões para a Sala 4 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 4, 5, false),
-(false, false, '2025-06-16', '17:00:00', 4, 6, false),
-(true, false, '2025-06-16', '20:00:00', 4, 7, true),   -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 4, 8, false),
-(true, false, '2025-06-17', '17:00:00', 4, 9, false),
+(true, false, '2025-06-30', '14:00:00', 4, 5, false),
+(false, false, '2025-06-30', '17:00:00', 4, 6, false),
+(true, false, '2025-06-30', '20:00:00', 4, 7, true),   -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 4, 8, false),
+(true, false, '2025-06-29', '17:00:00', 4, 9, false),
 
 -- Sessões para a Sala 8
-(false, false, '2025-06-17', '20:00:00', 8, 10, false),
-(true, false, '2025-06-18', '14:00:00', 8, 11, false),
-(false, false, '2025-06-18', '17:00:00', 8, 12, false),
-(true, false, '2025-06-18', '20:00:00', 8, 13, false),
-(false, false, '2025-06-19', '14:00:00', 8, 14, false),
+(false, false, '2025-06-29', '20:00:00', 8, 10, false),
+(true, false, '2025-07-04', '14:00:00', 8, 11, false),
+(false, false, '2025-07-04', '17:00:00', 8, 12, false),
+(true, false, '2025-07-04', '20:00:00', 8, 13, false),
+(false, false, '2025-07-05', '14:00:00', 8, 14, false),
 
 -- Sessões para a Sala 9
-(true, false, '2025-06-16', '14:00:00', 9, 4, false),
-(false, false, '2025-06-16', '17:00:00', 9, 5, true),
-(true, true, '2025-06-16', '20:00:00', 9, 6, false),
-(false, false, '2025-06-17', '14:00:00', 9, 7, false),
-(true, false, '2025-06-17', '17:00:00', 9, 8, false),
+(true, false, '2025-06-30', '14:00:00', 9, 4, false),
+(false, false, '2025-06-30', '17:00:00', 9, 5, true),
+(true, true, '2025-06-30', '20:00:00', 9, 6, false),
+(false, false, '2025-06-29', '14:00:00', 9, 7, false),
+(true, false, '2025-06-29', '17:00:00', 9, 8, false),
 
 -- Sessões para a Sala 10
-(false, false, '2025-06-17', '20:00:00', 10, 9, false),
-(true, true, '2025-06-18', '14:00:00', 10, 10, false),
-(false, false, '2025-06-18', '17:00:00', 10, 11, false),
-(true, false, '2025-06-18', '20:00:00', 10, 12, false),
-(false, false, '2025-06-19', '14:00:00', 10, 13, false),
+(false, false, '2025-06-29', '20:00:00', 10, 9, false),
+(true, true, '2025-07-04', '14:00:00', 10, 10, false),
+(false, false, '2025-07-04', '17:00:00', 10, 11, false),
+(true, false, '2025-07-04', '20:00:00', 10, 12, false),
+(false, false, '2025-07-05', '14:00:00', 10, 13, false),
 
 -- Sessões para a Sala 11
-(true, false, '2025-06-16', '14:00:00', 11, 2, false),
-(false, false, '2025-06-16', '17:00:00', 11, 3, false),
-(true, true, '2025-06-16', '20:00:00', 11, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 11, 5, false),
-(true, false, '2025-06-17', '17:00:00', 11, 6, false),
+(true, false, '2025-06-30', '14:00:00', 11, 2, false),
+(false, false, '2025-06-30', '17:00:00', 11, 3, false),
+(true, true, '2025-06-30', '20:00:00', 11, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 11, 5, false),
+(true, false, '2025-06-29', '17:00:00', 11, 6, false),
 
 -- Sessões para a Sala 12
-(false, false, '2025-06-17', '20:00:00', 12, 7, false),
-(true, true, '2025-06-18', '14:00:00', 12, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 12, 9, false),
-(true, false, '2025-06-18', '20:00:00', 12, 10, false),
-(false, false, '2025-06-19', '14:00:00', 12, 11, false),
+(false, false, '2025-06-29', '20:00:00', 12, 7, false),
+(true, true, '2025-07-04', '14:00:00', 12, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 12, 9, false),
+(true, false, '2025-07-04', '20:00:00', 12, 10, false),
+(false, false, '2025-07-05', '14:00:00', 12, 11, false),
 
 -- Sessões para a Sala 13
-(true, false, '2025-06-16', '14:00:00', 13, 3, true),
-(false, false, '2025-06-16', '17:00:00', 13, 4, false),
-(true, true, '2025-06-16', '20:00:00', 13, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 13, 6, false),
-(true, false, '2025-06-17', '17:00:00', 13, 7, false),
+(true, false, '2025-06-30', '14:00:00', 13, 3, true),
+(false, false, '2025-06-30', '17:00:00', 13, 4, false),
+(true, true, '2025-06-30', '20:00:00', 13, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 13, 6, false),
+(true, false, '2025-06-29', '17:00:00', 13, 7, false),
 
 -- Sessões para a Sala 14
-(false, false, '2025-06-17', '20:00:00', 14, 8, false),
-(true, true, '2025-06-18', '14:00:00', 14, 9, false),
-(false, false, '2025-06-18', '17:00:00', 14, 10, false),
-(true, false, '2025-06-18', '20:00:00', 14, 11, false),
-(false, false, '2025-06-19', '14:00:00', 14, 12, false),
+(false, false, '2025-06-29', '20:00:00', 14, 8, false),
+(true, true, '2025-07-04', '14:00:00', 14, 9, false),
+(false, false, '2025-07-04', '17:00:00', 14, 10, false),
+(true, false, '2025-07-04', '20:00:00', 14, 11, false),
+(false, false, '2025-07-05', '14:00:00', 14, 12, false),
 
 -- Sessões para a Sala 15
-(true, false, '2025-06-16', '14:00:00', 15, 4, false),
-(false, false, '2025-06-16', '17:00:00', 15, 5, false),
-(true, true, '2025-06-16', '20:00:00', 15, 6, false),
-(false, false, '2025-06-17', '14:00:00', 15, 7, true),
-(true, false, '2025-06-17', '17:00:00', 15, 8, false),
+(true, false, '2025-06-30', '14:00:00', 15, 4, false),
+(false, false, '2025-06-30', '17:00:00', 15, 5, false),
+(true, true, '2025-06-30', '20:00:00', 15, 6, false),
+(false, false, '2025-06-29', '14:00:00', 15, 7, true),
+(true, false, '2025-06-29', '17:00:00', 15, 8, false),
 
 -- Sessões para a Sala 16
-(false, false, '2025-06-17', '20:00:00', 16, 9, false),
-(true, true, '2025-06-18', '14:00:00', 16, 10, false),
-(false, false, '2025-06-18', '17:00:00', 16, 11, false),
-(true, false, '2025-06-18', '20:00:00', 16, 12, false),
-(false, false, '2025-06-19', '14:00:00', 16, 13, false),
+(false, false, '2025-06-29', '20:00:00', 16, 9, false),
+(true, true, '2025-07-04', '14:00:00', 16, 10, false),
+(false, false, '2025-07-04', '17:00:00', 16, 11, false),
+(true, false, '2025-07-04', '20:00:00', 16, 12, false),
+(false, false, '2025-07-05', '14:00:00', 16, 13, false),
 
 -- Sessões para a Sala 17 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 17, 5, false),
-(false, false, '2025-06-16', '17:00:00', 17, 6, false),
-(true, false, '2025-06-16', '20:00:00', 17, 7, false),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 17, 8, false),
-(true, false, '2025-06-17', '17:00:00', 17, 9, false),
+(true, false, '2025-06-30', '14:00:00', 17, 5, false),
+(false, false, '2025-06-30', '17:00:00', 17, 6, false),
+(true, false, '2025-06-30', '20:00:00', 17, 7, false),  -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 17, 8, false),
+(true, false, '2025-06-29', '17:00:00', 17, 9, false),
 
 -- Sessões para a Sala 18
-(false, false, '2025-06-17', '20:00:00', 18, 10, true),
-(true, false, '2025-06-18', '14:00:00', 18, 11, false),
-(false, false, '2025-06-18', '17:00:00', 18, 12, false),
-(true, false, '2025-06-18', '20:00:00', 18, 13, false),
-(false, false, '2025-06-19', '14:00:00', 18, 14, false),
+(false, false, '2025-06-29', '20:00:00', 18, 10, true),
+(true, false, '2025-07-04', '14:00:00', 18, 11, false),
+(false, false, '2025-07-04', '17:00:00', 18, 12, false),
+(true, false, '2025-07-04', '20:00:00', 18, 13, false),
+(false, false, '2025-07-05', '14:00:00', 18, 14, false),
 
 -- Sessões para a Sala 19
-(true, false, '2025-06-16', '14:00:00', 19, 4, false),
-(false, false, '2025-06-16', '17:00:00', 19, 5, false),
-(true, true, '2025-06-16', '20:00:00', 19, 6, true),
-(false, false, '2025-06-17', '14:00:00', 19, 7, false),
-(true, false, '2025-06-17', '17:00:00', 19, 8, false),
+(true, false, '2025-06-30', '14:00:00', 19, 4, false),
+(false, false, '2025-06-30', '17:00:00', 19, 5, false),
+(true, true, '2025-06-30', '20:00:00', 19, 6, true),
+(false, false, '2025-06-29', '14:00:00', 19, 7, false),
+(true, false, '2025-06-29', '17:00:00', 19, 8, false),
 
 -- Sessões para a Sala 20
-(false, false, '2025-06-17', '20:00:00', 20, 9, false),
-(true, true, '2025-06-18', '14:00:00', 20, 10, false),
-(false, false, '2025-06-18', '17:00:00', 20, 11, false),
-(true, false, '2025-06-18', '20:00:00', 20, 12, false),
-(false, false, '2025-06-19', '14:00:00', 20, 13, false),
+(false, false, '2025-06-29', '20:00:00', 20, 9, false),
+(true, true, '2025-07-04', '14:00:00', 20, 10, false),
+(false, false, '2025-07-04', '17:00:00', 20, 11, false),
+(true, false, '2025-07-04', '20:00:00', 20, 12, false),
+(false, false, '2025-07-05', '14:00:00', 20, 13, false),
 
 -- Sessões para a Sala 21
-(true, false, '2025-06-16', '14:00:00', 21, 2, false),
-(false, false, '2025-06-16', '17:00:00', 21, 3, false),
-(true, true, '2025-06-16', '20:00:00', 21, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 21, 5, false),
-(true, false, '2025-06-17', '17:00:00', 21, 6, false),
+(true, false, '2025-06-30', '14:00:00', 21, 2, false),
+(false, false, '2025-06-30', '17:00:00', 21, 3, false),
+(true, true, '2025-06-30', '20:00:00', 21, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 21, 5, false),
+(true, false, '2025-06-29', '17:00:00', 21, 6, false),
 
 -- Sessões para a Sala 25
-(false, false, '2025-06-17', '20:00:00', 25, 7, false),
-(true, true, '2025-06-18', '14:00:00', 25, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 25, 9, false),
-(true, false, '2025-06-18', '20:00:00', 25, 10, false),
-(false, false, '2025-06-19', '14:00:00', 25, 11, false),
+(false, false, '2025-06-29', '20:00:00', 25, 7, false),
+(true, true, '2025-07-04', '14:00:00', 25, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 25, 9, false),
+(true, false, '2025-07-04', '20:00:00', 25, 10, false),
+(false, false, '2025-07-05', '14:00:00', 25, 11, false),
 
 -- Sessões para a Sala 22
-(true, false, '2025-06-16', '14:00:00', 22, 3, false),
-(false, false, '2025-06-16', '17:00:00', 22, 4, false),
-(true, true, '2025-06-16', '20:00:00', 22, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 22, 6, true),
-(true, false, '2025-06-17', '17:00:00', 22, 7, false),
+(true, false, '2025-06-30', '14:00:00', 22, 3, false),
+(false, false, '2025-06-30', '17:00:00', 22, 4, false),
+(true, true, '2025-06-30', '20:00:00', 22, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 22, 6, true),
+(true, false, '2025-06-29', '17:00:00', 22, 7, false),
 -- Sessões para a Sala 26
-(false, false, '2025-06-17', '20:00:00', 26, 8, false),
-(true, true, '2025-06-18', '14:00:00', 26, 9, false),
-(false, false, '2025-06-18', '17:00:00', 26, 10, false),
-(true, false, '2025-06-18', '20:00:00', 26, 11, false),
-(false, false, '2025-06-19', '14:00:00', 26, 12, false),
+(false, false, '2025-06-29', '20:00:00', 26, 8, false),
+(true, true, '2025-07-04', '14:00:00', 26, 9, false),
+(false, false, '2025-07-04', '17:00:00', 26, 10, false),
+(true, false, '2025-07-04', '20:00:00', 26, 11, false),
+(false, false, '2025-07-05', '14:00:00', 26, 12, false),
 
 -- Sessões para a Sala 23
-(true, false, '2025-06-16', '14:00:00', 23, 4, false),
-(false, false, '2025-06-16', '17:00:00', 23, 5, false),
-(true, true, '2025-06-16', '20:00:00', 23, 6, true),
-(false, false, '2025-06-17', '14:00:00', 23, 7, false),
-(true, false, '2025-06-17', '17:00:00', 23, 8, false),
+(true, false, '2025-06-30', '14:00:00', 23, 4, false),
+(false, false, '2025-06-30', '17:00:00', 23, 5, false),
+(true, true, '2025-06-30', '20:00:00', 23, 6, true),
+(false, false, '2025-06-29', '14:00:00', 23, 7, false),
+(true, false, '2025-06-29', '17:00:00', 23, 8, false),
 
 -- Sessões para a Sala 27
-(false, false, '2025-06-17', '20:00:00', 27, 9, false),
-(true, true, '2025-06-18', '14:00:00', 27, 10, false),
-(false, false, '2025-06-18', '17:00:00', 27, 11, false),
-(true, false, '2025-06-18', '20:00:00', 27, 12, false),
-(false, false, '2025-06-19', '14:00:00', 27, 13, false),
+(false, false, '2025-06-29', '20:00:00', 27, 9, false),
+(true, true, '2025-07-04', '14:00:00', 27, 10, false),
+(false, false, '2025-07-04', '17:00:00', 27, 11, false),
+(true, false, '2025-07-04', '20:00:00', 27, 12, false),
+(false, false, '2025-07-05', '14:00:00', 27, 13, false),
 
 -- Sessões para a Sala 24 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 24, 5, false),
-(false, false, '2025-06-16', '17:00:00', 24, 6, false),
-(true, false, '2025-06-16', '20:00:00', 24, 7, false),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 24, 8, false),
-(true, false, '2025-06-17', '17:00:00', 24, 9, false),
+(true, false, '2025-06-30', '14:00:00', 24, 5, false),
+(false, false, '2025-06-30', '17:00:00', 24, 6, false),
+(true, false, '2025-06-30', '20:00:00', 24, 7, false),  -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 24, 8, false),
+(true, false, '2025-06-29', '17:00:00', 24, 9, false),
 
 -- Sessões para a Sala 28
-(false, false, '2025-06-17', '20:00:00', 28, 10, false),
-(true, false, '2025-06-18', '14:00:00', 28, 11, false),
-(false, false, '2025-06-18', '17:00:00', 28, 12, true),
-(true, false, '2025-06-18', '20:00:00', 28, 13, false),
-(false, false, '2025-06-19', '14:00:00', 28, 14, false),
+(false, false, '2025-06-29', '20:00:00', 28, 10, false),
+(true, false, '2025-07-04', '14:00:00', 28, 11, false),
+(false, false, '2025-07-04', '17:00:00', 28, 12, true),
+(true, false, '2025-07-04', '20:00:00', 28, 13, false),
+(false, false, '2025-07-05', '14:00:00', 28, 14, false),
 
 -- Sessões para a Sala 29
-(true, false, '2025-06-16', '14:00:00', 29, 4, true),
-(false, false, '2025-06-16', '17:00:00', 29, 5, false),
-(true, true, '2025-06-16', '20:00:00', 29, 6, false),
-(false, false, '2025-06-17', '14:00:00', 29, 7, false),
-(true, false, '2025-06-17', '17:00:00', 29, 8, false),
+(true, false, '2025-06-30', '14:00:00', 29, 4, true),
+(false, false, '2025-06-30', '17:00:00', 29, 5, false),
+(true, true, '2025-06-30', '20:00:00', 29, 6, false),
+(false, false, '2025-06-29', '14:00:00', 29, 7, false),
+(true, false, '2025-06-29', '17:00:00', 29, 8, false),
 
 -- Sessões para a Sala 30
-(false, false, '2025-06-17', '20:00:00', 30, 9, false),
-(true, true, '2025-06-18', '14:00:00', 30, 10, false),
-(false, false, '2025-06-18', '17:00:00', 30, 11, false),
-(true, false, '2025-06-18', '20:00:00', 30, 12, false),
-(false, false, '2025-06-19', '14:00:00', 30, 13, false),
+(false, false, '2025-06-29', '20:00:00', 30, 9, false),
+(true, true, '2025-07-04', '14:00:00', 30, 10, false),
+(false, false, '2025-07-04', '17:00:00', 30, 11, false),
+(true, false, '2025-07-04', '20:00:00', 30, 12, false),
+(false, false, '2025-07-05', '14:00:00', 30, 13, false),
 
 -- Sessões para a Sala 31
-(true, false, '2025-06-16', '14:00:00', 31, 2, false),
-(false, false, '2025-06-16', '17:00:00', 31, 3, false),
-(true, true, '2025-06-16', '20:00:00', 31, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 31, 5, false),
-(true, false, '2025-06-17', '17:00:00', 31, 6, false),
+(true, false, '2025-06-30', '14:00:00', 31, 2, false),
+(false, false, '2025-06-30', '17:00:00', 31, 3, false),
+(true, true, '2025-06-30', '20:00:00', 31, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 31, 5, false),
+(true, false, '2025-06-29', '17:00:00', 31, 6, false),
 
 -- Sessões para a Sala 35
-(false, false, '2025-06-17', '20:00:00', 35, 7, false),
-(true, true, '2025-06-18', '14:00:00', 35, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 35, 9, false),
-(true, false, '2025-06-18', '20:00:00', 35, 10, false),
-(false, false, '2025-06-19', '14:00:00', 35, 11, true),
+(false, false, '2025-06-29', '20:00:00', 35, 7, false),
+(true, true, '2025-07-04', '14:00:00', 35, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 35, 9, false),
+(true, false, '2025-07-04', '20:00:00', 35, 10, false),
+(false, false, '2025-07-05', '14:00:00', 35, 11, true),
 
 -- Sessões para a Sala 32
-(true, false, '2025-06-16', '14:00:00', 32, 3, false),
-(false, false, '2025-06-16', '17:00:00', 32, 4, false),
-(true, true, '2025-06-16', '20:00:00', 32, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 32, 6, false),
-(true, false, '2025-06-17', '17:00:00', 32, 7, true),
+(true, false, '2025-06-30', '14:00:00', 32, 3, false),
+(false, false, '2025-06-30', '17:00:00', 32, 4, false),
+(true, true, '2025-06-30', '20:00:00', 32, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 32, 6, false),
+(true, false, '2025-06-29', '17:00:00', 32, 7, true),
 
 -- Sessões para a Sala 36
-(false, false, '2025-06-17', '20:00:00', 36, 8, false),
-(true, true, '2025-06-18', '14:00:00', 36, 9, false),
-(false, false, '2025-06-18', '17:00:00', 36, 10, false),
-(true, false, '2025-06-18', '20:00:00', 36, 11, false),
-(false, false, '2025-06-19', '14:00:00', 36, 12, false),
+(false, false, '2025-06-29', '20:00:00', 36, 8, false),
+(true, true, '2025-07-04', '14:00:00', 36, 9, false),
+(false, false, '2025-07-04', '17:00:00', 36, 10, false),
+(true, false, '2025-07-04', '20:00:00', 36, 11, false),
+(false, false, '2025-07-05', '14:00:00', 36, 12, false),
 
 -- Sessões para a Sala 33
-(true, false, '2025-06-16', '14:00:00', 33, 4, false),
-(false, false, '2025-06-16', '17:00:00', 33, 5, false),
-(true, true, '2025-06-16', '20:00:00', 33, 6, false),
-(false, false, '2025-06-17', '14:00:00', 33, 7, false),
-(true, false, '2025-06-17', '17:00:00', 33, 8, false),
+(true, false, '2025-06-30', '14:00:00', 33, 4, false),
+(false, false, '2025-06-30', '17:00:00', 33, 5, false),
+(true, true, '2025-06-30', '20:00:00', 33, 6, false),
+(false, false, '2025-06-29', '14:00:00', 33, 7, false),
+(true, false, '2025-06-29', '17:00:00', 33, 8, false),
 
 -- Sessões para a Sala 37
-(false, false, '2025-06-17', '20:00:00', 37, 9, false),
-(true, true, '2025-06-18', '14:00:00', 37, 10, false),
-(false, false, '2025-06-18', '17:00:00', 37, 11, false),
-(true, false, '2025-06-18', '20:00:00', 37, 12, false),
-(false, false, '2025-06-19', '14:00:00', 37, 13, false),
+(false, false, '2025-06-29', '20:00:00', 37, 9, false),
+(true, true, '2025-07-04', '14:00:00', 37, 10, false),
+(false, false, '2025-07-04', '17:00:00', 37, 11, false),
+(true, false, '2025-07-04', '20:00:00', 37, 12, false),
+(false, false, '2025-07-05', '14:00:00', 37, 13, false),
 
 -- Sessões para a Sala 34 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 34, 5, false),
-(false, false, '2025-06-16', '17:00:00', 34, 6, false),
-(true, false, '2025-06-16', '20:00:00', 34, 7, false),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 34, 8, false),
-(true, false, '2025-06-17', '17:00:00', 34, 9, false),
+(true, false, '2025-06-30', '14:00:00', 34, 5, false),
+(false, false, '2025-06-30', '17:00:00', 34, 6, false),
+(true, false, '2025-06-30', '20:00:00', 34, 7, false),  -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 34, 8, false),
+(true, false, '2025-06-29', '17:00:00', 34, 9, false),
 
 -- Sessões para a Sala 38
-(false, false, '2025-06-17', '20:00:00', 38, 10, false),
-(true, false, '2025-06-18', '14:00:00', 38, 11, false),
-(false, false, '2025-06-18', '17:00:00', 38, 12, false),
-(true, false, '2025-06-18', '20:00:00', 38, 13, false),
-(false, false, '2025-06-19', '14:00:00', 38, 14, false),
+(false, false, '2025-06-29', '20:00:00', 38, 10, false),
+(true, false, '2025-07-04', '14:00:00', 38, 11, false),
+(false, false, '2025-07-04', '17:00:00', 38, 12, false),
+(true, false, '2025-07-04', '20:00:00', 38, 13, false),
+(false, false, '2025-07-05', '14:00:00', 38, 14, false),
 
 -- Sessões para a Sala 39
-(true, false, '2025-06-16', '14:00:00', 39, 4, false),
-(false, false, '2025-06-16', '17:00:00', 39, 5, false),
-(true, true, '2025-06-16', '20:00:00', 39, 6, false),
-(false, false, '2025-06-17', '14:00:00', 39, 7, false),
-(true, false, '2025-06-17', '17:00:00', 39, 8, false),
+(true, false, '2025-06-30', '14:00:00', 39, 4, false),
+(false, false, '2025-06-30', '17:00:00', 39, 5, false),
+(true, true, '2025-06-30', '20:00:00', 39, 6, false),
+(false, false, '2025-06-29', '14:00:00', 39, 7, false),
+(true, false, '2025-06-29', '17:00:00', 39, 8, false),
 
 -- Sessões para a Sala 40
-(false, false, '2025-06-17', '20:00:00', 40, 9, false),
-(true, true, '2025-06-18', '14:00:00', 40, 10, false),
-(false, false, '2025-06-18', '17:00:00', 40, 11, true),
-(true, false, '2025-06-18', '20:00:00', 40, 12, false),
-(false, false, '2025-06-19', '14:00:00', 40, 13, false),
+(false, false, '2025-06-29', '20:00:00', 40, 9, false),
+(true, true, '2025-07-04', '14:00:00', 40, 10, false),
+(false, false, '2025-07-04', '17:00:00', 40, 11, true),
+(true, false, '2025-07-04', '20:00:00', 40, 12, false),
+(false, false, '2025-07-05', '14:00:00', 40, 13, false),
 
 -- Sessões para a Sala 41
-(true, false, '2025-06-16', '14:00:00', 41, 2, false),
-(false, false, '2025-06-16', '17:00:00', 41, 3, false),
-(true, true, '2025-06-16', '20:00:00', 41, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 41, 5, false),
-(true, false, '2025-06-17', '17:00:00', 41, 6, false),
+(true, false, '2025-06-30', '14:00:00', 41, 2, false),
+(false, false, '2025-06-30', '17:00:00', 41, 3, false),
+(true, true, '2025-06-30', '20:00:00', 41, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 41, 5, false),
+(true, false, '2025-06-29', '17:00:00', 41, 6, false),
 
 -- Sessões para a Sala 45
-(false, false, '2025-06-17', '20:00:00', 45, 7, false),
-(true, true, '2025-06-18', '14:00:00', 45, 8, true),   -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 45, 9, false),
-(true, false, '2025-06-18', '20:00:00', 45, 10, false),
-(false, false, '2025-06-19', '14:00:00', 45, 11, false),
+(false, false, '2025-06-29', '20:00:00', 45, 7, false),
+(true, true, '2025-07-04', '14:00:00', 45, 8, true),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 45, 9, false),
+(true, false, '2025-07-04', '20:00:00', 45, 10, false),
+(false, false, '2025-07-05', '14:00:00', 45, 11, false),
 
 -- Sessões para a Sala 42
-(true, false, '2025-06-16', '14:00:00', 42, 3, false),
-(false, false, '2025-06-16', '17:00:00', 42, 4, false),
-(true, true, '2025-06-16', '20:00:00', 42, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 42, 6, false),
-(true, false, '2025-06-17', '17:00:00', 42, 7, false),
+(true, false, '2025-06-30', '14:00:00', 42, 3, false),
+(false, false, '2025-06-30', '17:00:00', 42, 4, false),
+(true, true, '2025-06-30', '20:00:00', 42, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 42, 6, false),
+(true, false, '2025-06-29', '17:00:00', 42, 7, false),
 
 -- Sessões para a Sala 46
-(false, false, '2025-06-17', '20:00:00', 46, 8, false),
-(true, true, '2025-06-18', '14:00:00', 46, 9, false),
-(false, false, '2025-06-18', '17:00:00', 46, 10, false),
-(true, false, '2025-06-18', '20:00:00', 46, 11, false),
-(false, false, '2025-06-19', '14:00:00', 46, 12, false),
+(false, false, '2025-06-29', '20:00:00', 46, 8, false),
+(true, true, '2025-07-04', '14:00:00', 46, 9, false),
+(false, false, '2025-07-04', '17:00:00', 46, 10, false),
+(true, false, '2025-07-04', '20:00:00', 46, 11, false),
+(false, false, '2025-07-05', '14:00:00', 46, 12, false),
 
 -- Sessões para a Sala 43
-(true, false, '2025-06-16', '14:00:00', 43, 4, false),
-(false, false, '2025-06-16', '17:00:00', 43, 5, false),
-(true, true, '2025-06-16', '20:00:00', 43, 6, true),
-(false, false, '2025-06-17', '14:00:00', 43, 7, false),
-(true, false, '2025-06-17', '17:00:00', 43, 8, false),
+(true, false, '2025-06-30', '14:00:00', 43, 4, false),
+(false, false, '2025-06-30', '17:00:00', 43, 5, false),
+(true, true, '2025-06-30', '20:00:00', 43, 6, true),
+(false, false, '2025-06-29', '14:00:00', 43, 7, false),
+(true, false, '2025-06-29', '17:00:00', 43, 8, false),
 
 -- Sessões para a Sala 47
-(false, false, '2025-06-17', '20:00:00', 47, 9, false),
-(true, true, '2025-06-18', '14:00:00', 47, 10, false),
-(false, false, '2025-06-18', '17:00:00', 47, 11, false),
-(true, false, '2025-06-18', '20:00:00', 47, 12, false),
-(false, false, '2025-06-19', '14:00:00', 47, 13, false),
+(false, false, '2025-06-29', '20:00:00', 47, 9, false),
+(true, true, '2025-07-04', '14:00:00', 47, 10, false),
+(false, false, '2025-07-04', '17:00:00', 47, 11, false),
+(true, false, '2025-07-04', '20:00:00', 47, 12, false),
+(false, false, '2025-07-05', '14:00:00', 47, 13, false),
 
 -- Sessões para a Sala 44 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 44, 5, false),
-(false, false, '2025-06-16', '17:00:00', 44, 6, false),
-(true, false, '2025-06-16', '20:00:00', 44, 7, false),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 44, 8, false),
-(true, false, '2025-06-17', '17:00:00', 44, 9, false),
+(true, false, '2025-06-30', '14:00:00', 44, 5, false),
+(false, false, '2025-06-30', '17:00:00', 44, 6, false),
+(true, false, '2025-06-30', '20:00:00', 44, 7, false),  -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 44, 8, false),
+(true, false, '2025-06-29', '17:00:00', 44, 9, false),
 
 -- Sessões para a Sala 48
-(false, false, '2025-06-17', '20:00:00', 48, 10, false),
-(true, false, '2025-06-18', '14:00:00', 48, 11, false),
-(false, false, '2025-06-18', '17:00:00', 48, 12, false),
-(true, false, '2025-06-18', '20:00:00', 48, 13, false),
-(false, false, '2025-06-19', '14:00:00', 48, 14, false),
+(false, false, '2025-06-29', '20:00:00', 48, 10, false),
+(true, false, '2025-07-04', '14:00:00', 48, 11, false),
+(false, false, '2025-07-04', '17:00:00', 48, 12, false),
+(true, false, '2025-07-04', '20:00:00', 48, 13, false),
+(false, false, '2025-07-05', '14:00:00', 48, 14, false),
 
 -- Sessões para a Sala 49
-(true, false, '2025-06-16', '14:00:00', 49, 4, false),
-(false, false, '2025-06-16', '17:00:00', 49, 5, false),
-(true, true, '2025-06-16', '20:00:00', 49, 6, false),
-(false, false, '2025-06-17', '14:00:00', 49, 7, false),
-(true, false, '2025-06-17', '17:00:00', 49, 8, false),
+(true, false, '2025-06-30', '14:00:00', 49, 4, false),
+(false, false, '2025-06-30', '17:00:00', 49, 5, false),
+(true, true, '2025-06-30', '20:00:00', 49, 6, false),
+(false, false, '2025-06-29', '14:00:00', 49, 7, false),
+(true, false, '2025-06-29', '17:00:00', 49, 8, false),
 
 -- Sessões para a Sala 50
-(false, false, '2025-06-17', '20:00:00', 50, 9, false),
-(true, true, '2025-06-18', '14:00:00', 50, 10, false),
-(false, false, '2025-06-18', '17:00:00', 50, 11, false),
-(true, false, '2025-06-18', '20:00:00', 50, 12, false),
-(false, false, '2025-06-19', '14:00:00', 50, 13, false),
+(false, false, '2025-06-29', '20:00:00', 50, 9, false),
+(true, true, '2025-07-04', '14:00:00', 50, 10, false),
+(false, false, '2025-07-04', '17:00:00', 50, 11, false),
+(true, false, '2025-07-04', '20:00:00', 50, 12, false),
+(false, false, '2025-07-05', '14:00:00', 50, 13, false),
 
 -- Sessões para a Sala 51
-(true, false, '2025-06-16', '14:00:00', 51, 2, false),
-(false, false, '2025-06-16', '17:00:00', 51, 3, false),
-(true, true, '2025-06-16', '20:00:00', 51, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 51, 5, false),
-(true, false, '2025-06-17', '17:00:00', 51, 6, false),
+(true, false, '2025-06-30', '14:00:00', 51, 2, false),
+(false, false, '2025-06-30', '17:00:00', 51, 3, false),
+(true, true, '2025-06-30', '20:00:00', 51, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 51, 5, false),
+(true, false, '2025-06-29', '17:00:00', 51, 6, false),
 
 -- Sessões para a Sala 55
-(false, false, '2025-06-17', '20:00:00', 55, 7, false),
-(true, true, '2025-06-18', '14:00:00', 55, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 55, 9, false),
-(true, false, '2025-06-18', '20:00:00', 55, 10, false),
-(false, false, '2025-06-19', '14:00:00', 55, 11, true),
+(false, false, '2025-06-29', '20:00:00', 55, 7, false),
+(true, true, '2025-07-04', '14:00:00', 55, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 55, 9, false),
+(true, false, '2025-07-04', '20:00:00', 55, 10, false),
+(false, false, '2025-07-05', '14:00:00', 55, 11, true),
 
 -- Sessões para a Sala 52
-(true, false, '2025-06-16', '14:00:00', 52, 3, false),
-(false, false, '2025-06-16', '17:00:00', 52, 4, false),
-(true, true, '2025-06-16', '20:00:00', 52, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 52, 6, false),
-(true, false, '2025-06-17', '17:00:00', 52, 7, false),
+(true, false, '2025-06-30', '14:00:00', 52, 3, false),
+(false, false, '2025-06-30', '17:00:00', 52, 4, false),
+(true, true, '2025-06-30', '20:00:00', 52, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 52, 6, false),
+(true, false, '2025-06-29', '17:00:00', 52, 7, false),
 
 -- Sessões para a Sala 56
-(false, false, '2025-06-17', '20:00:00', 56, 8, false),
-(true, true, '2025-06-18', '14:00:00', 56, 9, false),
-(false, false, '2025-06-18', '17:00:00', 56, 10, true),
-(true, false, '2025-06-18', '20:00:00', 56, 11, false),
-(false, false, '2025-06-19', '14:00:00', 56, 12, false),
+(false, false, '2025-06-29', '20:00:00', 56, 8, false),
+(true, true, '2025-07-04', '14:00:00', 56, 9, false),
+(false, false, '2025-07-04', '17:00:00', 56, 10, true),
+(true, false, '2025-07-04', '20:00:00', 56, 11, false),
+(false, false, '2025-07-05', '14:00:00', 56, 12, false),
 
 -- Sessões para a Sala 53
-(true, false, '2025-06-16', '14:00:00', 53, 4, false),
-(false, false, '2025-06-16', '17:00:00', 53, 5, false),
-(true, true, '2025-06-16', '20:00:00', 53, 6, false),
-(false, false, '2025-06-17', '14:00:00', 53, 7, true),
-(true, false, '2025-06-17', '17:00:00', 53, 8, false),
+(true, false, '2025-06-30', '14:00:00', 53, 4, false),
+(false, false, '2025-06-30', '17:00:00', 53, 5, false),
+(true, true, '2025-06-30', '20:00:00', 53, 6, false),
+(false, false, '2025-06-29', '14:00:00', 53, 7, true),
+(true, false, '2025-06-29', '17:00:00', 53, 8, false),
 
 -- Sessões para a Sala 57
-(false, false, '2025-06-17', '20:00:00', 57, 9, false),
-(true, true, '2025-06-18', '14:00:00', 57, 10, false),
-(false, false, '2025-06-18', '17:00:00', 57, 11, false),
-(true, false, '2025-06-18', '20:00:00', 57, 12, false),
-(false, false, '2025-06-19', '14:00:00', 57, 13, false),
+(false, false, '2025-06-29', '20:00:00', 57, 9, false),
+(true, true, '2025-07-04', '14:00:00', 57, 10, false),
+(false, false, '2025-07-04', '17:00:00', 57, 11, false),
+(true, false, '2025-07-04', '20:00:00', 57, 12, false),
+(false, false, '2025-07-05', '14:00:00', 57, 13, false),
 
 -- Sessões para a Sala 54 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 54, 5, false),
-(false, false, '2025-06-16', '17:00:00', 54, 6, false),
-(true, false, '2025-06-16', '20:00:00', 54, 7, true),   -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 54, 8, false),
-(true, false, '2025-06-17', '17:00:00', 54, 9, false),
+(true, false, '2025-06-30', '14:00:00', 54, 5, false),
+(false, false, '2025-06-30', '17:00:00', 54, 6, false),
+(true, false, '2025-06-30', '20:00:00', 54, 7, true),   -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 54, 8, false),
+(true, false, '2025-06-29', '17:00:00', 54, 9, false),
 
 -- Sessões para a Sala 58
-(false, false, '2025-06-17', '20:00:00', 58, 10, false),
-(true, false, '2025-06-18', '14:00:00', 58, 11, false),
-(false, false, '2025-06-18', '17:00:00', 58, 12, false),
-(true, false, '2025-06-18', '20:00:00', 58, 13, false),
-(false, false, '2025-06-19', '14:00:00', 58, 14, false),
+(false, false, '2025-06-29', '20:00:00', 58, 10, false),
+(true, false, '2025-07-04', '14:00:00', 58, 11, false),
+(false, false, '2025-07-04', '17:00:00', 58, 12, false),
+(true, false, '2025-07-04', '20:00:00', 58, 13, false),
+(false, false, '2025-07-05', '14:00:00', 58, 14, false),
 
 -- Sessões para a Sala 59
-(true, false, '2025-06-16', '14:00:00', 59, 4, false),
-(false, false, '2025-06-16', '17:00:00', 59, 5, true),
-(true, true, '2025-06-16', '20:00:00', 59, 6, false),
-(false, false, '2025-06-17', '14:00:00', 59, 7, false),
-(true, false, '2025-06-17', '17:00:00', 59, 8, false),
+(true, false, '2025-06-30', '14:00:00', 59, 4, false),
+(false, false, '2025-06-30', '17:00:00', 59, 5, true),
+(true, true, '2025-06-30', '20:00:00', 59, 6, false),
+(false, false, '2025-06-29', '14:00:00', 59, 7, false),
+(true, false, '2025-06-29', '17:00:00', 59, 8, false),
 
 -- Sessões para a Sala 60
-(false, false, '2025-06-17', '20:00:00', 60, 9, false),
-(true, true, '2025-06-18', '14:00:00', 60, 10, false),
-(false, false, '2025-06-18', '17:00:00', 60, 11, false),
-(true, false, '2025-06-18', '20:00:00', 60, 12, false),
-(false, false, '2025-06-19', '14:00:00', 60, 13, false),
+(false, false, '2025-06-29', '20:00:00', 60, 9, false),
+(true, true, '2025-07-04', '14:00:00', 60, 10, false),
+(false, false, '2025-07-04', '17:00:00', 60, 11, false),
+(true, false, '2025-07-04', '20:00:00', 60, 12, false),
+(false, false, '2025-07-05', '14:00:00', 60, 13, false),
 
 -- Sessões para a Sala 61
-(true, false, '2025-06-16', '14:00:00', 61, 2, false),
-(false, false, '2025-06-16', '17:00:00', 61, 3, false),
-(true, true, '2025-06-16', '20:00:00', 61, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 61, 5, false),
-(true, false, '2025-06-17', '17:00:00', 61, 6, false),
+(true, false, '2025-06-30', '14:00:00', 61, 2, false),
+(false, false, '2025-06-30', '17:00:00', 61, 3, false),
+(true, true, '2025-06-30', '20:00:00', 61, 4, true),   -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 61, 5, false),
+(true, false, '2025-06-29', '17:00:00', 61, 6, false),
 
 -- Sessões para a Sala 62
-(false, false, '2025-06-17', '20:00:00', 62, 7, false),
-(true, true, '2025-06-18', '14:00:00', 62, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 62, 9, false),
-(true, false, '2025-06-18', '20:00:00', 62, 10, false),
-(false, false, '2025-06-19', '14:00:00', 62, 11, false),
+(false, false, '2025-06-29', '20:00:00', 62, 7, false),
+(true, true, '2025-07-04', '14:00:00', 62, 8, false),   -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 62, 9, false),
+(true, false, '2025-07-04', '20:00:00', 62, 10, false),
+(false, false, '2025-07-05', '14:00:00', 62, 11, false),
 
 -- Sessões para a Sala 63
-(true, false, '2025-06-16', '14:00:00', 63, 3, true),
-(false, false, '2025-06-16', '17:00:00', 63, 4, false),
-(true, true, '2025-06-16', '20:00:00', 63, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 63, 6, false),
-(true, false, '2025-06-17', '17:00:00', 63, 7, false),
+(true, false, '2025-06-30', '14:00:00', 63, 3, true),
+(false, false, '2025-06-30', '17:00:00', 63, 4, false),
+(true, true, '2025-06-30', '20:00:00', 63, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 63, 6, false),
+(true, false, '2025-06-29', '17:00:00', 63, 7, false),
 
 -- Sessões para a Sala 64
-(false, false, '2025-06-17', '20:00:00', 64, 8, false),
-(true, true, '2025-06-18', '14:00:00', 64, 9, false),
-(false, false, '2025-06-18', '17:00:00', 64, 10, false),
-(true, false, '2025-06-18', '20:00:00', 64, 11, false),
-(false, false, '2025-06-19', '14:00:00', 64, 12, false),
+(false, false, '2025-06-29', '20:00:00', 64, 8, false),
+(true, true, '2025-07-04', '14:00:00', 64, 9, false),
+(false, false, '2025-07-04', '17:00:00', 64, 10, false),
+(true, false, '2025-07-04', '20:00:00', 64, 11, false),
+(false, false, '2025-07-05', '14:00:00', 64, 12, false),
 
 -- Sessões para a Sala 65
-(true, false, '2025-06-16', '14:00:00', 65, 4, false),
-(false, false, '2025-06-16', '17:00:00', 65, 5, false),
-(true, true, '2025-06-16', '20:00:00', 65, 6, false),
-(false, false, '2025-06-17', '14:00:00', 65, 7, true),
-(true, false, '2025-06-17', '17:00:00', 65, 8, false),
+(true, false, '2025-06-30', '14:00:00', 65, 4, false),
+(false, false, '2025-06-30', '17:00:00', 65, 5, false),
+(true, true, '2025-06-30', '20:00:00', 65, 6, false),
+(false, false, '2025-06-29', '14:00:00', 65, 7, true),
+(true, false, '2025-06-29', '17:00:00', 65, 8, false),
 
 -- Sessões para a Sala 66
-(false, false, '2025-06-17', '20:00:00', 66, 9, false),
-(true, true, '2025-06-18', '14:00:00', 66, 10, false),
-(false, false, '2025-06-18', '17:00:00', 66, 11, false),
-(true, false, '2025-06-18', '20:00:00', 66, 12, false),
-(false, false, '2025-06-19', '14:00:00', 66, 13, false),
+(false, false, '2025-06-29', '20:00:00', 66, 9, false),
+(true, true, '2025-07-04', '14:00:00', 66, 10, false),
+(false, false, '2025-07-04', '17:00:00', 66, 11, false),
+(true, false, '2025-07-04', '20:00:00', 66, 12, false),
+(false, false, '2025-07-05', '14:00:00', 66, 13, false),
 
 -- Sessões para a Sala 67 (esta sala não suporta 3D, segundo os dados anteriores)
-(true, false, '2025-06-16', '14:00:00', 67, 5, false),
-(false, false, '2025-06-16', '17:00:00', 67, 6, false),
-(true, false, '2025-06-16', '20:00:00', 67, 7, false),  -- eh_3d é false
-(false, false, '2025-06-17', '14:00:00', 67, 8, false),
-(true, false, '2025-06-17', '17:00:00', 67, 9, false),
+(true, false, '2025-06-30', '14:00:00', 67, 5, false),
+(false, false, '2025-06-30', '17:00:00', 67, 6, false),
+(true, false, '2025-06-30', '20:00:00', 67, 7, false),  -- eh_3d é false
+(false, false, '2025-06-29', '14:00:00', 67, 8, false),
+(true, false, '2025-06-29', '17:00:00', 67, 9, false),
 
 -- Sessões para a Sala 68
-(false, false, '2025-06-17', '20:00:00', 68, 10, true),
-(true, false, '2025-06-18', '14:00:00', 68, 11, false),
-(false, false, '2025-06-18', '17:00:00', 68, 12, false),
-(true, false, '2025-06-18', '20:00:00', 68, 13, false),
-(false, false, '2025-06-19', '14:00:00', 68, 14, false),
+(false, false, '2025-06-29', '20:00:00', 68, 10, true),
+(true, false, '2025-07-04', '14:00:00', 68, 11, false),
+(false, false, '2025-07-04', '17:00:00', 68, 12, false),
+(true, false, '2025-07-04', '20:00:00', 68, 13, false),
+(false, false, '2025-07-05', '14:00:00', 68, 14, false),
 
 -- Sessões para a Sala 69
-(true, false, '2025-06-16', '14:00:00', 69, 4, false),
-(false, false, '2025-06-16', '17:00:00', 69, 5, false),
-(true, true, '2025-06-16', '20:00:00', 69, 6, true),
-(false, false, '2025-06-17', '14:00:00', 69, 7, false),
-(true, false, '2025-06-17', '17:00:00', 69, 8, false),
+(true, false, '2025-06-30', '14:00:00', 69, 4, false),
+(false, false, '2025-06-30', '17:00:00', 69, 5, false),
+(true, true, '2025-06-30', '20:00:00', 69, 6, true),
+(false, false, '2025-06-29', '14:00:00', 69, 7, false),
+(true, false, '2025-06-29', '17:00:00', 69, 8, false),
 
 -- Sessões para a Sala 70
-(false, false, '2025-06-17', '20:00:00', 70, 9, false),
-(true, true, '2025-06-18', '14:00:00', 70, 10, false),
-(false, false, '2025-06-18', '17:00:00', 70, 11, false),
-(true, false, '2025-06-18', '20:00:00', 70, 12, false),
-(false, false, '2025-06-19', '14:00:00', 70, 13, false),
+(false, false, '2025-06-29', '20:00:00', 70, 9, false),
+(true, true, '2025-07-04', '14:00:00', 70, 10, false),
+(false, false, '2025-07-04', '17:00:00', 70, 11, false),
+(true, false, '2025-07-04', '20:00:00', 70, 12, false),
+(false, false, '2025-07-05', '14:00:00', 70, 13, false),
 
 -- Sessões para a Sala 71
-(true, false, '2025-06-16', '14:00:00', 71, 2, false),
-(false, false, '2025-06-16', '17:00:00', 71, 3, false),
-(true, true, '2025-06-16', '20:00:00', 71, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-17', '14:00:00', 71, 5, false),
-(true, false, '2025-06-17', '17:00:00', 71, 6, false),
+(true, false, '2025-06-30', '14:00:00', 71, 2, false),
+(false, false, '2025-06-30', '17:00:00', 71, 3, false),
+(true, true, '2025-06-30', '20:00:00', 71, 4, false),  -- Filme 4 em 3D, Sala 1 suporta 3D
+(false, false, '2025-06-29', '14:00:00', 71, 5, false),
+(true, false, '2025-06-29', '17:00:00', 71, 6, false),
 
 -- Sessões para a Sala 75
-(false, false, '2025-06-17', '20:00:00', 75, 7, false),
-(true, true, '2025-06-18', '14:00:00', 75, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
-(false, false, '2025-06-18', '17:00:00', 75, 9, false),
-(true, false, '2025-06-18', '20:00:00', 75, 10, false),
-(false, false, '2025-06-19', '14:00:00', 75, 11, false),
+(false, false, '2025-06-29', '20:00:00', 75, 7, false),
+(true, true, '2025-07-04', '14:00:00', 75, 8, false),  -- Filme 8 em 3D, Sala 1 suporta 3D
+(false, false, '2025-07-04', '17:00:00', 75, 9, false),
+(true, false, '2025-07-04', '20:00:00', 75, 10, false),
+(false, false, '2025-07-05', '14:00:00', 75, 11, false),
 
 -- Sessões para a Sala 72
-(true, false, '2025-06-16', '14:00:00', 72, 3, false),
-(false, false, '2025-06-16', '17:00:00', 72, 4, false),
-(true, true, '2025-06-16', '20:00:00', 72, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
-(false, false, '2025-06-17', '14:00:00', 72, 6, true),
-(true, false, '2025-06-17', '17:00:00', 72, 7, false),
+(true, false, '2025-06-30', '14:00:00', 72, 3, false),
+(false, false, '2025-06-30', '17:00:00', 72, 4, false),
+(true, true, '2025-06-30', '20:00:00', 72, 5, false),  -- Exemplo genérico, assumindo filme e sala compatíveis com 3D
+(false, false, '2025-06-29', '14:00:00', 72, 6, true),
+(true, false, '2025-06-29', '17:00:00', 72, 7, false),
 
 -- Sessões para a Sala 74
-(false, false, '2025-06-17', '20:00:00', 74, 8, false),
-(true, true, '2025-06-18', '14:00:00', 74, 9, false),
-(false, false, '2025-06-18', '17:00:00', 74, 10, false),
-(true, false, '2025-06-18', '20:00:00', 74, 11, false),
-(false, false, '2025-06-19', '14:00:00', 74, 12, false),
+(false, false, '2025-06-29', '20:00:00', 74, 8, false),
+(true, true, '2025-07-04', '14:00:00', 74, 9, false),
+(false, false, '2025-07-04', '17:00:00', 74, 10, false),
+(true, false, '2025-07-04', '20:00:00', 74, 11, false),
+(false, false, '2025-07-05', '14:00:00', 74, 12, false),
 
 -- Sessões para a Sala 75
-(true, false, '2025-06-16', '14:00:00', 75, 4, false),
-(false, false, '2025-06-16', '17:00:00', 75, 5, false),
-(true, true, '2025-06-16', '20:00:00', 75, 6, true),
-(false, false, '2025-06-17', '14:00:00', 75, 7, false),
-(true, false, '2025-06-17', '17:00:00', 75, 8, false);
+(true, false, '2025-06-30', '14:00:00', 75, 4, false),
+(false, false, '2025-06-30', '17:00:00', 75, 5, false),
+(true, true, '2025-06-30', '20:00:00', 75, 6, true),
+(false, false, '2025-07-06', '14:00:00', 75, 7, false),
+(true, false, '2025-07-06', '17:00:00', 75, 8, false);
 
 
 INSERT INTO funcionario (cpf, nome, sobrenome, data_inicio_contratado, data_fim_contrato, trabalha_em) VALUES
@@ -1711,34 +1689,44 @@ END $$;
 DO $$
 DECLARE
     v_clientes CHAR(11)[];
-    v_poltronas tipo_poltrona_sessao[];
     v_total_ingressos INT := 0;
 
-    v_poltrona tipo_poltrona_sessao;
+    -- Declara a variável que vai conter cada linha da sua SELECT como um RECORD
+    v_registro_poltrona RECORD;
+
     v_cliente_id CHAR(11);
     v_valor NUMERIC(10,2);
     v_data_compra DATE;
     v_hora_compra TIME;
     v_forma_pagamento VARCHAR(50);
     v_tipo SMALLINT;
-    v_index INT;
 
     formas_pagamento VARCHAR[] := ARRAY['dinheiro', 'débito', 'crédito', 'pix'];
     valores_permitidos NUMERIC[] := ARRAY[20.00, 40.00, 60.00, 80.00];
+
 BEGIN
-    RAISE NOTICE 'Carregando clientes e poltronas disponíveis...';
+    RAISE NOTICE 'Carregando clientes...';
 
     -- Carrega todos os clientes em um array
     SELECT array_agg(cpf) INTO v_clientes FROM cliente;
 
-    -- Carrega todas as combinações de sessões + poltronas disponíveis
-    FOR v_poltrona IN
-        SELECT 
-            s.numero,
-            p.numero,
-            p.letra,
-            s.sala_id,
-            s.data
+    -- Adicionar uma checagem para garantir que há clientes
+    IF v_clientes IS NULL OR array_length(v_clientes, 1) = 0 THEN
+        RAISE EXCEPTION 'Nenhum cliente encontrado no banco de dados. Impossível gerar ingressos.';
+    END IF;
+
+    RAISE NOTICE 'Total de clientes: %', array_length(v_clientes, 1);
+    RAISE NOTICE 'Iniciando inserção de ingressos...';
+
+    -- Loop de inserção
+    -- Itera diretamente sobre o resultado da query, usando UMA variável RECORD
+    FOR v_registro_poltrona IN
+        SELECT
+            s.numero AS sessao_id,          -- Adicionamos ALIAS para facilitar o acesso
+            p.numero AS poltrona_numero,
+            p.letra AS poltrona_letra,
+            s.sala_id AS poltrona_sala_id,
+            s.data AS sessao_data
         FROM sessao s
         JOIN poltrona p ON s.sala_id = p.sala_id
         WHERE s.cancelada = FALSE
@@ -1748,21 +1736,13 @@ BEGIN
               AND i.poltrona_numero = p.numero
               AND i.poltrona_letra = p.letra
         )
+        -- Limita o número de poltronas/sessões para evitar loops muito longos
+        LIMIT 10000 -- Processa no máximo 10.000 combinações de poltrona/sessão
     LOOP
-        v_poltronas := array_append(v_poltronas, v_poltrona);
-    END LOOP;
-
-    RAISE NOTICE 'Total de clientes: %, Total de poltronas disponíveis: %', array_length(v_clientes, 1), array_length(v_poltronas, 1);
-
-    -- Loop de inserção
-    WHILE v_total_ingressos < 10000 AND array_length(v_poltronas,1) > 0 LOOP
-        -- Escolhe índice aleatório da poltrona disponível
-        v_index := floor(random() * array_length(v_poltronas,1) + 1)::INT;
-        v_poltrona := v_poltronas[v_index];
-
-        -- Remove poltrona usada (swap com a última e remove última posição)
-        v_poltronas[v_index] := v_poltronas[array_upper(v_poltronas,1)];
-        v_poltronas := v_poltronas[1:array_upper(v_poltronas,1)-1];
+        -- Se já inserimos 10.000 ingressos, saímos do loop
+        IF v_total_ingressos >= 10000 THEN
+            EXIT;
+        END IF;
 
         -- Cliente aleatório
         v_cliente_id := v_clientes[floor(random() * array_length(v_clientes,1) + 1)::INT];
@@ -1800,10 +1780,11 @@ BEGIN
             v_hora_compra,
             v_forma_pagamento,
             v_cliente_id,
-            v_poltrona.sessao_id,
-            v_poltrona.poltrona_numero,
-            v_poltrona.poltrona_letra,
-            v_poltrona.poltrona_sala_id
+            -- Acessamos os campos da variável RECORD usando os ALIASES definidos na SELECT
+            v_registro_poltrona.sessao_id,
+            v_registro_poltrona.poltrona_numero,
+            v_registro_poltrona.poltrona_letra,
+            v_registro_poltrona.poltrona_sala_id
         );
 
         v_total_ingressos := v_total_ingressos + 1;
@@ -1811,3 +1792,32 @@ BEGIN
 
     RAISE NOTICE 'Inserção finalizada: % ingressos inseridos.', v_total_ingressos;
 END $$;
+-- Cria uma sessão para hoje às 18h para o primeiro filme do primeiro cinema (sala 1, filme 1)
+INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada)
+VALUES (true, false, CURRENT_DATE, '18:00:00', 1, 1, false);
+
+INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada)
+VALUES (true, true, CURRENT_DATE, '14:00:00', 2, 1, false);
+
+INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada)
+VALUES (true, false, CURRENT_DATE, '22:00:00', 3, 1, false);
+
+INSERT INTO sessao (leg_ou_dub, eh_3d, data, hora, sala_id, filme_id, cancelada)
+VALUES (true, false, CURRENT_DATE, '18:30:00', 3, 1, false);
+
+-- Insere vários ingressos para essa sessão (sessao_id = da sessão criada acima)
+-- Supondo que as poltronas A1 a A10 existem na sala 1
+INSERT INTO ingresso (
+    tipo, valor, data, hora, forma_pagamento, cliente_id,
+    sessao_id, poltrona_numero, poltrona_letra, poltrona_sala_id
+) VALUES
+(1, 40.00, CURRENT_DATE, '17:00:00', 'crédito', (SELECT cpf FROM cliente LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 1, 'A', 1),
+(1, 40.00, CURRENT_DATE, '17:05:00', 'débito', (SELECT cpf FROM cliente OFFSET 1 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 2, 'A', 1),
+(2, 20.00, CURRENT_DATE, '17:10:00', 'pix', (SELECT cpf FROM cliente OFFSET 2 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 3, 'A', 1),
+(1, 40.00, CURRENT_DATE, '17:15:00', 'dinheiro', (SELECT cpf FROM cliente OFFSET 3 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 4, 'A', 1),
+(2, 20.00, CURRENT_DATE, '17:20:00', 'crédito', (SELECT cpf FROM cliente OFFSET 4 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 5, 'A', 1),
+(1, 40.00, CURRENT_DATE, '17:25:00', 'débito', (SELECT cpf FROM cliente OFFSET 5 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 6, 'A', 1),
+(2, 20.00, CURRENT_DATE, '17:30:00', 'pix', (SELECT cpf FROM cliente OFFSET 6 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 7, 'A', 1),
+(1, 40.00, CURRENT_DATE, '17:35:00', 'dinheiro', (SELECT cpf FROM cliente OFFSET 7 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 8, 'A', 1),
+(2, 20.00, CURRENT_DATE, '17:40:00', 'crédito', (SELECT cpf FROM cliente OFFSET 8 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 9, 'A', 1),
+(1, 40.00, CURRENT_DATE, '17:45:00', 'débito', (SELECT cpf FROM cliente OFFSET 9 LIMIT 1), (SELECT numero FROM sessao WHERE sala_id=1 AND filme_id=1 AND data=CURRENT_DATE AND hora='18:00:00' LIMIT 1), 10, 'A', 1);

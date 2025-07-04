@@ -23,7 +23,7 @@ type SessionsMovieData = {
     duracao: string;
     class_ind: number;
     descricao: string;
-    poster_url?: string;
+    cartaz?: string;
   };
   sessions_by_room: SessionsData[]
 }
@@ -99,17 +99,26 @@ export default function Session() {
           {filmData && (
             <>
               {
-                filmData.movie.poster_url ? <img src={filmData.movie.poster_url} alt="Poster do filme" />
-                : <img src="https://dummyimage.com/500x750/000/fff.jpg&text=Erro+na+imagem" alt="Poster do filme" />
+              filmData.movie.cartaz ? (
+                <img
+                src={`data:image/jpeg;base64,${filmData.movie.cartaz}`}
+                alt="Poster do filme"
+                />
+              ) : (
+                <img
+                src="https://dummyimage.com/500x750/000/fff.jpg&text=Erro+na+imagem"
+                alt="Poster do filme"
+                />
+              )
               }
               <div className="details">
-                <h3>{filmData.movie.titulo}</h3>
-                <p>
-                  <strong>Duração:</strong> {formatarHora(filmData.movie.duracao)}
-                </p>
-                <p>
-                  <strong>Descrição:</strong> {filmData.movie.descricao}
-                </p>
+              <h3>{filmData.movie.titulo}</h3>
+              <p>
+                <strong>Duração:</strong> {formatarHora(filmData.movie.duracao)}
+              </p>
+              <p>
+                <strong>Descrição:</strong> {filmData.movie.descricao}
+              </p>
               </div>
             </>
           )}

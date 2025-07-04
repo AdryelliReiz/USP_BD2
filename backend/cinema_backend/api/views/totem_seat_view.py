@@ -9,12 +9,7 @@ class TotemSeatView(ViewSet):
     """
     permission_classes = [AllowAny]
 
-    def retrieve(self, request, pk):
-        query = self.new_method()
-        seat_data = RawSQLHelper.execute_query(query, [pk])
-        return Response(seat_data)
-
-    def new_method(self):
+    def retrieve(self, request, pk=None):
         query = """
         SELECT poltrona.letra, poltrona.numero, poltrona.tipo,
         CASE
@@ -30,5 +25,5 @@ class TotemSeatView(ViewSet):
             AND ingresso.poltrona_sala_id = poltrona.sala_id
         WHERE sessao.numero = %s
         """
-        
-        return query
+        seat_data = RawSQLHelper.execute_query(query, [pk])
+        return Response(seat_data)

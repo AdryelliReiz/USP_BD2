@@ -7,7 +7,7 @@ from rest_framework import viewsets
 from datetime import datetime, timedelta
 
 class ReportView(viewsets.ViewSet):
-    def get(self, request):
+    def list(self, request):
 
          # 1. Faturamento do mes anterior
         last_month = (datetime.now() - timedelta(days=30)).month

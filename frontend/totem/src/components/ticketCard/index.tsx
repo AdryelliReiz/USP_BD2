@@ -5,7 +5,7 @@ import "./styles.scss";
 export interface ITicketCardProps {
     name: string; // Nome do ingresso
     value: number; // Valor do ingresso
-    type: "monetario" | "pontos"; // Tipo (monetário ou pontos)
+    type: number;
     onQuantityChange: (quantity: number, operation: "minus" | "plus") => boolean; // Callback para mudança de quantidade
 }
 
@@ -32,7 +32,7 @@ const TicketCard: React.FC<ITicketCardProps> = ({ name, value, type, onQuantityC
     return (
         <div className="ticket-card">
             <h3>{name}</h3>
-            <p>{type === "monetario" ? `R$ ${value.toFixed(2)}` : `${value} pontos`}</p>
+            <p>{type != 3 ? `R$ ${value.toFixed(2)}` : `${value} pontos`}</p>
             <div className="quantity-controls">
                 <button onClick={handleDecrement} disabled={quantity <= 0}>-</button>
                 <span>{quantity}</span>

@@ -1,58 +1,95 @@
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 from rest_framework.permissions import AllowAny
+from rest_framework import status
 from api.utils import RawSQLHelper
+from decimal import Decimal, ROUND_HALF_UP
+import datetime
 
 class TotemTicketView(ViewSet):
     """
-    Tela de selecao dos ingressos
+    Tela de seleção dos ingressos
     """
     permission_classes = [AllowAny]
 
     def retrieve(self, request, pk):
-        """
-        GET /sessions/<id>/tickets
-        Retrieves ticket types (name, value, type) for a given session ID,
-        and the balance of points for the client (if CPF is provided).
-        """
-        cpf = request.query_params.get('cpf', None)
+        cpf = request.query_params.get("cpf")
 
-
-        ticket_query = """
-        SELECT
-            tipo,
-            valor,
-            CASE
-                WHEN tipo = 1 THEN 'meia'
-                WHEN tipo = 2 THEN 'inteira'
-                WHEN tipo = 3 THEN 'club'
-                ELSE 'unknown'
-            END AS nome,
-            'monetario' AS tipo_pago
-        FROM ingresso
-        WHERE sessao_id = %s
+        # Busca dados da sessão e da sala associada
+        session_query = """
+            SELECT
+                s.eh_3d,
+                s.leg_ou_dub,
+                s.data,
+                sa.suporta_imax
+            FROM sessao AS s
+            INNER JOIN sala AS sa ON s.sala_id = sa.numero
+            WHERE s.numero = %s
         """
-        ticket_data = RawSQLHelper.execute_query(ticket_query, [pk])
+        session_result = RawSQLHelper.execute_query(session_query, [pk])
 
-        # Se CPF for cadastrado, verifica os seus pontos
-        points_balance = 0
+        if not session_result:
+            return Response({"detail": "Sessão não encontrada."}, status=status.HTTP_404_NOT_FOUND)
+
+        session_data = session_result[0]
+        is_3d = session_data["eh_3d"]
+        is_imax = session_data["suporta_imax"]
+        session_date = session_data["data"]
+
+        # Verifica se data é string ou date
+        if isinstance(session_date, str):
+            session_date = datetime.datetime.strptime(session_date, "%Y-%m-%d").date()
+
+        # Cálculo do valor inteira
+        preco_base = 20
+        if is_3d:
+            preco_base += 5
+        if is_imax:
+            preco_base += 7
+
+        # Adiciona valor se for sábado ou domingo
+        if session_date.weekday() in (5, 6):  # sábado ou domingo
+            preco_base += 8
+
+        preco_inteira = Decimal(preco_base).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        preco_meia = (preco_inteira / 2).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+        ingressos = [
+            {
+            "tipo": 1,
+            "nome": "inteira",
+            "valor": float(preco_inteira),
+            "tipo_pago": "monetario"
+            },
+            {
+            "tipo": 2,
+            "nome": "meia",
+            "valor": float(preco_meia),
+            "tipo_pago": "monetario"
+            }
+        ]
+
+        pontos_cliente = 0
         if cpf:
-            client_points_query = """
-            SELECT SUM(qtde) AS total_pontos
-            FROM pontos
-            WHERE cliente_id = %s
+            pontos_query = """
+                SELECT quantidade_pontos AS total_pontos
+                FROM cliente
+                WHERE cpf = %s
             """
-            points_result = RawSQLHelper.execute_query(client_points_query, [cpf])
-            if points_result:
-                points_balance = points_result[0]['total_pontos'] or 0
+            pontos_result = RawSQLHelper.execute_query(pontos_query, [cpf])
+            if pontos_result and pontos_result[0]["total_pontos"] is not None:
+                pontos_cliente = pontos_result[0]["total_pontos"]
 
-            # Adiciona os pontos ao cliente se ele tiver o tipo clube/cadastro
-            for ticket in ticket_data:
-                if ticket['nome'] == 'club':
-                    ticket['tipo_pago'] = 'pontos'
+            preco_pontos = int((preco_inteira * 10).to_integral_value(rounding=ROUND_HALF_UP))
+            ingressos.append({
+                "tipo": 3,
+                "nome": "club",
+                "valor": preco_pontos,
+                "tipo_pago": "pontos"
+            })
 
-        # Retorna os pontos dos clientes e o ticket data
         return Response({
-            'pontos': points_balance,
-            'ingressos': ticket_data
+            "pontos": pontos_cliente,
+            "ingressos": ingressos,
+            "atributos": session_data
         })

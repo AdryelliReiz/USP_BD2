@@ -20,4 +20,3 @@ from .totem_seat_view import *
 from .totem_session_view import *
 from .totem_ticket_view import *
 
-from .example_view import *
